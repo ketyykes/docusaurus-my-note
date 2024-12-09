@@ -1,0 +1,46 @@
+/**
+ * 這裡包含的所有 CSS 都會是全局性的。
+ * 經典模板預設包含 Infima。
+ * Infima 是一個專為內容導向網站設計的 CSS 框架。
+ */
+
+/* 你可以在這裡覆蓋默認的 Infima 變量 */
+:root {
+	/* 主要顏色系列 */
+	--ifm-color-primary: #2e8555; /* 基本主色 */
+	--ifm-color-primary-dark: #29784c; /* 深色版本 */
+	--ifm-color-primary-darker: #277148; /* 更深色版本 */
+	--ifm-color-primary-darkest: #205d3b; /* 最深色版本 */
+	--ifm-color-primary-light: #33925d; /* 淺色版本 */
+	--ifm-color-primary-lighter: #359962; /* 更淺色版本 */
+	--ifm-color-primary-lightest: #3cad6e; /* 最淺色版本 */
+
+	/* 其他全局設置 */
+	--ifm-code-font-size: 95%; /* 代碼字體大小 */
+	--docusaurus-highlighted-code-line-bg: rgba(
+		0,
+		0,
+		0,
+		0.1
+	); /* 代碼高亮背景色 */
+}
+
+/* 為了提高暗模式下的可讀性，應該選擇更淺的調色板 */
+[data-theme="dark"] {
+	/* 暗模式主要顏色系列 */
+	--ifm-color-primary: #25c2a0; /* 暗模式基本主色 */
+	--ifm-color-primary-dark: #21af90; /* 暗模式深色版本 */
+	--ifm-color-primary-darker: #1fa588; /* 暗模式更深色版本 */
+	--ifm-color-primary-darkest: #1a8870; /* 暗模式最深色版本 */
+	--ifm-color-primary-light: #29d5b0; /* 暗模式淺色版本 */
+	--ifm-color-primary-lighter: #32d8b4; /* 暗模式更淺色版本 */
+	--ifm-color-primary-lightest: #4fddbf; /* 暗模式最淺色版本 */
+
+	/* 暗模式其他設置 */
+	--docusaurus-highlighted-code-line-bg: rgba(
+		0,
+		0,
+		0,
+		0.3
+	); /* 暗模式代碼高亮背景色 */
+}
