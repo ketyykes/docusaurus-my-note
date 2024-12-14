@@ -1,47 +1,31 @@
 ---
 sidebar_position: 1
+title: 嘿！歡迎來到這個的小天地 🏠
+description: 來看看這裡有什麼好玩的吧！
+last_update:
+  date: 2024-12-13
+  author: Danny
 ---
 
-# Tutorial Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+哇！你找到這裡啦！👋 不管你是技術迷、愛學習的小夥伴，還是專業大神，希望你能在這裡挖到寶藏哦！💎
 
-## Getting Started
+這個網站就像是一個百寶箱，裡面裝滿了各種網路上的東西。來看看這裡有什麼：
 
-Get started by **creating a new site**.
+1. 文件翻譯：把技術文件翻譯成繁體中文。📚➡️📖
+2. 技術觀點：運用 AI 工具，以淺顯易懂的方式解釋技術。🧠💡
+3. 工具推薦：將自己有用的工具紀錄並且分享。🔨🔧
+4. 學習筆記：用 LLM 學習各種技術的筆記。📝🚀
+5. 實作筆記：實作各種技術的筆記。🛠️💻
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+多半內容有經過查證或是實驗過，如果你發現什麼奇怪或者錯誤的地方，歡迎告訴我！
 
-### What you'll need
+## 這個網站在做什麼？🤔
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+建這個網站，就是想要：
 
-## Generate a new site
+1. 把有用的東西記錄下來，免得以後忘記啦！📝
+2. 跟大家分享內容，希望提供給有需要的人。🌍
 
-Generate a new Docusaurus site using the **classic template**.
 
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+希望這個網站也能成為你的秘密武器庫，幫你在學習和工作中披荊斬棘！感謝你的光臨，祝你在這裡玩得開心，學得盡興！🎉🚀
