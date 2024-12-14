@@ -4,8 +4,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
 	title: "我的筆記",
-	tagline: "網站的標語",
-	favicon: "img/favicon.ico",
+	tagline: "歡迎來到水土曜來了筆記站",
+	favicon: "img/wed_sat_icon.svg",
 
 	// Set the production url of your site here
 	url: "https://note.wedsatcoming.com/",
@@ -39,6 +39,7 @@ const config: Config = {
 					// Remove this to remove the "edit this page" links.
 					editUrl:
 						"https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+					showLastUpdateTime: true,
 				},
 				blog: {
 					showReadingTime: true,
