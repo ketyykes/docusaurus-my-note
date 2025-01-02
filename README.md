@@ -55,10 +55,6 @@ pnpm run typecheck
 ```
 ├── README.md                 # 專案說明文件
 ├── babel.config.js           # Babel 設定檔
-├── blog/                     # 部落格文章目錄
-│   ├── [部落格文章檔案]      # 各種 .md 和 .mdx 格式的部落格文章
-│   ├── authors.yml          # 作者資訊設定
-│   └── tags.yml             # 標籤設定
 ├── docs/                     # 文件目錄
 │   ├── Reference/           # 參考文件
 │   ├── learn-note/          # 學習筆記
