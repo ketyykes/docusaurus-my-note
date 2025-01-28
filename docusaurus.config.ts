@@ -6,7 +6,6 @@ const config: Config = {
 	title: "水土曜來了筆記站",
 	tagline: "歡迎來到水土曜來了筆記站",
 	favicon: "img/wed_sat_icon.svg",
-
 	// Set the production url of your site here
 	url: "https://note.wedsatcoming.com/",
 	// Set the /<baseUrl>/ pathname under which your site is served
@@ -50,6 +49,10 @@ const config: Config = {
 	themeConfig: {
 		// Replace with your project's social card
 		image: "img/banner-night.jpg",
+		metadata: [
+			{ name: "algolia-site-verification", content: "A8845A31B4D03839" },
+		],
+
 		navbar: {
 			title: "水土曜來了筆記",
 			logo: {
@@ -66,6 +69,10 @@ const config: Config = {
 				// {
 				// 	href: "https://github.com/facebook/docusaurus",
 				// 	label: "GitHub",
+				// 	position: "right",
+				// },
+				// {
+				// 	type: "search",
 				// 	position: "right",
 				// },
 			],
