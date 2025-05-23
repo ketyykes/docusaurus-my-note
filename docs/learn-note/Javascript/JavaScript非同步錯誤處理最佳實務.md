@@ -15,7 +15,7 @@ last_update:
 
 以一個新增項目的函式為例，原始函式可能這樣寫：
 
-```javascript=
+```javascript
 const addItem = async (item) => {
   try {
     const response = await addItemRoute(item)
@@ -37,7 +37,7 @@ const addItem = async (item) => {
 
 以下是一個使用這個函式的實例，展示為什麼外部 `catch` 無法捕捉到錯誤：
 
-```javascript=
+```javascript
 const handleAddItem = async () => {
   const newItem = {
     name: '新項目',
@@ -66,7 +66,7 @@ handleAddItem()
 
 如上述範例所示，若我們希望外部的錯誤捕捉機制能正常運作，建議改寫原始函式，使用 `throw` 來拋出錯誤：
 
-```javascript=
+```javascript
 const addItem = async (item) => {
   try {
     const response = await addItemRoute(item)
@@ -88,7 +88,7 @@ const addItem = async (item) => {
 
 以下是使用改寫後函式的實例，可以看到外部的 `catch` 已經能正確捕捉錯誤了：
 
-```javascript=
+```javascript
 const handleAddItem = async () => {
   const newItem = {
     name: '新項目',
