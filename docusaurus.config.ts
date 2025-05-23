@@ -36,7 +36,6 @@ const config: Config = {
 					sidebarPath: "./sidebars.ts",
 					// Please change this to your repo.
 					// Remove this to remove the "edit this page" links.
-
 					showLastUpdateTime: true,
 				},
 				theme: {
@@ -52,6 +51,28 @@ const config: Config = {
 		metadata: [
 			{ name: "algolia-site-verification", content: "A8845A31B4D03839" },
 		],
+		algolia: {
+			// Algolia 提供的應用程式 ID
+			appId: "HVMC43GRZZ",
+
+			// 公開 API 金鑰：可以安全地提交到版本控制
+			apiKey: "c649c2e625d78e5389116c71f36d0e16",
+
+			// 索引名稱
+			indexName: "wedsatcoming",
+
+			// 可選：啟用上下文搜尋（預設為 true）
+			contextualSearch: true,
+
+			// 可選：搜尋頁面路徑（預設啟用，設為 false 可停用）
+			searchPagePath: "search",
+
+			// 可選：其他 Algolia 搜尋參數
+			searchParameters: {},
+
+			// 可選：是否啟用洞察功能（預設為 false）
+			insights: false,
+		},
 
 		navbar: {
 			title: "水土曜來了筆記",
@@ -66,11 +87,11 @@ const config: Config = {
 					position: "left",
 					label: "筆記",
 				},
-				// {
-				// 	href: "https://github.com/facebook/docusaurus",
-				// 	label: "GitHub",
-				// 	position: "right",
-				// },
+				{
+					href: "/docs/tags",
+					label: "Tags",
+					position: "left",
+				},
 				// {
 				// 	type: "search",
 				// 	position: "right",
