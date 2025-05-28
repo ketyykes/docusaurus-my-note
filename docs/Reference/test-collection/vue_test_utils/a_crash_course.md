@@ -22,7 +22,7 @@ last_update:
 
 我們先從一個只有一個 todo 的簡單 TodoApp 元件開始：
 
-```vue
+```html
 <template>
   <div></div>
 </template>
@@ -69,7 +69,7 @@ test('renders a todo', () => {
 
 如果現在執行這個測試，會失敗並出現錯誤訊息：Unable to get [data-test="todo"]。因為我們還沒渲染任何 todo，所以 `get()` 找不到元素。讓我們把 `<template>` 改成會渲染 todos 陣列：
 
-```vue
+```html
 <template>
   <div>
     <div v-for="todo in todos" :key="todo.id" data-test="todo">
@@ -108,7 +108,7 @@ test('creates a todo', () => {
 
 如果現在執行這個測試，當然會失敗。讓我們把 TodoApp.vue 加上 `<form>` 和 `<input>`，並讓測試通過：
 
-```vue
+```html
 <template>
   <div>
     <div v-for="todo in todos" :key="todo.id" data-test="todo">
@@ -196,7 +196,7 @@ test('completes a todo', async () => {
 
 要讓這個測試通過，只要把 `<template>` 改成有 `<input type="checkbox">`，並在 todo 元素加上 class 綁定：
 
-```vue
+```html
 <template>
   <div>
     <div
