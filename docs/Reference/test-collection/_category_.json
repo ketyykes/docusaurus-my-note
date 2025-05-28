@@ -1,0 +1,8 @@
+{
+  "label": "測試 Collection",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "這是一個完整的測試工具文件集。"
+  }
+}
