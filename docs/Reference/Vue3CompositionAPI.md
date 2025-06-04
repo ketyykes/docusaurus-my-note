@@ -10,8 +10,18 @@ last_update:
   author: Danny
 ---
 
-
 Vue 3 的 Composition API 為開發者帶來了全新的程式碼組織方式，相較於 Options API，它提供更好的程式碼重用性和可維護性。本文將深入介紹 Composition API 的核心概念和使用方法，從基礎設定到進階應用，幫助你掌握這個強大的功能。無論你是 Vue 新手或是想轉換到 Composition API 的開發者，都能從本文獲得完整的學習指引。
+
+## 目錄
+- [重點整理](#重點整理)
+- [Vue3 Composition API 注意事項](#1-vue3-composition-api-注意事項)
+- [Option API vs Composition API 計數器範例](#2-option-api-vs-composition-api-計數器範例)
+- [Composition API 中應避免的寫法](#3-composition-api-中應避免的寫法)
+- [定義參數型別（Props）傳入子組件](#4-定義參數型別props傳入子組件)
+- [Ref 與 Reactive 的響應式資料](#5-ref-與-reactive-的響應式資料)
+- [Ref 與 Reactive 的差異](#6-ref-與-reactive-的差異)
+- [Computed 計算屬性](#7-computed-計算屬性)
+- [撰寫 Composition API 的最佳實踐](#8-撰寫-composition-api-的最佳實踐)
 
 ## 重點整理
 
