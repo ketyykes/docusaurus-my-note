@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: GraphQL 查詢（Query）教學
+title: Query
 description: 本頁介紹 GraphQL 查詢（Query）的基本概念、語法與常見用法，讓你學會如何從 GraphQL 伺服器取得所需資料，並靈活運用查詢語言的各種功能。
 tags:
   - graphql
