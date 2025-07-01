@@ -22,7 +22,7 @@ last_update:
 
 > 看情況。
 
-<p style="padding-left: 3rem; margin-top: -1rem">
+<p >
   — 每個工程師，永遠都會這樣說
 </p>
 
@@ -196,4 +196,4 @@ export const useTodo = (id) =>
 
 ### 本文原始連結
 
-[React Query Data Transformations](https://tkdodo.eu/blog/react-query-data-transformations)
+[practical-react-query](https://tkdodo.eu/blog/react-query-data-transformations)
