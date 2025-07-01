@@ -196,4 +196,4 @@ export const useTodo = (id) =>
 
 ### 本文原始連結
 
-[practical-react-query](https://tkdodo.eu/blog/react-query-data-transformations)
+[Practical React Query](https://tkdodo.eu/blog/react-query-data-transformations)
