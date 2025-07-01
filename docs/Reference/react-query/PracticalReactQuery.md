@@ -277,4 +277,4 @@ const MyForm = ({ initialData }) => {
 
 ### 本文原始連結
 
-[practical-react-query](https://tkdodo.eu/blog/practical-react-query)
+[Practical React Query](https://tkdodo.eu/blog/practical-react-query)
