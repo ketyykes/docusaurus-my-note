@@ -66,7 +66,7 @@ export const useTodosQuery = () =>
 
 ### 2. 在 render function 處理
 
-就像[上一篇](practical-react-query)建議的，如果你有寫自訂 hook，也可以在這裡做資料轉換：
+就像上一篇 practical react query 建議的，如果你有寫自訂 hook，也可以在這裡做資料轉換：
 
 ```ts
 // render-transformation
