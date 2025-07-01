@@ -188,7 +188,7 @@ export const useTodo = (id) =>
 🟢  最佳效能<br/>
 🟢  可以只訂閱部分資料<br/>
 🟡  每個 observer 拿到的資料結構可能不同<br/>
-🟡  structural sharing 會做兩次（細節會在[第三篇](react-query-render-optimizations)說明）
+🟡  structural sharing 會做兩次（細節會在第三篇 react query render optimizations 說明）
 
 
 **最後更新：2023-10-21**
