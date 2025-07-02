@@ -146,9 +146,8 @@ const useUpdateTitle = (id) => {
 
 直接用 `setQueryData` 放進快取，所有用到這個查詢的元件都會自動 re-render。
 
-更多直接更新快取與兩種方法結合的例子可參考[#8: 有效設計 React Query Key](effective-react-query-keys#structure)。
+更多直接更新快取與兩種方法結合的例子可參考  effective React Query Key。
 
----
 
 我個人認為大多數情況下，應該優先用失效查詢。直接更新快取雖然很即時，但前端要寫更多邏輯，還要跟後端邏輯同步。像排序列表這種情境，直接更新很難處理，失效整個列表反而更安全。
 
