@@ -1,6 +1,6 @@
 ---
 sidebar_position: 8
-title: Effective react query keys
+title: Effective React Query keys
 description: 深入解析 React Query Query Key 的設計原則與實務技巧，包含快取、refetch、手動操作與工廠模式，讓你的查詢管理更有效率、更易維護。
 tags:
   - React Query
