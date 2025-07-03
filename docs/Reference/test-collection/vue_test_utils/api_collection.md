@@ -62,4 +62,4 @@ last_update:
 * **[config](https://test-utils.vuejs.org/api/#config)**:Vue Test Utils 的全域靜態設定
   * **[config.global](https://test-utils.vuejs.org/api/#config-global)**:與 `mount` 選項 `global` 相同功能，但影響全部測試；可在測試啟動前一次性設定
 * **[components](https://test-utils.vuejs.org/api/#components)**:於 `config.global` 中自訂全域元件或 stub；例：`config.global.components = { RouterLink: RouterLinkStub }`
-  * **[RouterLinkStub](https://test-utils.vuejs.org/api/#RouterLinkStub)**:官方提供的 Vue Router `<router-link>` 替代元件，可防止實際導頁並保留 `to` 資訊供斷言使用
+  * **[RouterLinkStub](https://test-utils.vuejs.org/api/#RouterLinkStub)**:官方提供的 Vue Router `<router-link>` 替代元件，可防止實際重新導向頁面並保留 `to` 資訊供斷言使用

@@ -163,7 +163,7 @@ const useUpdateTitle = (id) => {
 
 這裡不再額外舉例，官方文件有很完整的說明與 [TypeScript 範例](https://tanstack.com/query/v4/docs/examples/react/optimistic-updates-typescript)。
 
-我認為樂觀更新有時被過度使用。不是每個 mutation 都適合 optimistic update。你要很確定失敗機率很低，因為 rollback UX 不太好。像 Dialog 表單送出就關閉、或更新後自動導頁，這些如果失敗很難還原。
+我認為樂觀更新有時被過度使用。不是每個 mutation 都適合 optimistic update。你要很確定失敗機率很低，因為 rollback UX 不太好。像 Dialog 表單送出就關閉、或更新後自動 redirect，這些如果失敗很難還原。
 
 另外，只有真的需要即時回饋時才用 optimistic update（像 toggle button）。要寫的 code 也比較多，因為你要模擬後端行為，簡單的像 flip boolean 或加一筆資料還好，複雜一點就很難：
 
@@ -264,7 +264,7 @@ mutation.mutate({ title: 'hello', body: 'world' })
 
 `useMutation` 跟 `mutate` 都可以設 callback。要注意 `useMutation` 的 callback 會比 `mutate` 的先觸發，而且如果元件在 mutation 結束前就 unmount，`mutate` 的 callback 可能根本不會執行。
 
-建議把「一定要做的事」（像失效查詢）寫在 `useMutation` callback，UI 相關（像導頁、toast）寫在 `mutate` callback。這樣 custom hook 只管查詢邏輯，UI 行為還是放在元件裡，hook 也更好重用：
+建議把「一定要做的事」（像失效查詢）寫在 `useMutation` callback，UI 相關（像 Redirect `mutate` callback。這樣 custom hook 只管查詢邏輯，UI 行為還是放在元件裡，hook 也更好重用：
 
 ```js
 // separate-concerns
@@ -283,7 +283,7 @@ const useUpdateTodo = () =>
 const updateTodo = useUpdateTodo()
 updateTodo.mutate(
   { title: 'newTitle' },
-  // ✅ 只有還在 detail 頁時才導頁
+  // ✅ 只有還在 detail 頁時才 redirect
   { onSuccess: () => history.push('/todos') }
 )
 ```

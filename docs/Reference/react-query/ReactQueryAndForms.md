@@ -232,7 +232,7 @@ const { mutate, isLoading } = useMutation({
 
 ### mutation 後失效查詢並重設表單
 
-如果送出表單後沒有導頁，建議在失效查詢後再 reset 表單。像這篇 (mastering-mutations-in-react-query#some-callbacks-might-not-fire) 說的，最好在 mutate 的 onSuccess callback 做這件事。如果 state 分開管理，只要 reset 成 undefined 就會自動用 server state：
+如果送出表單後沒有跳轉至不同頁面，建議在失效查詢後再 reset 表單。像這篇 (mastering-mutations-in-react-query#some-callbacks-might-not-fire) 說的，最好在 mutate 的 onSuccess callback 做這件事。如果 state 分開管理，只要 reset 成 undefined 就會自動用 server state：
 
 ```js
 // reset-form
