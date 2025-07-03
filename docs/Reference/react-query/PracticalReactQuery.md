@@ -207,7 +207,7 @@ export const useTodosQuery = (state: State) =>
 
 ### 保持 server state 跟 client state 分離
 
-這跟我上個月寫的[這篇文章](./putting-props-to-use-state)有關：
+這跟我上個月寫的 這篇文章 ([putting-props-to-use-state](https://tkdodo.eu/blog/putting-props-to-use-state)) 有關：
 如果你是用 `useQuery` 拿到資料，盡量不要再把它放進 local state。
 主要原因是這樣會自動放棄 React Query 幫你做的背景更新，
 因為 local state 的「副本」不會自動跟著更新。
@@ -271,7 +271,7 @@ const MyForm = ({ initialData }) => {
 - 所有用到同一個 query key（還有型別定義）都集中在一個檔案。
 - 以後要調設定或加資料轉換，只要改一個地方。
 
-上面 [todos 查詢](#treat-the-query-key-like-a-dependency-array) 就是個例子。
+上面 todos 查詢 ([#treat-the-query-key-like-a-dependency-array](https://tkdodo.eu/blog/practical-react-query#treat-the-query-key-like-a-dependency-array)) 就是個例子。
 
 **最後更新：2023-10-21**
 
