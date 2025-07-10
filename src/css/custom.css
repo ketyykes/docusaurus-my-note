@@ -62,3 +62,30 @@
 		0.3
 	); /* 暗模式代碼高亮背景色 */
 }
+
+/* 暗模式下的顏色類別覆蓋 */
+[data-theme="dark"] .red { 
+	color: #ff6b6b; /* 暗模式友善的紅色 */
+}
+
+[data-theme="dark"] .blue { 
+	color: #74b9ff; /* 暗模式友善的藍色 */
+}
+
+[data-theme="dark"] .green { 
+	color: #68d391; /* 暗模式友善的綠色 */
+}
+
+.rem25{ font-size:2.5rem; }
+.rem40{ font-size:4.0rem; }
+.red { color:red; }
+.blue { color:blue; }
+.green { color:green; }
+.gray{ background-color:#d3d3d3; }
+.mycode{
+padding: 2px 4px;
+font-size: 90%;
+color: #c7254e;
+background-color: #f9f2f4;
+border-radius: 4px;
+}
