@@ -8,12 +8,11 @@ last_update:
   author: Danny
 ---
 
-# 從零開始掌握 Browser Tools MCP 工具 —— 讓 AI 助手即時互動你的瀏覽器
 
 本篇文章將會涵蓋以下重點：
 - 什麼是 Browser Tools MCP？
 - 如何安裝與快速啟動？
-- 各種稽核工具的實際應用方式
+- 各種 Audit Tools  的實際應用方式
 - 架構說明與運作原理
 - 常見問題與注意事項
 
@@ -31,7 +30,7 @@ Browser Tools MCP 是一套讓 AI 助手（例如 Cursor、Claude Desktop 等）
 ### 步驟一：安裝 Chrome 擴充套件
 
 請先下載並安裝官方提供的 Chrome 擴充套件：  
-<span class="mycode">[BrowserToolsMCP Chrome Extension v1.2.0](https://github.com/AgentDeskAI/browser-tools-mcp/releases/download/v1.2.0/BrowserTools-1.2.0-extension.zip)</span>
+[BrowserToolsMCP Chrome Extension v1.2.0](https://github.com/AgentDeskAI/browser-tools-mcp/releases/download/v1.2.0/BrowserTools-1.2.0-extension.zip)
 
 ### 步驟二：安裝 MCP 伺服器
 
@@ -43,8 +42,8 @@ Browser Tools MCP 是一套讓 AI 助手（例如 Cursor、Claude Desktop 等）
 開啟新終端機視窗，執行：  
 <span class="mycode">npx @agentdeskai/browser-tools-server@latest</span>
 
-> <span class="red">需特別留意：</span>  
-> 這兩個伺服器必須同時啟動，否則功能無法正常運作！
+需特別留意：  
+<span class="red">這兩個伺服器必須同時啟動，否則功能無法正常運作！</span>
 
 #### 問題排解小技巧
 - 完全關閉 Chrome（不只是關閉視窗，而是結束所有進程）
@@ -109,7 +108,7 @@ Browser Tools MCP 是一套讓 AI 助手（例如 Cursor、Claude Desktop 等）
 - 分析選取元素
 - 清除 MCP 伺服器日誌
 - 執行 Accessibility、Performance、SEO、Best Practices 各類稽核
-- <span class="green">支援多種 MCP 客戶端，主要設計給 Cursor IDE，也可用於其他 AI 編輯器</span>
+- 支援多種 MCP 客戶端，主要設計給 Cursor IDE，也可用於其他 AI 編輯器
 
 ## 參考資料
 
