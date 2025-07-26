@@ -9,7 +9,6 @@ last_update:
   author: Danny
 ---
 
-# SuperClaude 使用者指南 🚀
 
 ## 🎯 簡單的真相
 
