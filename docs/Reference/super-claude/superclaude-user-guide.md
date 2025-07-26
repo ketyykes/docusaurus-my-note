@@ -1,9 +1,11 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 title: SuperClaude 使用者指南
-description: 全面了解並有效使用 SuperClaude v3.0 的完整指南，包含核心元件、操作模式、協調系統等
+description: 一份全面性的 SuperClaude 使用指南，涵蓋其核心元件、操作模式、指令、旗標與 Persona 的詳細介紹與實用範例。
 tags:
   - SuperClaude
+  - 使用者指南
+  - AI工具
 last_update:
   date: 2025-07-26
   author: Danny
@@ -11,729 +13,729 @@ last_update:
 
 # SuperClaude 使用者指南 🚀
 
-## 🎯 簡單的事實
+## 🎯 簡單的真相
 
-**在表面複雜性背後，SuperClaude 實際上很容易使用。**
+**在看似複雜的背後，SuperClaude 的使用其實很簡單。**
 
-你不需要學習所有指令、標誌和人設。直接開始使用吧！🎈
+你不需要學習所有的指令、旗標和 Persona。直接開始使用就對了！🎈
 
-SuperClaude 有一個**智慧路由系統**，會嘗試理解你的需求：
-- 輸入 `/analyze some-code/` → 它會選擇正確的分析工具
-- 詢問安全性 → 安全專家自動啟動
-- 處理前端 → UI 專家接手
-- 除錯 → 調查模式啟動
+SuperClaude 有一個**智慧路由系統**，會試圖弄清楚你的需求：
+- 輸入 `/analyze some-code/` → 它會挑選合適的分析工具
+- 詢問有關安全性的問題 → 安全專家會自動啟用
+- 處理前端工作 → UI 專家會接手
+- 除錯某個問題 → 調查模式會啟動
 
-**學習在使用過程中產生** - 你會自然地發現什麼有效，而不需要先研究手冊。
+**學習於使用中自然發生** - 你會自然而然地發現有效的方法，而無需先研讀手冊。
 
-下面的詳細指南？它們在這裡是**當你想要理解**剛才發生了什麼或深入探索時使用。但老實說？大部分時候你都可以直接嘗試。😊
-
----
-
-**簡而言之**：安裝它，在你的程式碼上嘗試 `/analyze` 或 `/build`，看著魔法發生。
+下面的詳細指南呢？它們是為**當你想要了解**剛才發生了什麼，或想更深入探索時準備的。但老實說？大多數時候，你隨意發揮就好。😊
 
 ---
 
-全面了解並有效使用 SuperClaude v3.0 的指南。但記住 - 你可以直接跳到嘗試使用！
+**長話短說**：安裝它，在你的程式碼上試試 `/analyze` 或 `/build`，然後見證奇蹟發生。
+
+---
+
+一份全面性的指南，幫助你有效地理解和使用 SuperClaude v3.0。但請記住 - 你可以直接跳過，馬上試用！
 
 ## 目錄 📖
 
 1. [歡迎與概覽](#歡迎與概覽-)
 2. [核心元件](#核心元件-)
 3. [三種操作模式](#三種操作模式-)
-4. [協調系統](#協調系統-)
+4. [編排器系統](#編排器系統-)
 5. [規則與原則](#規則與原則-)
-6. [開始工作流程](#開始工作流程-)
+6. [入門工作流程](#入門工作流程-)
 7. [整合與協調](#整合與協調-)
 8. [實用範例](#實用範例-)
 9. [技巧與最佳實踐](#技巧與最佳實踐-)
-10. [故障排除](#故障排除--常見問題-)
-11. [下一步](#下一步-)
+10. [疑難排解](#疑難排解與常見問題-)
+11. [未來展望](#未來展望-)
 
 ---
 
-## 🚀 直接從這裡開始
+## 🚀 從這裡開始
 
-**想要跳過閱讀直接開始？** 這是你的 2 分鐘快速開始：
+**想跳過閱讀，直接開始嗎？** 這是你的 2 分鐘入門：
 
 ```bash
-# 在 Claude Code 中嘗試這些指令：
-/sc:help                    # 查看可用的功能
+# 在 Claude Code 中試試這些指令：
+/sc:help                    # 查看有哪些可用指令
 /sc:analyze README.md       # SuperClaude 分析你的專案
-/sc:workflow feature-prd.md # 從 PRD 產生實作工作流程（新功能！）
-/sc:implement user-auth     # 建立功能和元件（v3 新功能！）
-/sc:build                   # 智慧建置與自動最佳化
+/sc:workflow feature-prd.md # 從 PRD 產生實作工作流程 (新功能！)
+/sc:implement user-auth     # 建立功能和元件 (v3 新功能！)
+/sc:build                   # 帶有自動優化的智慧建置
 /sc:improve messy-file.js   # 自動清理程式碼
 ```
 
-**剛才發生了什麼？** SuperClaude 自動：
-- 為每個任務選擇正確的工具 🛠️
-- 啟動適當的專家（安全、效能等）🎭
-- 應用智慧標誌和最佳化 ⚡
-- 提供基於證據的建議 📊
+**剛才發生了什麼？** SuperClaude 自動地：
+- 為每個任務挑選了合適的工具 🛠️
+- 啟用了適當的專家 (安全、效能等) 🎭
+- 應用了智慧旗標和優化 ⚡
+- 提供了基於證據的建議 📊
 
-**看到有多簡單了嗎？** 不需要學習 - SuperClaude 處理複雜性，所以你不需要。
+**看到有多簡單了嗎？** 無需學習 - SuperClaude 會處理複雜性，讓你無需操心。
 
-想要了解它是如何運作的？繼續閱讀。想要繼續實驗？去吧！🎯
+想了解它的運作原理嗎？繼續閱讀。只想繼續實驗？那就動手吧！🎯
 
 ---
 
 ## 歡迎與概覽 👋
 
-### SuperClaude 到底是什麼？🤔
+### SuperClaude 到底是什麼？ 🤔
 
-SuperClaude 讓 Claude Code 在開發工作上更聰明。你得到的不是通用回應，而是來自不同專家（安全、效能、前端等）的專業協助，他們了解自己的領域。
+SuperClaude 讓 Claude Code 在開發工作上變得更聰明。你得到的不再是通用的回應，而是來自不同領域專家（安全、效能、前端等）的專業協助。
 
-**誠實的事實**：我們剛發布 v3.0，它剛從測試版出來。對於它的功能來說運作得相當好，但隨著我們繼續改進，你應該預期會有一些粗糙的地方。我們建立這個是因為我們希望 Claude Code 對真實的軟體開發工作流程更有幫助。
+**老實說**：我們剛發布 v3.0，它才剛結束測試版。就其功能而言，它運作得相當不錯，但隨著我們不斷改進，你應該會預期到一些不完善之處。我們打造這個工具，是因為我們希望 Claude Code 對於真實的軟體開發工作流程更有幫助。
 
-**有趣的部分？** 你不需要管理任何這種複雜性。只需使用正常的指令如 `/analyze` 或 `/build`，SuperClaude 通常會弄清楚要涉及哪些專家和使用什麼工具。🪄
+**最棒的部分？** 你不需要管理任何這些複雜性。只要使用像 `/analyze` 或 `/build` 這樣的正常指令，SuperClaude 通常會弄清楚該讓哪些專家參與，以及該使用哪些工具。🪄
 
 ### SuperClaude 增加了什麼 ✨
 
 **🛠️ 17 個專業指令**
-- 規劃工具：`/workflow`（新功能！）、`/estimate`、`/task`
+- 規劃工具：`/workflow` (新功能！)、`/estimate`、`/task`
 - 開發工具：`/implement`、`/build`、`/design`
 - 分析工具：`/analyze`、`/troubleshoot`、`/explain`
 - 品質工具：`/improve`、`/cleanup`、`/test`
-- 加上文件、git、部署等的實用工具
-- **你只需使用它們** - SuperClaude 自動處理複雜性
-- **新功能**：`/workflow` 指令用於 PRD 到實作的規劃
-- **新功能**：`/implement` 指令用於功能建立（恢復 v2 功能）
+- 還有用於文件、git、部署等的工具
+- **你只要使用它們** - SuperClaude 會自動處理複雜性
+- **新功能**：`/workflow` 指令，用於從 PRD 到實作的規劃
+- **新功能**：`/implement` 指令，用於建立功能 (恢復 v2 的功能)
 
-**🎭 11 個智慧人設** *（知道何時介入）*
-- 為不同領域調整行為的 AI 專家
-- **根據你的請求自動啟動**（安全任務的安全專家等）
-- 手動控制可用，但通常不需要
-- 把它想像成擁有一個知道何時幫助的完整開發團隊
+**🎭 11 個智慧 Persona** *(知道何時該介入)*
+- 能夠適應不同領域行為的 AI 專家
+- **根據你的請求自動啟用** (安全專家處理安全任務等)
+- 提供手動控制，但通常不需要
+- 把它想像成擁有一個知道何時該幫忙的完整開發團隊
 
-**🔧 MCP 伺服器整合** *（智慧外部工具）*
+**🔧 MCP 伺服器整合** *(智慧外部工具)*
 - Context7：官方函式庫文件查詢
-- Sequential：複雜多步驟分析
+- Sequential：複雜的多步驟分析
 - Magic：現代 UI 元件產生
 - Playwright：瀏覽器自動化與測試
-- **需要時自動連接** - 你不需要管理這些東西
+- **在需要時自動連接** - 你不需要管理這些東西
 
-**📋 增強任務管理** *（在幕後發生）*
+**📋 增強的任務管理** *(在幕後進行)*
 - 使用 TodoRead/TodoWrite 進行進度追蹤
 - 使用 `/task` 進行多會話專案管理
-- 使用 `/spawn` 進行複雜協調
+- 使用 `/spawn` 進行複雜的編排
 - 使用 `/loop` 進行迭代改進
-- **大部分自動** - SuperClaude 追蹤你正在做的事情
+- **大部分是自動的** - SuperClaude 會追蹤你在做什麼
 
-**⚡ 權杖最佳化** *（智慧效率）*
-- 當上下文滿載時智慧壓縮
-- 用於高效通訊的符號系統
-- 大型操作的效能最佳化
-- **通常會在需要時啟動**大型專案
+**⚡ Token 優化** *(智慧效率)*
+- 當情境快滿時進行智慧壓縮
+- 用於高效溝通的符號系統
+- 針對大型操作的效能優化
+- **通常在需要時**為大型專案啟用
 
 ### 目前狀態 (v3.0) 📊
 
 **✅ 運作良好的部分：**
-- 安裝系統（完全重寫，更可靠）
-- 具有 16 個指令和 11 個人設的核心框架
-- MCP 伺服器整合（大部分運作正常）
-- 基本任務管理和工作流程自動化
+- 安裝系統 (完全重寫，可靠性大大提高)
+- 包含 16 個指令和 11 個 Persona 的核心框架
+- MCP 伺服器整合 (大部分運作正常)
+- 基本的任務管理和工作流程自動化
 - 文件和使用者指南
 
-**⚠️ 仍然粗糙的部分：**
-- 這是初始發布 - 預期會有錯誤
-- 一些 MCP 整合可以更順暢
-- 效能尚未針對所有操作最佳化
+**⚠️ 仍在改進的部分：**
+- 這是一個初始版本 - 預計會有錯誤
+- 某些 MCP 整合可以更順暢
+- 並非所有操作的效能都已優化
 - 一些進階功能是實驗性的
 
 **❌ 我們移除的部分：**
-- Hooks 系統（變得太複雜，v4 會回來）
+- Hooks 系統 (變得太複雜，將在 v4 回歸)
 
-我們對 v3 作為基礎相當滿意，但肯定還有改進空間。
+我們對 v3 作為一個基礎感到相當滿意，但絕對還有改進的空間。
 
-### 它是如何運作的 🔄
+### 運作原理 🔄
 
-**簡單版本**：你輸入像 `/analyze auth.js` 這樣的東西，SuperClaude 會弄清楚其餘部分。
+**簡單版**：你輸入像 `/analyze auth.js` 這樣的指令，SuperClaude 會處理剩下的事。
 
-**稍微詳細的版本**：
+**稍微詳細一點的版本**：
 
-1. **智慧路由** - 分析你要求的是什麼
-2. **自動專家選擇** - 選擇正確的專家（安全、效能等）
-3. **工具協調** - 在有用時連接到外部系統
-4. **品質保證** - 確保建議是穩固的
+1. **智慧路由** - 分析你的請求內容
+2. **自動專家選擇** - 挑選合適的專家 (安全、效能等)
+3. **工具協調** - 在有幫助時連接到外部系統
+4. **品質保證** - 確保建議是可靠的
 
-**你看不到任何這種複雜性** - 只是感覺 Claude 對開發相關的事情變得更聰明了。
+**你看不到任何這些複雜性** - 感覺就像 Claude 在開發方面變得更聰明了。
 
-好處是大部分這些通常會自動發生。你提出請求，SuperClaude 嘗試找出好的方法，並使用適當的工具和專業知識執行。通常不需要配置或設定 - 只是希望有更好的結果。✨
+好處是，這大部分是自動發生的。你提出請求，SuperClaude 試圖找出一個好的方法，並用適當的工具和專業知識來執行。通常不需要設定 - 只希望有更好的結果。✨
 
 ### 快速功能概覽 🎯
 
-| 元件           | 功能                        | 了解更多 *（可選！）*         |
-| -------------- | --------------------------- | ----------------------------- |
-| **指令**       | 15 個自動啟動的專業工具     | [指令指南](commands-guide.md) |
-| **標誌**       | 大部分自動啟動的修飾符      | [標誌指南](flags-guide.md)    |
-| **人設**       | 11 個知道何時幫助的 AI 專家 | [人設指南](personas-guide.md) |
-| **MCP 伺服器** | 在有用時連接的外部整合      | [本指南](#核心元件-🧩)         |
-| **模式**       | 3 種不同工作流程的操作模式  | [本指南](#三種操作模式-🎭)     |
-| **協調器**     | 讓一切運作的智慧路由        | [本指南](#協調系統-🎯)         |
+| 元件 | 功能 | 了解更多 *(可選！)* |
+|-----------|--------------|------------|
+| **指令** | 15 個會自動啟用的專業工具 | [指令指南](commands-guide.md) |
+| **旗標** | 大部分會自動啟用的修飾符 | [旗標指南](flags-guide.md) |
+| **Persona** | 11 個知道何時該幫忙的 AI 專家 | [Persona 指南](personas-guide.md) |
+| **MCP 伺服器** | 在需要時連接的外部整合 | [本指南](#核心元件-) |
+| **模式** | 3 種適用於不同工作流程的操作模式 | [本指南](#三種操作模式-) |
+| **編排器** | 讓一切運作的智慧路由 | [本指南](#編排器系統-) |
 
-**記住**：你可以在不閱讀任何這些指南的情況下有效使用 SuperClaude。當你對它的運作方式感到好奇時，它們就在這裡！🎪
+**記住**：即使不閱讀任何這些指南，你也可以有效地使用 SuperClaude。它們是為當你對其運作原理感到好奇時準備的！🎪
 
 ---
 
 ## 核心元件 🧩
 
-SuperClaude 由幾個相互連接的系統組成，它們協同工作。以下是每個元件如何融入整體圖景。
+SuperClaude 由幾個相互連接的系統組成。以下是每個元件如何融入整體架構。
 
-### 指令：你的工具包 🛠️
+### 指令：你的工具箱 🛠️
 
-指令是處理特定類型開發工作的專業工具。你得到的不是通用的「幫我處理這個」，而是為不同場景量身打造的專用工具。
+指令是處理特定類型開發工作的專業工具。你得到的是針對不同情境的專用工具，而不是通用的「幫我處理這個」。
 
 **按目的組織的 15 個指令：**
 
 **開發** 🔨
 - `/build` - 專案建置、編譯、打包
-- `/design` - 系統架構和元件設計
+- `/design` - 系統架構與元件設計
 
-**分析** 🔍  
-- `/analyze` - 全面的程式碼和系統分析
-- `/troubleshoot` - 問題調查和除錯
-- `/explain` - 教育性解釋和學習
+**分析** 🔍
+- `/analyze` - 全面的程式碼與系統分析
+- `/troubleshoot` - 問題調查與除錯
+- `/explain` - 教育性解釋與學習
 
 **品質** ✨
-- `/improve` - 程式碼增強和最佳化
-- `/cleanup` - Technical debt reduction
-- `/test` - Testing and coverage analysis
+- `/improve` - 程式碼增強與優化
+- `/cleanup` - 技術債清理
+- `/test` - 測試與覆蓋率分析
 
-**Utilities** 🔧
-- `/document` - Documentation creation
-- `/git` - Enhanced git workflows
-- `/load` - Project context loading
-- `/estimate` - Project estimation
-- `/task` - Long-term project management
-- `/spawn` - Complex operation orchestration
-- `/index` - Command navigation and help
+**工具** 🔧
+- `/document` - 文件建立
+- `/git` - 增強型 git 工作流程
+- `/load` - 專案情境載入
+- `/estimate` - 專案估算
+- `/task` - 長期專案管理
+- `/spawn` - 複雜操作編排
+- `/index` - 指令導航與幫助
 
-Each command has its own flags, auto-activates appropriate personas, and integrates with relevant MCP servers. For detailed examples and usage patterns, see the [Commands Guide](commands-guide.md).
+每個指令都有自己的旗標，會自動啟用適當的 Persona，並與相關的 MCP 伺服器整合。詳細範例和使用模式請參閱[指令指南](commands-guide.md)。
 
-### Flags: Behavior Modifiers 🏁
+### 旗標：行為修飾符 🏁
 
-Flags change how SuperClaude processes your requests. They're like command-line options that modify behavior, add capabilities, or change output style.
+旗標改變 SuperClaude 處理你請求的方式。它們就像是命令列選項，可以修改行為、增加功能或改變輸出風格。
 
-**Key Flag Categories:**
+**主要旗標類別：**
 
-**Planning & Analysis** 🧠
-- `--think` / `--think-hard` / `--ultrathink` - Control thinking depth
-- `--plan` - Show execution plan before running
+**規劃與分析** 🧠
+- `--think` / `--think-hard` / `--ultrathink` - 控制思考深度
+- `--plan` - 執行前顯示執行計畫
 
-**Efficiency & Control** ⚡
-- `--uc` - Ultra-compressed output for large operations
-- `--safe-mode` - Conservative execution with validation
-- `--validate` - Pre-operation risk assessment
+**效率與控制** ⚡
+- `--uc` - 用於大型操作的超壓縮輸出
+- `--safe-mode` - 帶有驗證的保守執行
+- `--validate` - 操作前風險評估
 
-**MCP Server Control** 🔧
-- `--c7` - Enable Context7 for documentation
-- `--seq` - Enable Sequential for complex analysis
-- `--magic` - Enable Magic for UI components
-- `--play` - Enable Playwright for testing
+**MCP 伺服器控制** 🔧
+- `--c7` - 啟用 Context7 以取得文件
+- `--seq` - 啟用 Sequential 以進行複雜分析
+- `--magic` - 啟用 Magic 以產生 UI 元件
+- `--play` - 啟用 Playwright 以進行測試
 
-**Advanced Orchestration** 🎭
-- `--delegate` - Enable sub-agent delegation for parallel processing
-- `--wave-mode` - Multi-stage execution with compound intelligence
-- `--loop` - Iterative improvement mode
+**進階編排** 🎭
+- `--delegate` - 啟用子代理人委派以進行平行處理
+- `--wave-mode` - 具有複合智慧的多階段執行
+- `--loop` - 迭代改進模式
 
-**Focus & Scope** 🎯
-- `--focus security` - Focus on specific domains
-- `--scope project` - Set analysis scope
-- `--persona-[name]` - Activate specific personas
+**焦點與範圍** 🎯
+- `--focus security` - 專注於特定領域
+- `--scope project` - 設定分析範圍
+- `--persona-[name]` - 啟用特定 Persona
 
-Flags often auto-activate based on context. For example, security-related requests usually get `--persona-security` and `--focus security`. See the [Flags Guide](flags-guide.md) for comprehensive details and patterns.
+旗標通常會根據情境自動啟用。例如，與安全相關的請求通常會得到 `--persona-security` 和 `--focus security`。詳細資訊和模式請參閱[旗標指南](flags-guide.md)。
 
-### Personas: AI Specialists 🎭
+### Persona：AI 專家 🎭
 
-Personas are like having a team of specialists available on demand. Each brings different expertise, priorities, and approaches to problems.
+Persona 就像是擁有一支隨時待命的專家團隊。每個 Persona 都帶來不同的專業知識、優先順序和處理問題的方法。
 
-**11 Personas Organized by Domain:**
+**按領域組織的 11 個 Persona：**
 
-**Technical Specialists** 🔧
-- 🏗️ **architect** - Systems design, long-term architecture
-- 🎨 **frontend** - UI/UX, accessibility, frontend performance
-- ⚙️ **backend** - APIs, databases, reliability
-- 🛡️ **security** - Threat modeling, vulnerabilities
-- ⚡ **performance** - Optimization, bottleneck elimination
+**技術專家** 🔧
+- 🏗️ **architect** - 系統設計、長期架構
+- 🎨 **frontend** - UI/UX、無障礙、前端效能
+- ⚙️ **backend** - API、資料庫、可靠性
+- 🛡️ **security** - 威脅模型、漏洞
+- ⚡ **performance** - 優化、瓶頸消除
 
-**Process & Quality** ✨
-- 🔍 **analyzer** - Root cause analysis, investigation
-- 🧪 **qa** - Testing, quality assurance
-- 🔄 **refactorer** - Code quality, technical debt
-- 🚀 **devops** - Infrastructure, deployment
+**流程與品質** ✨
+- 🔍 **analyzer** - 根本原因分析、調查
+- 🧪 **qa** - 測試、品質保證
+- 🔄 **refactorer** - 程式碼品質、技術債
+- 🚀 **devops** - 基礎設施、部署
 
-**Knowledge & Communication** 📚
-- 👨‍🏫 **mentor** - Education, knowledge transfer
-- ✍️ **scribe** - Documentation, technical writing
+**知識與溝通** 📚
+- 👨‍🏫 **mentor** - 教育、知識轉移
+- ✍️ **scribe** - 文件、技術寫作
 
-Personas usually auto-activate based on request patterns but you can override with `--persona-[name]` flags. Each has different priorities (e.g., security persona prioritizes security over speed). See the [Personas Guide](personas-guide.md) for detailed descriptions and examples.
+Persona 通常會根據請求模式自動啟用，但你可以使用 `--persona-[name]` 旗標進行覆蓋。每個 Persona 都有不同的優先順序（例如，security persona 優先考慮安全性而非速度）。詳細描述和範例請參閱[Persona 指南](personas-guide.md)。
 
-### MCP Servers: External Capabilities 🔧
+### MCP 伺服器：外部能力 🔧
 
-MCP (Model Context Protocol) servers provide specialized capabilities beyond Claude's native abilities.
+MCP (Model Context Protocol) 伺服器提供超越 Claude 原生能力的專業功能。
 
-**4 Integrated Servers:**
+**4 個整合伺服器：**
 
 **Context7** 📚
-- **Purpose**: Official library documentation and best practices
-- **When it activates**: Framework questions, external library usage
-- **What it provides**: Up-to-date docs, code examples, patterns
-- **Example**: `/build react-app --c7` gets React best practices
+- **目的**：官方函式庫文件與最佳實踐
+- **啟用時機**：框架問題、外部函式庫使用
+- **提供內容**：最新的文件、程式碼範例、模式
+- **範例**：`/build react-app --c7` 獲取 React 最佳實踐
 
 **Sequential** 🧠
-- **Purpose**: Complex multi-step analysis and systematic thinking
-- **When it activates**: Debugging, system design, `--think` flags
-- **What it provides**: Structured problem-solving, hypothesis testing
-- **Example**: `/troubleshoot "auth randomly fails" --seq`
+- **目的**：複雜的多步驟分析與系統性思考
+- **啟用時機**：除錯、系統設計、`--think` 旗標
+- **提供內容**：結構化問題解決、假設測試
+- **範例**：`/troubleshoot "auth randomly fails" --seq`
 
 **Magic** ✨
-- **Purpose**: Modern UI component generation and design systems
-- **When it activates**: UI component requests, frontend work
-- **What it provides**: React/Vue/Angular components, design patterns
-- **Example**: `/build dashboard --magic` creates modern UI components
+- **目的**：現代 UI 元件產生與設計系統
+- **啟用時機**：UI 元件請求、前端工作
+- **提供內容**：React/Vue/Angular 元件、設計模式
+- **範例**：`/build dashboard --magic` 建立現代 UI 元件
 
 **Playwright** 🎭
-- **Purpose**: Browser automation, E2E testing, performance monitoring
-- **When it activates**: Testing workflows, performance analysis
-- **What it provides**: Cross-browser testing, visual validation, metrics
-- **Example**: `/test e2e --play` runs comprehensive browser tests
+- **目的**：瀏覽器自動化、E2E 測試、效能監控
+- **啟用時機**：測試工作流程、效能分析
+- **提供內容**：跨瀏覽器測試、視覺驗證、指標
+- **範例**：`/test e2e --play` 執行全面的瀏覽器測試
 
-MCP servers usually coordinate automatically but you can control them with `--all-mcp`, `--no-mcp`, or specific flags like `--c7`.
+MCP 伺服器通常會自動協調，但你可以使用 `--all-mcp`、`--no-mcp` 或特定旗標（如 `--c7`）來控制它們。
 
-### How Components Work Together 🤝
+### 元件如何協同運作 🤝
 
-The neat part is when components coordinate:
+最棒的部分是當元件協同運作時：
 
-**Example: Security Analysis Request**
+**範例：安全分析請求**
 ```bash
 /sc:analyze auth-system/ --focus security
 ```
 
-**What usually happens:**
-1. **Command**: `/analyze` handles code analysis
-2. **Flag**: `--focus security` directs attention
-3. **Persona**: 🛡️ security specialist auto-activates
-4. **MCP**: Sequential provides systematic analysis
-5. **Orchestrator**: Routes everything for optimal execution
+**通常會發生什麼：**
+1. **指令**：`/analyze` 處理程式碼分析
+2. **旗標**：`--focus security` 指示焦點
+3. **Persona**：🛡️ security 專家自動啟用
+4. **MCP**：Sequential 提供系統性分析
+5. **編排器**：為最佳執行效果進行路由
 
-**Result**: Security-focused analysis with threat modeling perspective, systematic methodology, and comprehensive coverage.
+**結果**：以安全為重點的分析，具有威脅模型觀點、系統性方法和全面覆蓋。
 
-This coordination usually happens for most requests - SuperClaude tries to figure out a good combination of tools and expertise for your specific need.
+這種協調通常會發生在大多數請求中 - SuperClaude 會試圖為你的特定需求找出工具和專業知識的最佳組合。
 
 ---
 
-## The Three Operational Modes 🎭
+## 三種操作模式 🎭
 
-SuperClaude operates in three distinct modes that optimize different aspects of the development workflow. Understanding these modes helps you get the most out of the framework.
+SuperClaude 在三種不同的模式下運作，以優化開發工作流程的不同方面。了解這些模式有助於你充分利用該框架。
 
-### Task Management Mode 📋
+### 任務管理模式 📋
 
-**What it is**: Structured workflow execution with progress tracking and validation.
+**這是什麼**：具有進度追蹤和驗證的結構化工作流程執行。
 
-**When it's used**: Any multi-step operation that needs tracking and coordination.
+**使用時機**：任何需要追蹤和協調的多步驟操作。
 
-**How it works**: SuperClaude breaks work into manageable tasks, tracks progress, and ensures quality through validation gates.
+**運作方式**：SuperClaude 將工作分解為可管理的任務，追蹤進度，並透過驗證關卡確保品質。
 
-#### Four Layers of Task Management
+#### 四層任務管理
 
-**Layer 1: Session Tasks (TodoRead/TodoWrite)**
-- **Scope**: Current Claude Code session
-- **Capacity**: 3-20 tasks per session
-- **States**: pending 📋, in_progress 🔄, completed ✅, blocked 🚧
-- **Usage**: Real-time progress tracking for immediate work
+**第一層：會話任務 (TodoRead/TodoWrite)**
+- **範圍**：當前的 Claude Code 會話
+- **容量**：每個會話 3-20 個任務
+- **狀態**：pending 📋, in_progress 🔄, completed ✅, blocked 🚧
+- **用途**：即時進度追蹤，用於當前工作
 
 ```bash
-# SuperClaude usually creates and manages session tasks
+# SuperClaude 通常會建立和管理會話任務
 /sc:build large-project/
-# → Creates: "Analyze project structure", "Run build process", "Validate output"
+# → 建立：「分析專案結構」、「執行建置流程」、「驗證輸出」
 ```
 
-**Layer 2: Project Tasks (/task command)**
-- **Scope**: Multi-session features (days to weeks)
-- **Structure**: Hierarchical (Epic → Story → Task)
-- **Persistence**: Cross-session state management
-- **Usage**: Long-term feature development
+**第二層：專案任務 (/task 指令)**
+- **範圍**：多會話功能 (數天至數週)
+- **結構**：階層式 (Epic → Story → Task)
+- **持久性**：跨會話狀態管理
+- **用途**：長期功能開發
 
 ```bash
 /sc:task create "implement user dashboard" --priority high
 /sc:task breakdown "payment integration"
-/sc:task status  # Check current project tasks
+/sc:task status  # 檢查當前專案任務
 ```
 
-**Layer 3: Complex Orchestration (/spawn command)**
-- **Scope**: Complex multi-domain operations
-- **Features**: Parallel/sequential coordination, tool management
-- **Usage**: Operations involving multiple tools/systems
+**第三層：複雜編排 (/spawn 指令)**
+- **範圍**：複雜的多領域操作
+- **功能**：平行/順序協調、工具管理
+- **用途**：涉及多個工具/系統的操作
 
 ```bash
 /sc:spawn deploy-pipeline --parallel
 /sc:spawn setup-dev-environment --monitor
 ```
 
-**Layer 4: Iterative Enhancement (/loop command)**
-- **Scope**: Progressive refinement workflows
-- **Features**: Iteration cycles with validation
-- **Usage**: Quality improvement and refinement
+**第四層：迭代增強 (/loop 指令)**
+- **範圍**：漸進式精煉工作流程
+- **功能**：帶有驗證的迭代週期
+- **用途**：品質改進與精煉
 
 ```bash
 /sc:improve messy-code.js --loop --iterations 3
-# → Iteratively improves code with validation between cycles
+# → 在週期之間透過驗證迭代改進程式碼
 ```
 
-#### Task State Management
+#### 任務狀態管理
 
-**Core Principles**:
-- **Evidence-Based Progress**: Measurable outcomes, not just activity
-- **Single Focus Protocol**: Only one task in_progress at a time
-- **Real-Time Updates**: Immediate status changes as work progresses
-- **Quality Gates**: Validation before marking tasks complete
+**核心原則**：
+- **基於證據的進度**：可衡量的結果，而不僅僅是活動
+- **單一焦點協定**：一次只有一個任務處於 in_progress 狀態，以求清晰
+- **即時更新**：隨著工作進展即時更新狀態
+- **品質關卡**：在標記任務完成前進行驗證
 
-**Task Detection**:
-- Multi-step operations (3+ steps) → Creates task breakdown
-- Keywords: build, implement, create, fix, optimize → Activates task tracking
-- Scope indicators: system, feature, comprehensive → Adds progress monitoring
+**任務偵測**：
+- 多步驟操作 (3+ 步驟) → 建立任務分解
+- 關鍵字：build, implement, create, fix, optimize → 啟動任務追蹤
+- 範圍指標：system, feature, comprehensive → 新增進度監控
 
-### Introspection Mode 🧠
+### 內省模式 🧠
 
-**What it is**: Meta-cognitive analysis that lets SuperClaude examine its own reasoning and decision-making processes.
+**這是什麼**：讓 SuperClaude 檢查自身推理和決策過程的元認知分析。
 
-**When it's used**: Complex problem-solving, framework troubleshooting, learning moments, or when you explicitly request it with `--introspect`.
+**使用時機**：複雜問題解決、框架疑難排解、學習時刻，或當你使用 `--introspect` 明確請求時。
 
-**How it works**: SuperClaude steps outside normal operation to analyze its thinking patterns, decision logic, and action sequences.
+**運作方式**：SuperClaude 跳出正常操作，分析其思維模式、決策邏輯和行動順序。
 
-#### Core Capabilities
+#### 核心能力
 
-**Reasoning Analysis** 🧠
-- Examines logical flow and decision rationale
-- Evaluates chain of thought coherence
-- Identifies assumptions and potential biases
-- Validates reasoning against evidence
+**推理分析** 🧠
+- 檢查邏輯流程和決策理據
+- 評估思維鏈的連貫性
+- 識別假設和潛在偏見
+- 根據證據驗證推理
 
-**Action Sequence Review** 🔄
-- Analyzes tool selection effectiveness
-- Reviews workflow patterns and efficiency
-- Considers alternative approaches
-- Identifies optimization opportunities
+**行動順序審查** 🔄
+- 分析工具選擇的有效性
+- 審查工作流程模式和效率
+- 考慮替代方法
+- 識別優化機會
 
-**Framework Compliance Check** 🔍
-- Validates actions against SuperClaude rules and principles
-- Identifies deviations from standard patterns
-- Provides corrective guidance when needed
-- Ensures quality standards are met
+**框架合規性檢查** 🔍
+- 根據 SuperClaude 規則和原則驗證行動
+- 識別與標準模式的偏差
+- 在需要時提供修正指導
+- 確保符合品質標準
 
-**Learning Recognition** 💡
-- Extracts insights from outcomes
-- Identifies successful patterns for reuse
-- Recognizes knowledge gaps for improvement
-- Suggests future optimization strategies
+**學習識別** 💡
+- 從結果中提取見解
+- 識別成功的模式以供重用
+- 識別知識差距以進行改進
+- 建議未來的優化策略
 
-#### Analysis Markers
+#### 分析標記
 
-When introspection mode is active, you'll see these markers:
+當內省模式啟用時，你會看到這些標記：
 
-- 🧠 **Reasoning Analysis** - Examining logical flow and decisions
-- 🔄 **Action Sequence Review** - Analyzing workflow effectiveness
-- 🎯 **Self-Assessment** - Meta-cognitive evaluation
-- 📊 **Pattern Recognition** - Identifying behavioral patterns
-- 🔍 **Framework Compliance** - Checking rule adherence
-- 💡 **Retrospective Insight** - Learning from outcomes
+- 🧠 **推理分析** - 檢查邏輯流程和決策
+- 🔄 **行動順序審查** - 分析工作流程有效性
+- 🎯 **自我評估** - 元認知評估
+- 📊 **模式識別** - 識別行為模式
+- 🔍 **框架合規性** - 檢查規則遵守情況
+- 💡 **回顧性見解** - 從結果中學習
 
-#### When Introspection Activates
+#### 何時啟用內省
 
-**Usually activates for**:
-- Complex multi-step problems requiring meta-cognitive oversight
-- Error recovery when outcomes don't match expectations
-- Framework discussions or SuperClaude troubleshooting
-- Pattern recognition needs for recurring behaviors
+**通常在以下情況啟用**：
+- 需要元認知監督的複雜多步驟問題
+- 當結果與預期不符時的錯誤恢復
+- 框架討論或 SuperClaude 疑難排解
+- 重複行為的模式識別需求
 
-**Manual activation**:
+**手動啟用**：
 ```bash
 /sc:analyze complex-system/ --introspect
 /sc:troubleshoot "framework confusion" --introspection
 ```
 
-### Token Efficiency Mode ⚡
+### Token 效率模式 ⚡
 
-**What it is**: Intelligent optimization system that maximizes information density while preserving quality.
+**這是什麼**：在保持品質的同時最大化資訊密度的智慧優化系統。
 
-**When it's used**: Large operations, when context approaches limits, or when you need faster execution.
+**使用時機**：大型操作、當情境接近極限時，或當你需要更快的執行速度時。
 
-**How it works**: Adaptive compression using symbols, abbreviations, and structural optimization based on context and persona awareness.
+**運作方式**：基於情境和 Persona 感知的符號、縮寫和結構優化的自適應壓縮。
 
-#### Compression Strategies
+#### 壓縮策略
 
-**5-Level Adaptive Compression**:
-1. **Minimal** (0-40% usage): Full detail with persona-optimized clarity
-2. **Efficient** (40-70% usage): Balanced compression with domain awareness  
-3. **Compressed** (70-85% usage): Aggressive optimization with quality gates
-4. **Critical** (85-95% usage): Maximum compression preserving essential context
-5. **Emergency** (95%+ usage): Ultra-compression with information validation
+**五級自適應壓縮**：
+1. **最小** (0-40% 使用率)：具有 Persona 優化清晰度的完整細節
+2. **高效** (40-70% 使用率)：具有領域感知的平衡壓縮
+3. **壓縮** (70-85% 使用率)：具有品質關卡的積極優化
+4. **關鍵** (85-95% 使用率)：保留必要情境的最大壓縮
+5. **緊急** (95%+ 使用率)：具有資訊驗證的超壓縮
 
-#### Symbol System
+#### 符號系統
 
-**Core Logic & Flow**:
-- `→` leads to, implies (`auth.js:45 → security risk`)
-- `⇒` transforms to (`input ⇒ validated_output`)
-- `&` and, combine (`security & performance`)
-- `»` sequence, then (`build » test » deploy`)
-- `∴` therefore (`tests fail ∴ code broken`)
+**核心邏輯與流程**：
+- `→` 導致、意味著 (`auth.js:45 → security risk`)
+- `⇒` 轉換為 (`input ⇒ validated_output`)
+- `&` 和、結合 (`security & performance`)
+- `»` 順序、然後 (`build » test » deploy`)
+- `∴` 因此 (`tests fail ∴ code broken`)
 
-**Status & Progress**:
-- ✅ completed, passed
-- ❌ failed, error  
-- ⚠️ warning
-- 🔄 in progress
-- 🎯 target, goal
+**狀態與進度**：
+- ✅ 完成、通過
+- ❌ 失敗、錯誤
+- ⚠️ 警告
+- 🔄 進行中
+- 🎯 目標、目的
 
-**Technical Domains**:
-- ⚡ Performance
-- 🔍 Analysis
-- 🛡️ Security
-- 📦 Deployment
-- 🎨 Design
+**技術領域**：
+- ⚡ 效能
+- 🔍 分析
+- 🛡️ 安全
+- 📦 部署
+- 🎨 設計
 
-#### Activation Strategy
+#### 啟用策略
 
-**Usually activates when**:
-- Context usage &gt;75% → Enables compression
-- Large-scale operations → Prevents token overflow
-- Complex orchestration → Optimizes communication
+**通常在以下情況啟用**：
+- 情境使用率 > 75% → 啟用壓縮
+- 大規模操作 → 防止 token 溢出
+- 複雜編排 → 優化溝通
 
-**Manual activation**:
+**手動啟用**：
 ```bash
-/sc:analyze huge-codebase/ --uc  # Ultra-compressed mode
-/sc:improve legacy-system/ --uc --delegate auto  # Efficient large operations
+/sc:analyze huge-codebase/ --uc  # 超壓縮模式
+/sc:improve legacy-system/ --uc --delegate auto  # 高效的大型操作
 ```
 
-**Performance Goals** (still improving!):
-- Target: ~30-50% token reduction
-- Quality: Tries to preserve ~95% of information
-- Speed: Usually &lt;100ms compression decisions
-- Integration: Works with framework components
+**效能目標** (仍在改進中！)：
+- 目標：約 30-50% 的 token 減少
+- 品質：試圖保留約 95% 的資訊
+- 速度：通常 <100ms 的壓縮決策
+- 整合：與框架元件協同運作
 
-#### Mode Integration
+#### 模式整合
 
-The three modes often work together:
+三種模式通常會協同運作：
 
 ```bash
 /sc:improve large-legacy-system/ --wave-mode auto --uc --introspect
 ```
 
-**What happens**:
-- **Task Management**: Creates structured improvement plan with progress tracking
-- **Token Efficiency**: Compresses output for large-scale operation
-- **Introspection**: Analyzes improvement strategy and validates approach
+**發生了什麼**：
+- **任務管理**：建立具有進度追蹤的結構化改進計畫
+- **Token 效率**：為大規模操作壓縮輸出
+- **內省**：分析改進策略並驗證方法
 
 ---
 
-## The Orchestrator System 🎯
+## 編排器系統 🎯
 
-The orchestrator is SuperClaude's intelligent routing system that tries to analyze your requests and coordinate a good combination of tools, personas, and integrations. It's what hopefully makes SuperClaude feel smart and responsive rather than just a collection of separate tools.
+編排器是 SuperClaude 的智慧路由系統，它會試圖分析你的請求，並協調工具、Persona 和整合的最佳組合。這就是希望讓 SuperClaude 感覺聰明和反應靈敏，而不僅僅是獨立工具的集合的原因。
 
-### How the Orchestrator Works 🔄
+### 編排器如何運作 🔄
 
-**Think of it as a smart dispatcher** that:
-1. **Analyzes** your request to understand intent and complexity
-2. **Routes** to the best combination of commands, flags, personas, and MCP servers
-3. **Coordinates** execution for optimal results
-4. **Validates** through quality gates to ensure good outcomes
-5. **Optimizes** performance and resource usage
+**把它想像成一個聰明的調度員**，它會：
+1. **分析**你的請求以了解意圖和複雜性
+2. **路由**到指令、旗標、Persona 和 MCP 伺服器的最佳組合
+3. **協調**執行以獲得最佳結果
+4. **透過**品質關卡進行驗證以確保良好的結果
+5. **優化**效能和資源使用
 
-### Detection Engine 🧠
+### 偵測引擎 🧠
 
-The detection engine analyzes every request through multiple lenses:
+偵測引擎透過多個視角分析每個請求：
 
-#### Pattern Recognition
+#### 模式識別
 
-**Complexity Detection**:
-- **Simple**: Single file operations, basic tasks (&lt;3 steps) → Direct execution
-- **Moderate**: Multi-file operations, analysis tasks (3-10 steps) → Standard routing
-- **Complex**: System-wide changes, architectural decisions (&gt;10 steps) → Advanced orchestration
+**複雜度偵測**：
+- **簡單**：單一檔案操作、基本任務 (<3 步驟) → 直接執行
+- **中等**：多檔案操作、分析任務 (3-10 步驟) → 標準路由
+- **複雜**：全系統變更、架構決策 (>10 步驟) → 進階編排
 
-**Domain Identification**:
-- **Frontend**: Keywords like "UI", "component", "responsive" → 🎨 frontend persona + Magic MCP
-- **Backend**: Keywords like "API", "database", "service" → ⚙️ backend persona + Context7 MCP
-- **Security**: Keywords like "vulnerability", "auth", "compliance" → 🛡️ security persona + Sequential MCP
-- **Performance**: Keywords like "slow", "optimize", "bottleneck" → ⚡ performance persona + Playwright MCP
+**領域識別**：
+- **前端**：關鍵字如「UI」、「component」、「responsive」 → 🎨 frontend persona + Magic MCP
+- **後端**：關鍵字如「API」、「database」、「service」 → ⚙️ backend persona + Context7 MCP
+- **安全**：關鍵字如「vulnerability」、「auth」、「compliance」 → 🛡️ security persona + Sequential MCP
+- **效能**：關鍵字如「slow」、「optimize」、「bottleneck」 → ⚡ performance persona + Playwright MCP
 
-**Operation Type Classification**:
-- **Analysis**: "analyze", "review", "understand" → Sequential MCP + analyzer persona
-- **Creation**: "create", "build", "implement" → Magic MCP (if UI) or Context7 (patterns)
-- **Modification**: "improve", "refactor", "optimize" → Appropriate specialist persona
-- **Debugging**: "troubleshoot", "fix", "debug" → Sequential MCP + analyzer persona
+**操作類型分類**：
+- **分析**：「analyze」、「review」、「understand」 → Sequential MCP + analyzer persona
+- **建立**：「create」、「build」、「implement」 → Magic MCP (如果是 UI) 或 Context7 (模式)
+- **修改**：「improve」、「refactor」、「optimize」 → 適當的專家 Persona
+- **除錯**：「troubleshoot」、「fix」、「debug」 → Sequential MCP + analyzer persona
 
-#### Auto-Activation Logic
+#### 自動啟用邏輯
 
-**High-Confidence Triggers** (90%+ activation):
+**高信度觸發** (90%+ 啟用率)：
 ```bash
 /sc:analyze auth-system/ --focus security
-# → 🛡️ security persona + Sequential MCP + --validate flag
+# → 🛡️ security persona + Sequential MCP + --validate 旗標
 ```
 
-**Context-Based Activation**:
+**基於情境的啟用**：
 ```bash
 /sc:build react-components/
-# → 🎨 frontend persona + Magic MCP + --c7 flag (React docs)
+# → 🎨 frontend persona + Magic MCP + --c7 旗標 (React 文件)
 ```
 
-**Performance-Based Activation**:
+**基於效能的啟用**：
 ```bash
-# When context usage &gt;75%
+# 當情境使用率 > 75%
 /sc:analyze large-project/
-# → Auto-adds --uc flag for compression
+# → 自動加入 --uc 旗標進行壓縮
 ```
 
-### Routing Intelligence 🚦
+### 路由智慧 🚦
 
-The routing system uses dynamic decision trees to map detected patterns to optimal tool combinations.
+路由系統使用動態決策樹將偵測到的模式對應到最佳的工具組合。
 
-#### Master Routing Table
+#### 主路由表
 
-| Request Pattern        | Usually Auto-Activates                    | How Often    | Why                             |
-| ---------------------- | ----------------------------------------- | ------------ | ------------------------------- |
-| "analyze architecture" | 🏗️ architect + --ultrathink + Sequential   | Most times   | Complex system analysis         |
-| "create UI component"  | 🎨 frontend + Magic + --uc                 | Pretty often | Frontend domain with generation |
-| "security audit"       | 🛡️ security + --ultrathink + Sequential    | Most times   | Security expertise needed       |
-| "debug complex issue"  | 🔍 analyzer + --think + Sequential         | Often        | Investigation methodology       |
-| "improve performance"  | ⚡ performance + --think-hard + Playwright | Pretty often | Performance expertise + testing |
+| 請求模式 | 通常自動啟用 | 頻率 | 原因 |
+|----------------|----------------|------------|-----|
+| "analyze architecture" | 🏗️ architect + --ultrathink + Sequential | 大多數時候 | 複雜的系統分析 |
+| "create UI component" | 🎨 frontend + Magic + --uc | 相當頻繁 | 帶有產生的前端領域 |
+| "security audit" | 🛡️ security + --ultrathink + Sequential | 大多數時候 | 需要安全專業知識 |
+| "debug complex issue" | 🔍 analyzer + --think + Sequential | 經常 | 調查方法論 |
+| "improve performance" | ⚡ performance + --think-hard + Playwright | 相當頻繁 | 效能專業知識 + 測試 |
 
-#### Intelligent Coordination
+#### 智慧協調
 
-**Multi-Server Operations**:
+**多伺服器操作**：
 ```bash
 /sc:design user-dashboard --type api
 ```
-**Orchestrator usually coordinates**:
-- 🏗️ architect persona (system design)
-- 🎨 frontend persona (UI design) 
-- Context7 MCP (framework patterns)
-- Sequential MCP (design methodology)
+**編排器通常會協調**：
+- 🏗️ architect persona (系統設計)
+- 🎨 frontend persona (UI 設計)
+- Context7 MCP (框架模式)
+- Sequential MCP (設計方法論)
 
-**Fallback Strategies**:
-- Context7 unavailable → WebSearch for documentation → Manual implementation
-- Sequential timeout → Native Claude analysis → Note limitations
-- Magic failure → Basic component generation → Suggest manual enhancement
+**備援策略**：
+- Context7 不可用 → WebSearch 尋找文件 → 手動實作
+- Sequential 超時 → 原生 Claude 分析 → 註明限制
+- Magic 失敗 → 基本元件產生 → 建議手動增強
 
-### Quality Gates & Validation Framework ✅
+### 品質關卡與驗證框架 ✅
 
-SuperClaude tries to implement an 8-step validation cycle for operations:
+SuperClaude 試圖為操作實施一個 8 步驟的驗證週期：
 
-#### 8-Step Quality Process
+#### 8 步驟品質流程
 
-1. **Syntax Validation** - Language parsers + Context7 standards
-2. **Type Checking** - Sequential analysis + compatibility verification
-3. **Linting** - Context7 rules + quality analysis
-4. **Security Review** - Sequential analysis + OWASP compliance
-5. **Testing** - Playwright E2E + coverage analysis (aiming for good coverage)
-6. **Performance** - Sequential analysis + benchmarking
-7. **Documentation** - Context7 patterns + completeness validation
-8. **Integration** - Playwright testing + deployment validation
+1. **語法驗證** - 語言解析器 + Context7 標準
+2. **類型檢查** - Sequential 分析 + 相容性驗證
+3. **程式碼風格檢查** - Context7 規則 + 品質分析
+4. **安全審查** - Sequential 分析 + OWASP 合規性
+5. **測試** - Playwright E2E + 覆蓋率分析 (目標是良好的覆蓋率)
+6. **效能** - Sequential 分析 + 基準測試
+7. **文件** - Context7 模式 + 完整性驗證
+8. **整合** - Playwright 測試 + 部署驗證
 
-#### Validation Automation
+#### 驗證自動化
 
-**Continuous Integration**:
-- CI/CD pipeline integration
-- Progressive validation with early failure detection
-- Evidence generation with comprehensive metrics
+**持續整合**：
+- CI/CD 管線整合
+- 具有早期失敗偵測的漸進式驗證
+- 具有全面指標的證據產生
 
-**Intelligent Monitoring**:
-- Success rate tracking with ML prediction
-- Adaptive validation based on historical patterns
-- Automatic optimization of validation strategies
+**智慧監控**：
+- 使用機器學習預測的成功率追蹤
+- 基於歷史模式的自適應驗證
+- 自動優化驗證策略
 
-### Performance Optimization ⚡
+### 效能優化 ⚡
 
-The orchestrator tries to optimize for good performance through several strategies:
+編排器試圖透過幾種策略來優化效能：
 
-#### Resource Management
+#### 資源管理
 
-**Token Allocation**:
-- Detection Engine: 1-2K tokens for pattern analysis
-- Decision Trees: 500-1K tokens for routing logic
-- MCP Coordination: Variable based on activated servers
-- Reserve: 10% buffer for unexpected complexity
+**Token 分配**：
+- 偵測引擎：1-2K tokens 用於模式分析
+- 決策樹：500-1K tokens 用於路由邏輯
+- MCP 協調：根據啟用的伺服器而變動
+- 預備：10% 的緩衝區用於應對意外的複雜性
 
-**Operation Batching**:
-- **Parallel execution** when no dependencies exist
-- **Context sharing** across related operations
-- **Cache strategies** for successful routing patterns
-- **Smart queuing** to prevent resource exhaustion
+**操作批次處理**：
+- **平行執行** 當沒有依賴關係時
+- **情境共享** 於相關操作之間
+- **快取策略** 用於成功的路由模式
+- **智慧佇列** 以防止資源耗盡
 
-#### Advanced Orchestration
+#### 進階編排
 
-**Sub-Agent Delegation**:
+**子代理人委派**：
 ```bash
-# Auto-activates when &gt;7 directories or &gt;50 files detected
+# 當偵測到 >7 個目錄或 >50 個檔案時自動啟用
 /sc:analyze monorepo/
-# → --delegate auto flag + parallel processing
+# → --delegate auto 旗標 + 平行處理
 ```
 
-**Wave Orchestration**:
+**Wave 編排**：
 ```bash
-# Auto-activates when complexity &gt;0.7 + files &gt;20 + operation types &gt;2
+# 當複雜度 >0.7 + 檔案 >20 + 操作類型 >2 時自動啟用
 /sc:improve legacy-system/
-# → --wave-mode auto + multi-stage execution
+# → --wave-mode auto + 多階段執行
 ```
 
-### Real-World Orchestration Examples 💡
+### 真實世界編排範例 💡
 
-#### Example 1: Security Analysis Request
+#### 範例 1：安全分析請求
 ```bash
 /sc:analyze user-auth/ --focus security
 ```
 
-**Orchestrator Analysis**:
-- Domain: Security (high confidence)
-- Complexity: Moderate (authentication system)
-- Operation: Analysis + scanning
+**編排器分析**：
+- 領域：安全 (高信度)
+- 複雜度：中等 (驗證系統)
+- 操作：分析 + 掃描
 
-**Usually coordinates**:
-- 🛡️ security persona (threat modeling perspective)
-- Sequential MCP (systematic analysis)
-- --validate flag (pre-operation safety check)
-- --think flag (complex security patterns)
+**通常會協調**：
+- 🛡️ security persona (威脅模型觀點)
+- Sequential MCP (系統性分析)
+- --validate 旗標 (操作前安全檢查)
+- --think 旗標 (複雜的安全模式)
 
-**Quality Gates**: All 8 steps with emphasis on security validation
+**品質關卡**：所有 8 個步驟，重點是安全驗證
 
-#### Example 2: Frontend Performance Optimization
+#### 範例 2：前端效能優化
 ```bash
 /sc:improve slow-dashboard/ --focus performance
 ```
 
-**Orchestrator Analysis**:
-- Domain: Frontend + Performance (dual expertise needed)
-- Complexity: High (performance optimization)
-- Operation: Improvement + validation
+**編排器分析**：
+- 領域：前端 + 效能 (需要雙重專業知識)
+- 複雜度：高 (效能優化)
+- 操作：改進 + 驗證
 
-**Usually coordinates**:
-- ⚡ performance persona (primary)
-- 🎨 frontend persona (secondary, if UI detected)
-- Playwright MCP (performance testing)
-- --think-hard flag (complex optimization)
+**通常會協調**：
+- ⚡ performance persona (主要)
+- 🎨 frontend persona (次要，如果偵測到 UI)
+- Playwright MCP (效能測試)
+- --think-hard 旗標 (複雜的優化)
 
-**Quality Gates**: Performance-focused validation with benchmarking
+**品質關卡**：以效能為重點的驗證與基準測試
 
-#### Example 3: Large Codebase Analysis  
+#### 範例 3：大型程式碼庫分析
 ```bash
 /sc:analyze enterprise-monorepo/
 ```
 
-**Orchestrator Analysis**:
-- Scope: Large (&gt;50 files detected)
-- Complexity: High (enterprise-scale)
-- Resources: High token usage predicted
+**編排器分析**：
+- 範圍：大 (>50 個檔案偵測到)
+- 複雜度：高 (企業級)
+- 資源：預測高 token 使用量
 
-**Usually coordinates**:
-- --delegate auto flag (parallel processing)
-- --uc flag (token optimization)
-- 🏗️ architect persona (system-level analysis)
-- Sequential MCP (structured analysis)
+**通常會協調**：
+- --delegate auto 旗標 (平行處理)
+- --uc 旗標 (token 優化)
+- 🏗️ architect persona (系統級分析)
+- Sequential MCP (結構化分析)
 
-**Quality Gates**: Distributed validation across sub-agents
+**品質關卡**：跨子代理人的分散式驗證
 
-### Orchestrator Configuration ⚙️
+### 編排器設定 ⚙️
 
-**Performance Settings**:
+**效能設定**：
 ```yaml
 orchestrator_config:
   enable_caching: true
@@ -743,7 +745,7 @@ orchestrator_config:
   emergency_threshold: 90%
 ```
 
-**Intelligence Settings**:
+**智慧設定**：
 ```yaml
   learning_enabled: true
   confidence_threshold: 0.7
@@ -751,2309 +753,2308 @@ orchestrator_config:
   wave_score_threshold: 0.7
 ```
 
-The orchestrator tries to learn from successful patterns and improve future routing decisions based on outcomes.
+編排器會試圖從成功的模式中學習，並根據結果改進未來的路由決策。
 
 ---
 
-## Rules & Principles 📏
+## 規則與原則 📏
 
-SuperClaude operates according to core rules and principles that ensure consistent, reliable, and helpful behavior. Understanding these helps you predict how SuperClaude will approach problems and why it makes certain decisions.
+SuperClaude 根據核心規則和原則運作，以確保一致、可靠和有幫助的行為。了解這些有助於你預測 SuperClaude 將如何處理問題，以及為什麼它會做出某些決定。
 
-### Core Operational Rules ⚖️
+### 核心操作規則 ⚖️
 
-These are the core rules that SuperClaude tries to follow:
+這些是 SuperClaude 試圖遵循的核心規則：
 
-#### File Operation Security 🔐
-- **Always Read before Write/Edit** - SuperClaude never modifies files without understanding current content
-- **Use absolute paths only** - Prevents path traversal attacks and ensures reliable file operations
-- **Never auto-commit** - SuperClaude won't commit changes to git unless explicitly requested
-- **Prefer batch operations** - Multiple related changes are grouped for consistency
+#### 檔案操作安全 🔐
+- **寫入/編輯前務必讀取** - SuperClaude 在不了解當前內容的情況下絕不修改檔案
+- **僅使用絕對路徑** - 防止路徑遍歷攻擊並確保可靠的檔案操作
+- **絕不自動提交** - 除非明確要求，否則 SuperClaude 不會將變更提交到 git
+- **偏好批次操作** - 將多個相關變更分組以保持一致性
 
-**Why this matters**: These rules prevent data loss, security vulnerabilities, and unintended modifications to your codebase.
+**> ⚠️ 注意**：這些規則可防止資料遺失、安全漏洞和對程式碼庫的意外修改。
 
-#### Task Management Rules 📋
-- **Evidence-based progress** - Tasks are only marked complete when there's measurable evidence
-- **Single focus protocol** - Only one task is "in_progress" at a time for clarity
-- **Quality gates** - All operations include validation steps before completion
-- **Context retention** - Tries to preserve context well across operations
+#### 任務管理規則 📋
+- **基於證據的進度** - 只有在有可衡量的證據時，任務才會被標記為完成
+- **單一焦點協定** - 為求清晰，一次只有一個任務處於「進行中」狀態
+- **品質關卡** - 所有操作在完成前都包含驗證步驟
+- **情境保留** - 試圖在操作之間良好地保留情境
 
-**Why this matters**: Ensures reliable progress tracking and prevents work from being lost or forgotten.
+**> ⚠️ 注意**：確保可靠的進度追蹤，並防止工作遺失或被遺忘。
 
-#### Framework Compliance Rules 🎯
-- **Check dependencies first** - Always verify package.json/requirements.txt before using libraries
-- **Follow existing patterns** - Respect project conventions, import styles, and architecture
-- **Systematic codebase changes** - Complete discovery before making project-wide modifications
-- **Validate completion** - Verify changes work and don't break existing functionality
+#### 框架合規性規則 🎯
+- **先檢查依賴關係** - 在使用函式庫之前，務必驗證 package.json/requirements.txt
+- **遵循現有模式** - 尊重專案慣例、匯入風格和架構
+- **系統性的程式碼庫變更** - 在進行全專案修改之前完成探索
+- **驗證完成** - 驗證變更是否有效且未破壞現有功能
 
-**Why this matters**: Maintains code quality and consistency with your existing project structure.
+**> ⚠️ 注意**：維持程式碼品質並與你現有的專案結構保持一致。
 
-### Development Principles 🛠️
+### 開發原則 🛠️
 
-These principles guide how SuperClaude approaches development problems:
+這些原則指導 SuperClaude 如何處理開發問題：
 
-#### Evidence-Based Decision Making 📊
-**Primary Directive**: "Evidence > assumptions | Code > documentation | Efficiency > verbosity"
+#### 基於證據的決策 📊
+**主要指令**：「證據 > 假設 | 程式碼 > 文件 | 效率 > 冗長」
 
-- **Measure before optimizing** - Performance improvements based on actual metrics
-- **Test hypotheses systematically** - Claims supported by verifiable data
-- **Document decision rationale** - Clear reasoning for architectural choices
-- **Learn from outcomes** - Continuous improvement based on results
+- **優化前先測量** - 基於實際指標的效能改進
+- **系統性地測試假設** - 由可驗證資料支持的主張
+- **記錄決策理據** - 清晰的架構選擇理由
+- **從結果中學習** - 基於結果的持續改進
 
-**In practice**:
+**實務上**：
 ```bash
 /sc:improve slow-api/ --focus performance
-# → Measures current performance, identifies bottlenecks, optimizes based on data
+# → 測量當前效能，識別瓶頸，並根據資料進行優化
 ```
 
-#### SOLID Design Principles 🏗️
-- **Single Responsibility** - Each component has one reason to change
-- **Open/Closed** - Open for extension, closed for modification
-- **Liskov Substitution** - Derived classes substitutable for base classes
-- **Interface Segregation** - No forced dependencies on unused interfaces
-- **Dependency Inversion** - Depend on abstractions, not concretions
+#### SOLID 設計原則 🏗️
+- **單一職責** - 每個元件只有一個變更的理由
+- **開放/封閉** - 對擴展開放，對修改封閉
+- **里氏替換** - 衍生類別可替換其基礎類別
+- **介面隔離** - 不強制依賴未使用的介面
+- **依賴反轉** - 依賴抽象，而非具體實作
 
-**Why SuperClaude follows these**: Leads to maintainable, scalable, and flexible code that's easier to understand and modify.
+**> ⚠️ 注意**：SuperClaude 遵循這些原則，可以產生可維護、可擴展且靈活的程式碼，更容易理解和修改。
 
-#### Quality Philosophy ✨
-- **Prevention over detection** - Build quality in rather than test it in
-- **Simplicity over complexity** - Choose the simplest solution that works
-- **Maintainability over cleverness** - Code should be easy to understand and modify
-- **Security by default** - Implement secure patterns from the start
+#### 品質哲學 ✨
+- **預防勝於偵測** - 將品質內建，而非事後測試
+- **簡單勝於複雜** - 選擇能運作的最簡單解決方案
+- **可維護性勝於技巧性** - 程式碼應易於理解和修改
+- **預設安全** - 從一開始就實施安全模式
 
-#### Senior Developer Mindset 🎓
-SuperClaude approaches problems like an experienced developer:
+#### 資深開發者心態 🎓
+SuperClaude 像經驗豐富的開發者一樣處理問題：
 
-- **Systems thinking** - Consider impacts across the entire system
-- **Long-term perspective** - Decisions evaluated against multiple time horizons
-- **Risk calibration** - Distinguish between acceptable and unacceptable risks
-- **Stakeholder awareness** - Balance technical perfection with practical constraints
+- **系統性思維** - 考慮對整個系統的影響
+- **長遠眼光** - 從多個時間維度評估決策
+- **風險校準** - 區分可接受和不可接受的風險
+- **利害關係人意識** - 平衡技術完美與實際限制
 
-### How Rules & Principles Affect You 💡
+### 規則與原則如何影響你 💡
 
-#### Predictable Behavior
-Because SuperClaude follows consistent rules, you can predict how it will approach problems:
+#### 可預測的行為
+因為 SuperClaude 遵循一致的規則，你可以預測它將如何處理問題：
 
 ```bash
 /sc:improve legacy-authentication/
 ```
-**You can expect**:
-- Reading existing code before suggesting changes
-- Following your project's existing patterns
-- Security-first approach (security persona likely activates)
-- Evidence-based recommendations with reasoning
-- Quality gates before marking improvements complete
+**你可以預期**：
+- 在建議變更前讀取現有程式碼
+- 遵循你專案的現有模式
+- 安全優先的方法 (安全 Persona 可能會啟用)
+- 帶有理由的基於證據的建議
+- 在標記改進完成前的品質關卡
 
-#### Quality Assurance
-The principles ensure high-quality outcomes:
+#### 品質保證
+這些原則確保高品質的結果：
 
-- **Tries to avoid magic changes** - SuperClaude usually explains its reasoning
-- **Aims for no breaking changes** - Tries to preserve existing functionality
-- **Security-conscious** - Security principles are important
-- **Debt-aware** - Tries to maintain or reduce complexity
+- **試圖避免神奇的變更** - SuperClaude 通常會解釋其理由
+- **目標是無破壞性變更** - 試圖保留現有功能
+- **具有安全意識** - 安全原則很重要
+- **具有技術債意識** - 試圖維持或降低複雜性
 
-#### Transparency
-You should usually understand what SuperClaude is doing and why:
+#### 透明度
+你通常應該了解 SuperClaude 在做什麼以及為什麼：
 
 ```bash
 /sc:analyze --introspect complex-system/
 ```
-**Shows you**:
-- Decision-making process
-- Rule application
-- Principle adherence
-- Alternative approaches considered
+**向你展示**：
+- 決策過程
+- 規則應用
+- 原則遵守情況
+- 考慮過的替代方法
 
-### Examples of Rules & Principles in Action 🎯
+### 規則與原則實例 🎯
 
-#### Example 1: Systematic Refactoring
-**Request**: "Clean up this messy codebase"
+#### 範例 1：系統性重構
+**請求**：「清理這個混亂的程式碼庫」
 
-**Rules Applied**:
-- Complete discovery before changes (searches entire codebase)
-- Read all files before modifications
-- Follow existing project patterns
-- Validate completion with evidence
+**應用的規則**：
+- 變更前完成探索 (搜尋整個程式碼庫)
+- 修改前讀取所有檔案
+- 遵循現有專案模式
+- 用證據驗證完成
 
-**Principles Applied**:
-- Simplicity over complexity (reduces unnecessary complexity)
-- Evidence-based decisions (measures complexity before/after)
-- Quality assurance (comprehensive testing)
-- Long-term maintainability (considers future modifications)
+**應用的原則**：
+- 簡單勝於複雜 (減少不必要的複雜性)
+- 基於證據的決策 (測量變更前後的複雜性)
+- 品質保證 (全面測試)
+- 長期可維護性 (考慮未來的修改)
 
-#### Example 2: Security Implementation
-**Request**: "Add authentication to our API"
+#### 範例 2：安全性實作
+**請求**：「為我們的 API 新增驗證功能」
 
-**Rules Applied**:
-- Security persona usually auto-activates
-- Never compromise on security fundamentals
-- Check existing patterns first
-- Quality gates include security validation
+**應用的規則**：
+- 安全 Persona 通常會自動啟用
+- 絕不在安全基礎上妥協
+- 先檢查現有模式
+- 品質關卡包含安全驗證
 
-**Principles Applied**:
-- Security by default (implements secure patterns)
-- Defense in depth (multiple security layers)
-- Evidence-based approach (follows established security patterns)
-- Systems thinking (considers impact on entire application)
+**應用的原則**：
+- 預設安全 (實施安全模式)
+- 深度防禦 (多層安全防護)
+- 基於證據的方法 (遵循已建立的安全模式)
+- 系統性思維 (考慮對整個應用程式的影響)
 
-#### Example 3: Performance Optimization
-**Request**: "This page loads slowly"
+#### 範例 3：效能優化
+**請求**：「這個頁面載入很慢」
 
-**Rules Applied**:
-- Measure before optimizing
-- Evidence-based progress tracking
-- Validate improvements with metrics
-- Maintain existing functionality
+**應用的規則**：
+- 優化前先測量
+- 基於證據的進度追蹤
+- 用指標驗證改進
+- 維持現有功能
 
-**Principles Applied**:
-- Measurement-driven optimization
-- User experience focus
-- Systematic methodology
-- Prevention over detection (identifies root causes)
+**應用的原則**：
+- 以測量為驅動的優化
+- 專注於使用者體驗
+- 系統化的方法論
+- 預防勝於偵測 (識別根本原因)
 
-### Rule Enforcement & Quality Gates 🚨
+### 規則執行與品質關卡 🚨
 
-SuperClaude enforces rules through its quality gate system:
+SuperClaude 透過其品質關卡系統執行規則：
 
-#### Enforcement Approach
-- **Pre-operation validation** - Checks risks before starting
-- **Real-time monitoring** - Tracks rule compliance during execution
-- **Post-operation verification** - Confirms rules were followed
-- **Evidence collection** - Documents compliance for transparency
+#### 執行方法
+- **操作前驗證** - 開始前檢查風險
+- **即時監控** - 執行期間追蹤規則遵守情況
+- **操作後驗證** - 確認規則已遵守
+- **證據收集** - 記錄遵守情況以求透明
 
-#### When Rules Are Challenged
-Sometimes rules might seem to conflict with immediate needs:
+#### 當規則受到挑戰時
+有時規則似乎與當前需求衝突：
 
-**Example**: "Just make this work quickly, don't worry about quality"
+**範例**：「只要讓它快點運作，不用擔心品質」
 
-**SuperClaude's response**:
-- Acknowledges the urgency
-- Explains why quality rules matter for long-term success
-- Offers compromise solutions that maintain essential rules
-- Documents risks if quality standards are relaxed
+**SuperClaude 的回應**：
+- 承認其急迫性
+- 解釋為什麼品質規則對長期成功很重要
+- 提供維持基本規則的折衷方案
+- 如果放寬品質標準，則記錄風險
 
-### Principles That Guide Persona Behavior 🎭
+### 指導 Persona 行為的原則 🎭
 
-Each persona follows the core principles but emphasizes different aspects:
+每個 Persona 都遵循核心原則，但強調不同方面：
 
-- **🛡️ Security persona**: Security > compliance > reliability > performance
-- **⚡ Performance persona**: Measure first > optimize critical path > user experience
-- **🏗️ Architect persona**: Long-term maintainability > scalability > performance
-- **🎨 Frontend persona**: User needs > accessibility > performance > technical elegance
+- **🛡️ Security persona**：安全性 > 合規性 > 可靠性 > 效能
+- **⚡ Performance persona**：先測量 > 優化關鍵路徑 > 使用者體驗
+- **🏗️ Architect persona**：長期可維護性 > 可擴展性 > 效能
+- **🎨 Frontend persona**：使用者需求 > 無障礙 > 效能 > 技術優雅
 
-**Why this matters**: You can predict how different personas will prioritize trade-offs based on their core principles.
+**> ⚠️ 注意**：你可以根據不同 Persona 的核心原則來預測它們將如何權衡取捨。
 
-### Living Principles 🌱
+### 活的原則 🌱
 
-These rules and principles aren't set in stone. They evolve based on:
+這些規則和原則並非一成不變。它們會根據以下因素演變：
 
-- **Community feedback** - Real-world usage patterns inform improvements
-- **Outcome analysis** - Successful patterns are reinforced
-- **Technology changes** - Principles adapt to new development practices
-- **User needs** - Rules balance flexibility with consistency
+- **社群回饋** - 真實世界的使用模式為改進提供資訊
+- **結果分析** - 成功的模式會被強化
+- **技術變革** - 原則適應新的開發實踐
+- **使用者需求** - 規則在靈活性與一致性之間取得平衡
 
-The goal is to maintain helpful, predictable behavior while adapting to the changing landscape of software development.
+目標是在適應軟體開發不斷變化的格局的同時，維持有幫助、可預測的行為。
 
 ---
 
-## Getting Started Workflows 🛣️
+## 入門工作流程 🛣️
 
-Now that you understand SuperClaude's components, let's look at practical workflows for different development scenarios. These patterns will help you get productive quickly.
+現在你了解了 SuperClaude 的元件，讓我們來看看不同開發情境的實用工作流程。這些模式將幫助你快速上手。
 
-### First-Time Setup 🎬
+### 首次設定 🎬
 
-If you haven't installed SuperClaude yet, see the [Installation Guide](installation-guide.md). Once installed, here's how to get started:
+如果你還沒安裝 SuperClaude，請參閱[安裝指南](installation-guide.md)。安裝後，可以這樣開始：
 
-#### Quick Verification
+#### 快速驗證
 ```bash
-# Test basic functionality
-/sc:help                    # Should show SuperClaude commands
-/sc:analyze README.md       # Try analyzing a simple file
-/sc:build --help           # Check command options
+# 測試基本功能
+/sc:help                    # 應該會顯示 SuperClaude 指令
+/sc:analyze README.md       # 嘗試分析一個簡單的檔案
+/sc:build --help           # 檢查指令選項
 ```
 
-#### Understanding Auto-Activation
-Try these commands to see how SuperClaude automatically chooses the right tools:
+#### 理解自動啟用
+試試這些指令，看看 SuperClaude 如何自動選擇合適的工具：
 
 ```bash
-# Frontend work → frontend persona + Magic MCP
+# 前端工作 → frontend persona + Magic MCP
 /sc:build src/components/
 
-# Security analysis → security persona + Sequential MCP  
+# 安全分析 → security persona + Sequential MCP
 /sc:analyze auth/ --focus security
 
-# Performance investigation → performance persona + Playwright MCP
+# 效能調查 → performance persona + Playwright MCP
 /sc:analyze --focus performance slow-endpoints/
 ```
 
-Watch for auto-activated flags and personas in the output. This shows SuperClaude's intelligent routing in action.
+注意輸出中自動啟用的旗標和 Persona。這顯示了 SuperClaude 的智慧路由正在運作。
 
-### Development Workflow Patterns 🔄
+### 開發工作流程模式 🔄
 
-#### New Project Onboarding
-When starting work on an unfamiliar project:
+#### 新專案上手
+在開始一個不熟悉的專案時：
 
 ```bash
-# 1. Load project context
+# 1. 載入專案情境
 /sc:load --deep --summary
-# → Gives overview of structure, dependencies, patterns
+# → 提供結構、依賴關係、模式的概覽
 
-# 2. Analyze architecture  
+# 2. 分析架構
 /sc:analyze --focus architecture
-# → 🏗️ architect persona provides system understanding
+# → 🏗️ architect persona 提供系統理解
 
-# 3. Check code quality
+# 3. 檢查程式碼品質
 /sc:analyze --focus quality
-# → 🧪 qa persona identifies potential issues
+# → 🧪 qa persona 識別潛在問題
 
-# 4. Review documentation
+# 4. 審查文件
 /sc:document README --type guide
-# → ✍️ scribe persona improves project documentation
+# → ✍️ scribe persona 改進專案文件
 ```
 
-#### Feature Development Cycle
-For developing new features:
+#### 功能開發週期
+開發新功能時：
 
 ```bash
-# 1. Design phase
+# 1. 設計階段
 /sc:design user-dashboard --type component
-# → 🏗️ architect + 🎨 frontend personas coordinate
+# → 🏗️ architect + 🎨 frontend personas 協調
 
-# 2. Implementation
-/sc:build dashboard-components/ 
-# → 🎨 frontend persona + Magic MCP for UI generation
+# 2. 實作
+/sc:build dashboard-components/
+# → 🎨 frontend persona + Magic MCP 用於 UI 產生
 
-# 3. Testing
+# 3. 測試
 /sc:test --type e2e dashboard/
-# → 🧪 qa persona + Playwright MCP for testing
+# → 🧪 qa persona + Playwright MCP 用於測試
 
-# 4. Documentation  
+# 4. 文件
 /sc:document dashboard/ --type api
-# → ✍️ scribe persona creates comprehensive docs
+# → ✍️ scribe persona 建立全面的文件
 ```
 
-#### Bug Investigation & Resolution
-For systematic debugging:
+#### 錯誤調查與解決
+進行系統性除錯時：
 
 ```bash
-# 1. Problem investigation
+# 1. 問題調查
 /sc:troubleshoot "login randomly fails" --think
-# → 🔍 analyzer persona + Sequential MCP for methodology
+# → 🔍 analyzer persona + Sequential MCP 提供方法論
 
-# 2. Root cause analysis
+# 2. 根本原因分析
 /sc:analyze auth-flow/ --focus debugging
-# → Systematic investigation with evidence collection
+# → 帶有證據收集的系統性調查
 
-# 3. Fix implementation
+# 3. 修復實作
 /sc:improve auth/ --safe-mode --validate
-# → Safe improvements with validation
+# → 帶有驗證的安全改進
 
-# 4. Verification testing
+# 4. 驗證測試
 /sc:test auth-flow/ --coverage
-# → Comprehensive testing to ensure fix works
+# → 全面測試以確保修復有效
 ```
 
-#### Code Quality Improvement
-For improving existing code:
+#### 程式碼品質改進
+改進現有程式碼時：
 
 ```bash
-# 1. Quality assessment
+# 1. 品質評估
 /sc:analyze legacy-code/ --focus quality
-# → 🔄 refactorer persona identifies improvement opportunities
+# → 🔄 refactorer persona 識別改進機會
 
-# 2. Safe improvements
+# 2. 安全改進
 /sc:improve --preview legacy-code/
-# → See what would change before applying
+# → 在套用前查看將會變更的內容
 
-# 3. Apply improvements
+# 3. 套用改進
 /sc:improve --safe legacy-code/
-# → Apply only low-risk improvements
+# → 僅套用低風險的改進
 
-# 4. Validate changes
+# 4. 驗證變更
 /sc:test --coverage improved-code/
-# → Ensure improvements don't break functionality
+# → 確保改進不會破壞功能
 ```
 
-### Common Workflow Combinations 🤝
+### 常見工作流程組合 🤝
 
-#### Security-First Development
+#### 安全優先開發
 ```bash
-# Development with security focus
+# 以安全為重點的開發
 /sc:analyze --persona-security --focus security
-/sc:build --validate --safe-mode  
+/sc:build --validate --safe-mode
 /sc:test --type security
 /sc:git --persona-security --validate
 ```
 
-#### Performance-Optimized Workflow
+#### 效能優化工作流程
 ```bash
-# Performance-focused development
+# 以效能為重點的開發
 /sc:analyze --focus performance --persona-performance
 /sc:improve --type performance --benchmark
 /sc:test --focus performance --play
-/sc:test --focus performance --play
 ```
 
-#### Team Collaboration Workflow
+#### 團隊協作工作流程
 ```bash
-# Collaborative development patterns
+# 協作開發模式
 /sc:analyze team-code/ --persona-qa --focus quality
 /sc:document features/ --persona-scribe --type guide
 /sc:git --smart-commit --branch-strategy
-/sc:task status  # Check team progress
+/sc:task status  # 檢查團隊進度
 ```
 
-### Advanced Workflow Patterns 🚀
+### 進階工作流程模式 🚀
 
-#### Large Codebase Management
-For working with enterprise-scale projects:
+#### 大型程式碼庫管理
+處理企業級專案時：
 
 ```bash
-# Efficient large-scale analysis
+# 高效率的大規模分析
 /sc:analyze monorepo/ --delegate auto --uc --focus architecture
-# → Parallel processing + compression + architectural focus
+# → 平行處理 + 壓縮 + 架構焦點
 
-# Systematic improvements
+# 系統性改進
 /sc:improve legacy-system/ --wave-mode auto --safe-mode
-# → Multi-stage improvements with safety checks
+# → 帶有安全檢查的多階段改進
 
-# Comprehensive quality review
+# 全面品質審查
 /sc:analyze enterprise-app/ --delegate folders --focus quality
-# → Distributed quality analysis
+# → 分散式品質分析
 ```
 
-#### Legacy System Modernization
-For updating old codebases:
+#### 舊系統現代化
+更新舊程式碼庫時：
 
 ```bash
-# Assessment phase
+# 評估階段
 /sc:analyze legacy/ --persona-architect --ultrathink
-# → Deep architectural analysis
+# → 深度架構分析
 
-# Planning phase  
+# 規劃階段
 /sc:design modernization-strategy --type architecture
-# → Comprehensive modernization plan
+# → 全面的現代化計畫
 
-# Implementation phase
+# 實作階段
 /sc:improve legacy/ --wave-mode systematic --safe-mode --loop
-# → Iterative, safe improvements with validation
+# → 帶有驗證的迭代、安全改進
 
-# Migration support
+# 遷移支援
 /sc:migrate --type framework legacy-to-modern/
-# → Framework migration assistance
+# → 框架遷移協助
 ```
 
-#### Multi-Domain Projects
-For projects spanning multiple technical domains:
+#### 多領域專案
+處理跨越多個技術領域的專案時：
 
 ```bash
-# Coordinate across domains
+# 跨領域協調
 /sc:analyze fullstack-app/ --all-mcp --delegate auto
-# → All MCP servers + parallel processing
+# → 所有 MCP 伺服器 + 平行處理
 
-# Domain-specific improvements
+# 特定領域的改進
 /sc:improve frontend/ --persona-frontend --magic
-/sc:improve backend/ --persona-backend --c7  
+/sc:improve backend/ --persona-backend --c7
 /sc:improve infrastructure/ --persona-devops --seq
 
-# Integration validation
+# 整合驗證
 /sc:test --type integration --play
-# → Comprehensive integration testing
+# → 全面的整合測試
 ```
 
-### Workflow Optimization Tips 💡
+### 工作流程優化技巧 💡
 
-#### Start Small, Scale Up
+#### 從小處著手，逐步擴大
 ```bash
-# Begin with focused scope
+# 從集中的範圍開始
 /sc:analyze single-component.js --focus quality
 
-# Expand as needed
+# 根據需要擴大
 /sc:analyze entire-module/ --focus quality --delegate files
 
-# Scale to full system
+# 擴展到整個系統
 /sc:analyze whole-project/ --delegate auto --uc
 ```
 
-#### Use Progressive Enhancement
+#### 使用漸進式增強
 ```bash
-# Basic command
+# 基本指令
 /sc:build project/
 
-# Add intelligence
+# 新增智慧
 /sc:build project/ --think --c7
 
-# Full orchestration
+# 完整編排
 /sc:build project/ --wave-mode auto --all-mcp --delegate auto
 ```
 
-#### Combine Complementary Personas
+#### 結合互補的 Persona
 ```bash
-# Security + Performance analysis
+# 安全 + 效能分析
 /sc:analyze api/ --persona-security
 /sc:analyze api/ --persona-performance
 
-# Architecture + Quality review
+# 架構 + 品質審查
 /sc:review system/ --persona-architect --focus architecture
 /sc:review system/ --persona-qa --focus quality
 ```
 
-### Troubleshooting Workflows 🚨
+### 疑難排解工作流程 🚨
 
-#### When Commands Don't Work as Expected
+#### 當指令未如預期運作時
 ```bash
-# Debug with introspection
+# 使用內省進行除錯
 /sc:troubleshoot "command issues" --introspect
-# → Meta-cognitive analysis of what went wrong
+# → 對出錯原因進行元認知分析
 
-# Try different approaches
+# 嘗試不同方法
 /sc:analyze problem/ --persona-analyzer --seq
-# → Systematic investigation methodology
+# → 系統性調查方法論
 
-# Check framework status
+# 檢查框架狀態
 /sc:load framework-status/ --summary
-# → Understand current SuperClaude state
+# → 理解當前的 SuperClaude 狀態
 ```
 
-#### When Performance is Slow
+#### 當效能緩慢時
 ```bash
-# Optimize for speed
+# 為速度進行優化
 /sc:analyze large-project/ --no-mcp --uc --scope module
-# → Disable extra features, compress output, limit scope
+# → 停用額外功能、壓縮輸出、限制範圍
 
-# Use delegation for large tasks
+# 對大型任務使用委派
 /sc:improve huge-codebase/ --delegate auto --concurrency 5
-# → Parallel processing with controlled concurrency
+# → 帶有受控並行性的平行處理
 ```
 
-#### When Results Aren't Focused Enough
+#### 當結果不夠集中時
 ```bash
-# Use specific focus flags
+# 使用特定的焦點旗標
 /sc:analyze code/ --focus security --scope file
 
-# Activate appropriate personas manually
-/sc:analyze frontend-code/ --persona-security  # Security view of frontend
+# 手動啟用適當的 Persona
+/sc:analyze frontend-code/ --persona-security  # 從安全角度看前端
 
-# Combine multiple approaches
+# 結合多種方法
 /sc:analyze --focus performance --persona-performance --play
 ```
 
-### Building Your Own Workflows 🛠️
+### 建立你自己的工作流程 🛠️
 
-#### Identify Your Common Patterns
-Track what combinations work well for your specific needs:
+#### 識別你的常見模式
+追蹤哪些組合對你的特定需求效果良好：
 
 ```bash
-# Security-focused API development
+# 以安全為重點的 API 開發
 alias secure-api="/build api/ --persona-security --validate --c7"
 
-# Performance-optimized frontend work  
+# 效能優化的前端工作
 alias perf-frontend="/build ui/ --persona-performance --magic --benchmark"
 
-# Quality improvement workflow
+# 品質改進工作流程
 alias quality-check="/scan --focus quality && /improve --safe-mode && /test --coverage"
 ```
 
-#### Experiment with Flag Combinations
-Try different combinations to find what works best:
+#### 實驗旗標組合
+嘗試不同的組合，找出最適合的：
 
 ```bash
-# For learning: verbose explanations with docs
+# 用於學習：帶有文件的詳細解釋
 /sc:explain concept --persona-mentor --verbose --c7
 
-# For safety: maximum validation and checking
+# 用於安全：最大程度的驗證和檢查
 /sc:improve critical-code/ --safe-mode --validate --preview
 
-# For efficiency: compressed output with parallel processing
+# 用於效率：帶有平行處理的壓縮輸出
 /sc:analyze big-project/ --uc --delegate auto --concurrency 3
 ```
 
-Remember: SuperClaude learns from successful patterns, so the more you use effective combinations, the better it gets at auto-activating the right approach for your needs.
+記住：SuperClaude 會從成功的模式中學習，所以你越常使用有效的組合，它就越能為你的需求自動啟用正確的方法。
 
 ---
 
-## Integration & Coordination 🤝
+## 整合與協調 🤝
 
-Understanding how SuperClaude's components work together is key to using the framework effectively. This section shows you how commands, flags, personas, and MCP servers coordinate automatically - and how to control that coordination when needed.
+了解 SuperClaude 的元件如何協同運作是有效使用該框架的關鍵。本節將向你展示指令、旗標、Persona 和 MCP 伺服器如何自動協調 - 以及在需要時如何控制這種協調。
 
-### Auto-Coordination Examples 🤖
+### 自動協調範例 🤖
 
-SuperClaude automatically coordinates components based on context. Here's how it works in practice:
+SuperClaude 會根據情境自動協調元件。以下是它在實務中的運作方式：
 
-#### Frontend Development Request
+#### 前端開發請求
 ```bash
 /sc:build react-dashboard/
 ```
 
-**Automatic coordination**:
-- **Command**: `/build` handles compilation and bundling
-- **Persona**: 🎨 frontend auto-activates (React detected)
-- **MCP**: Magic provides modern UI components
-- **MCP**: Context7 provides React best practices 
-- **Flags**: `--c7` auto-activates for framework docs
+**自動協調**：
+- **指令**：`/build` 處理編譯和打包
+- **Persona**：🎨 frontend 自動啟用 (偵測到 React)
+- **MCP**：Magic 提供現代 UI 元件
+- **MCP**：Context7 提供 React 最佳實踐
+- **旗標**：`--c7` 自動啟用以取得框架文件
 
-**Result**: React-optimized build with modern components, accessibility checks, and performance optimization.
+**結果**：經過 React 優化的建置，具有現代元件、無障礙檢查和效能優化。
 
-#### Security Analysis Request
+#### 安全分析請求
 ```bash
 /sc:scan user-authentication/ --focus security
 ```
 
-**Automatic coordination**:
-- **Command**: `/scan` handles security scanning
-- **Persona**: 🛡️ security auto-activates (security focus)
-- **MCP**: Sequential provides systematic analysis
-- **Flags**: `--validate` auto-activates (high-risk operation)
-- **Flags**: `--think` auto-activates (complex security patterns)
+**自動協調**：
+- **指令**：`/scan` 處理安全掃描
+- **Persona**：🛡️ security 自動啟用 (安全焦點)
+- **MCP**：Sequential 提供系統性分析
+- **旗標**：`--validate` 自動啟用 (高風險操作)
+- **旗標**：`--think` 自動啟用 (複雜的安全模式)
 
-**Result**: Comprehensive security analysis with threat modeling, vulnerability detection, and compliance checking.
+**結果**：全面的安全分析，具有威脅模型、漏洞偵測和合規性檢查。
 
-#### Performance Investigation
+#### 效能調查
 ```bash
 /sc:troubleshoot "API responses are slow"
 ```
 
-**Automatic coordination**:
-- **Command**: `/troubleshoot` handles investigation
-- **Persona**: ⚡ performance auto-activates (performance keywords)
-- **Persona**: 🔍 analyzer provides investigation methodology
-- **MCP**: Sequential structures the debugging process
-- **MCP**: Playwright provides performance testing
-- **Flags**: `--think` auto-activates (complex debugging)
+**自動協調**：
+- **指令**：`/troubleshoot` 處理調查
+- **Persona**：⚡ performance 自動啟用 (效能關鍵字)
+- **Persona**：🔍 analyzer 提供調查方法論
+- **MCP**：Sequential 建構除錯流程
+- **MCP**：Playwright 提供效能測試
+- **旗標**：`--think` 自動啟用 (複雜除錯)
 
-**Result**: Systematic performance investigation with metrics, bottleneck identification, and optimization recommendations.
+**結果**：具有指標、瓶頸識別和優化建議的系統性效能調查。
 
-### Manual Coordination Control 🎛️
+### 手動協調控制 🎛️
 
-Sometimes you want to override auto-coordination for specific needs:
+有時你希望為特定需求覆蓋自動協調：
 
-#### Override Persona Selection
+#### 覆蓋 Persona 選擇
 ```bash
-# View frontend code from security perspective
+# 從安全角度查看前端程式碼
 /sc:analyze react-components/ --persona-security
-# → Security analysis of UI components (XSS, data exposure, etc.)
+# → UI 元件的安全分析 (XSS、資料洩漏等)
 
-# Apply architectural thinking to small utility
-/sc:improve utility-function.js --persona-architect  
-# → Design patterns and extensibility for simple code
+# 將架構思維應用於小型工具
+/sc:improve utility-function.js --persona-architect
+# → 簡單程式碼的設計模式和擴展性
 ```
 
-#### Control MCP Server Usage
+#### 控制 MCP 伺服器使用
 ```bash
-# Disable all MCP servers for speed
+# 為速度停用所有 MCP 伺服器
 /sc:analyze large-codebase/ --no-mcp
-# → 40-60% faster execution, native tools only
+# → 40-60% 更快的執行速度，僅使用原生工具
 
-# Enable all MCP servers for comprehensive analysis
+# 為全面分析啟用所有 MCP 伺服器
 /sc:analyze complex-system/ --all-mcp
-# → Maximum capabilities, higher token usage
+# → 最大能力，更高的 token 使用量
 
-# Use specific MCP combinations
+# 使用特定的 MCP 組合
 /sc:build ui-components/ --magic --c7 --no-seq
-# → UI generation + docs, skip complex analysis
+# → UI 產生 + 文件，跳過複雜分析
 ```
 
-#### Combine Multiple Perspectives
+#### 結合多種觀點
 ```bash
-# Sequential analysis with different personas
-/sc:analyze payment-system/ --persona-security     # Security view
-/sc:analyze payment-system/ --persona-performance  # Performance view  
-/sc:analyze payment-system/ --persona-architect    # Architecture view
+# 使用不同 Persona 進行順序分析
+/sc:analyze payment-system/ --persona-security     # 安全觀點
+/sc:analyze payment-system/ --persona-performance  # 效能觀點
+/sc:analyze payment-system/ --persona-architect    # 架構觀點
 
-# Or coordinate automatically
+# 或自動協調
 /sc:review payment-system/ --focus quality
-# → Auto-coordinates security + performance + architecture insights
+# → 自動協調安全 + 效能 + 架構的見解
 ```
 
-### Flag Coordination Patterns 🏁
+### 旗標協調模式 🏁
 
-Flags work together to create powerful combinations:
+旗標協同運作以建立強大的組合：
 
-#### Safety-First Patterns
+#### 安全優先模式
 ```bash
-# Maximum safety for critical code
+# 對關鍵程式碼的最大安全性
 /sc:improve production-auth/ --safe-mode --validate --preview
-# → Conservative changes + risk assessment + preview before applying
+# → 保守變更 + 風險評估 + 套用前預覽
 
-# Safe exploration of large changes
+# 安全地探索大型變更
 /sc:improve legacy-system/ --wave-mode auto --safe-mode --validate
-# → Multi-stage improvements + safety checks + validation gates
+# → 多階段改進 + 安全檢查 + 驗證關卡
 ```
 
-#### Performance-Optimized Patterns  
+#### 效能優化模式
 ```bash
-# Fast execution for large operations
+# 大型操作的快速執行
 /sc:analyze huge-project/ --uc --no-mcp --scope module
-# → Compressed output + native tools + limited scope
+# → 壓縮輸出 + 原生工具 + 有限範圍
 
-# Efficient parallel processing
+# 高效的平行處理
 /sc:improve monorepo/ --delegate auto --uc --concurrency 5
-# → Parallel processing + compression + controlled resource usage
+# → 平行處理 + 壓縮 + 受控資源使用
 ```
 
-#### Learning-Focused Patterns
+#### 學習導向模式
 ```bash
-# Educational explanations with full context
+# 具有完整情境的教育性解釋
 /sc:explain complex-concept --persona-mentor --verbose --c7
-# → Educational approach + detailed explanations + official docs
+# → 教育方法 + 詳細解釋 + 官方文件
 
-# Deep understanding with transparency
-/sc:analyze mysterious-code/ --persona-analyzer --think-hard --introspect  
-# → Investigation methodology + deep analysis + thinking transparency
+# 具有透明度的深度理解
+/sc:analyze mysterious-code/ --persona-analyzer --think-hard --introspect
+# → 調查方法論 + 深度分析 + 思維透明度
 ```
 
-### MCP Server Coordination 🔧
+### MCP 伺服器協調 🔧
 
-MCP servers often work together automatically:
+MCP 伺服器通常會自動協同運作：
 
-#### Documentation + Analysis
+#### 文件 + 分析
 ```bash
 /sc:improve old-react-code/
 ```
-**MCP coordination**:
-- Context7: Gets current React best practices
-- Sequential: Analyzes code against modern patterns
-- Magic: Suggests modern component patterns
-- Result: Modernization with current standards
+**MCP 協調**：
+- Context7：獲取當前的 React 最佳實踐
+- Sequential：根據現代模式分析程式碼
+- Magic：建議現代元件模式
+- 結果：符合當前標準的現代化
 
-#### Testing + Performance
+#### 測試 + 效能
 ```bash
 /sc:test dashboard/ --focus performance
 ```
-**MCP coordination**:
-- Sequential: Plans comprehensive test strategy
-- Playwright: Executes performance testing
-- Context7: Provides testing best practices
-- Result: Performance testing with industry standards
+**MCP 協調**：
+- Sequential：規劃全面的測試策略
+- Playwright：執行效能測試
+- Context7：提供測試最佳實踐
+- 結果：符合行業標準的效能測試
 
-#### Complex Problem Solving
+#### 複雜問題解決
 ```bash
 /sc:troubleshoot "complex multi-service issue" --ultrathink
 ```
-**MCP coordination**:
-- Sequential: Structures systematic investigation
-- Context7: Provides service architecture patterns
-- Playwright: Tests service interactions
-- Result: Comprehensive multi-domain debugging
+**MCP 協調**：
+- Sequential：建構系統性調查
+- Context7：提供服務架構模式
+- Playwright：測試服務互動
+- 結果：全面的多領域除錯
 
-### Persona Collaboration Patterns 🎭
+### Persona 協作模式 🎭
 
-Personas automatically collaborate on complex requests:
+Persona 會在複雜請求上自動協作：
 
-#### Architecture + Security
+#### 架構 + 安全
 ```bash
 /sc:design payment-api --type secure
 ```
-**Persona collaboration**:
-- 🏗️ architect: System design and scalability
-- 🛡️ security: Threat modeling and secure patterns
-- ⚙️ backend: API implementation patterns
-- Result: Secure, scalable API design
+**Persona 協作**：
+- 🏗️ architect：系統設計與可擴展性
+- 🛡️ security：威脅模型與安全模式
+- ⚙️ backend：API 實作模式
+- 結果：安全、可擴展的 API 設計
 
-#### Frontend + Performance  
+#### 前端 + 效能
 ```bash
 /sc:build dashboard --focus performance
 ```
-**Persona collaboration**:
-- 🎨 frontend: UI/UX and accessibility
-- ⚡ performance: Optimization and metrics
-- 🏗️ architect: Component architecture  
-- Result: Fast, accessible, well-structured dashboard
+**Persona 協作**：
+- 🎨 frontend：UI/UX 與無障礙
+- ⚡ performance：優化與指標
+- 🏗️ architect：元件架構
+- 結果：快速、無障礙、結構良好的儀表板
 
-#### Quality + Refactoring
+#### 品質 + 重構
 ```bash
 /sc:improve legacy-code/ --focus quality
 ```
-**Persona collaboration**:
-- 🔄 refactorer: Code quality and patterns
-- 🧪 qa: Testing and validation
-- 🏗️ architect: Structural improvements
-- Result: Clean, tested, well-architected code
+**Persona 協作**：
+- 🔄 refactorer：程式碼品質與模式
+- 🧪 qa：測試與驗證
+- 🏗️ architect：結構性改進
+- 結果：乾淨、經過測試、架構良好的程式碼
 
-### Advanced Coordination Strategies 🚀
+### 進階協調策略 🚀
 
-#### Wave Orchestration
-For complex multi-stage operations:
+#### Wave 編排
+用於複雜的多階段操作：
 
 ```bash
 /sc:improve enterprise-system/ --wave-mode systematic
 ```
 
-**Wave coordination**:
-1. **Analysis Wave**: 🔍 analyzer + Sequential assess current state
-2. **Planning Wave**: 🏗️ architect + Context7 design improvements  
-3. **Implementation Wave**: Appropriate specialists + tools implement changes
-4. **Validation Wave**: 🧪 qa + Playwright verify improvements
-5. **Optimization Wave**: ⚡ performance + metrics optimize results
+**Wave 協調**：
+1. **分析 Wave**：🔍 analyzer + Sequential 評估當前狀態
+2. **規劃 Wave**：🏗️ architect + Context7 設計改進
+3. **實作 Wave**：適當的專家 + 工具實作變更
+4. **驗證 Wave**：🧪 qa + Playwright 驗證改進
+5. **優化 Wave**：⚡ performance + 指標優化結果
 
-#### Sub-Agent Delegation
-For parallel processing:
+#### 子代理人委派
+用於平行處理：
 
 ```bash
 /sc:analyze large-monorepo/ --delegate folders
 ```
 
-**Delegation coordination**:
-- **Main Agent**: Orchestrates and synthesizes results
-- **Sub-Agents**: Specialized analysis of individual folders
-- **Coordination**: Results combined with domain expertise
-- **MCP Integration**: Shared across all agents
+**委派協調**：
+- **主代理人**：編排並綜合結果
+- **子代理人**：對個別資料夾進行專業分析
+- **協調**：將結果與領域專業知識結合
+- **MCP 整合**：在所有代理人之間共享
 
-#### Adaptive Intelligence
-SuperClaude adapts coordination based on context:
+#### 自適應智慧
+SuperClaude 根據情境調整協調：
 
-**Development Phase Detection**:
-- Planning phase → 🏗️ architect + ✍️ scribe emphasis
-- Implementation phase → Domain specialists + Magic/Context7
-- Testing phase → 🧪 qa + Playwright emphasis
-- Deployment phase → 🚀 devops + validation emphasis
+**開發階段偵測**：
+- 規劃階段 → 🏗️ architect + ✍️ scribe 強調
+- 實作階段 → 領域專家 + Magic/Context7
+- 測試階段 → 🧪 qa + Playwright 強調
+- 部署階段 → 🚀 devops + 驗證強調
 
-**Complexity-Based Scaling**:
-- Simple tasks → Direct execution
-- Moderate complexity → Persona + MCP coordination
-- High complexity → Wave orchestration + delegation
+**基於複雜度的擴展**：
+- 簡單任務 → 直接執行
+- 中等複雜度 → Persona + MCP 協調
+- 高複雜度 → Wave 編排 + 委派
 
-### Coordination Troubleshooting 🔧
+### 協調疑難排解 🔧
 
-#### When Auto-Coordination Goes Wrong
+#### 當自動協調出錯時
 ```bash
-# Too many tools activated (slow/expensive)
+# 太多工具被啟用 (慢/昂貴)
 /sc:analyze simple-file.js --no-mcp --answer-only
-# → Minimal tooling for simple tasks
+# → 簡單任務的最小化工具
 
-# Wrong persona activated
-/sc:analyze backend-api/ --persona-security  
-# → Override with explicit persona choice
+# 啟用了錯誤的 Persona
+/sc:analyze backend-api/ --persona-security
+# → 使用明確的 Persona 選擇進行覆蓋
 
-# Not enough analysis depth
+# 分析深度不足
 /sc:troubleshoot complex-issue --ultrathink --all-mcp
-# → Force maximum capabilities
+# → 強制最大能力
 ```
 
-#### Optimizing Coordination
+#### 優化協調
 ```bash
-# Start simple, add complexity as needed
-/sc:analyze code.js                    # Basic analysis
-/sc:analyze code.js --think            # Add thinking
-/sc:analyze code.js --think --c7       # Add documentation
-/sc:analyze code.js --think --c7 --seq # Add systematic analysis
+# 從簡單開始，根據需要增加複雜性
+/sc:analyze code.js                    # 基本分析
+/sc:analyze code.js --think            # 新增思考
+/sc:analyze code.js --think --c7       # 新增文件
+/sc:analyze code.js --think --c7 --seq # 新增系統性分析
 ```
 
-#### Understanding Coordination Decisions
+#### 理解協調決策
 ```bash
-# See why certain tools were chosen
+# 查看為什麼選擇了某些工具
 /sc:analyze complex-system/ --introspect
-# → Shows decision-making process and tool selection reasoning
+# → 顯示決策過程和工具選擇理由
 ```
 
-### Best Practices for Integration 💡
+### 整合最佳實踐 💡
 
-#### Let Auto-Coordination Work First
-- Trust SuperClaude's automatic tool selection
-- Override only when you need specific perspectives
-- Start with simple commands and add flags as needed
+#### 先讓自動協調運作
+- 相信 SuperClaude 的自動工具選擇
+- 只有在需要特定觀點時才覆蓋
+- 從簡單的指令開始，根據需要新增旗標
 
-#### Understand Flag Interactions
-- Some flags override others (`--no-mcp` overrides `--c7`, `--seq`)
-- Safety flags take precedence over optimization flags
-- Persona flags can be overridden by more specific persona requests
+#### 理解旗標互動
+- 某些旗標會覆蓋其他旗標 (`--no-mcp` 覆蓋 `--c7`, `--seq`)
+- 安全旗標優先於優化旗標
+- Persona 旗標可被更具體的 Persona 請求覆蓋
 
-#### Use Appropriate Scope
-- File-level: Single persona + minimal MCP
-- Module-level: Domain personas + relevant MCP
-- System-level: Multiple personas + full MCP coordination
+#### 使用適當的範圍
+- 檔案級：單一 Persona + 最小 MCP
+- 模組級：領域 Persona + 相關 MCP
+- 系統級：多個 Persona + 完整 MCP 協調
 
-#### Monitor Resource Usage
-- Large operations → Use `--uc` and `--delegate`
-- Simple tasks → Use `--no-mcp` and `--answer-only`
-- Critical operations → Use `--safe-mode` and `--validate`
+#### 監控資源使用
+- 大型操作 → 使用 `--uc` 和 `--delegate`
+- 簡單任務 → 使用 `--no-mcp` 和 `--answer-only`
+- 關鍵操作 → 使用 `--safe-mode` 和 `--validate`
 
-The key is understanding that SuperClaude's intelligence comes from the coordination between its components. The automatic coordination works well most of the time, but knowing how to control it gives you the flexibility to handle any situation.
+關鍵在於理解 SuperClaude 的智慧來自其元件之間的協調。自動協調在大多數時候運作良好，但知道如何控制它能讓你靈活應對任何情況。
 
 ---
 
-## Practical Examples 💡
+## 實用範例 💡
 
-Real-world scenarios showing SuperClaude in action. These examples demonstrate how different components work together to solve common development problems.
+真實世界的情境，展示 SuperClaude 的實際運作。這些範例展示了不同元件如何協同解決常見的開發問題。
 
-### Scenario 1: New Team Member Onboarding 👋
+### 情境 1：新團隊成員上手 👋
 
-**Situation**: You're starting work on an unfamiliar React/Node.js e-commerce project.
+**情況**：你剛開始接觸一個不熟悉的 React/Node.js 電子商務專案。
 
-#### Step 1: Project Understanding
+#### 步驟 1：專案理解
 ```bash
 /sc:load --deep --summary
 ```
-**What happens**:
-- 🔍 analyzer persona activates (investigation needed)
-- Sequential MCP structures the analysis  
-- Context7 MCP identifies framework patterns
-- Creates comprehensive project overview
+**發生了什麼**：
+- 🔍 analyzer persona 啟用 (需要調查)
+- Sequential MCP 建構分析
+- Context7 MCP 識別框架模式
+- 建立全面的專案概覽
 
-**Output**: Project structure, tech stack, dependencies, and architecture summary.
+**輸出**：專案結構、技術棧、依賴關係和架構摘要。
 
-#### Step 2: Code Quality Assessment
+#### 步驟 2：程式碼品質評估
 ```bash
 /sc:analyze --focus quality
 ```
-**Auto-coordination**:
-- 🧪 qa persona activates (quality focus)
-- Sequential MCP provides systematic analysis
-- Scans for code quality, security, and performance issues
-- Generates actionable improvement recommendations
+**自動協調**：
+- 🧪 qa persona 啟用 (品質焦點)
+- Sequential MCP 提供系統性分析
+- 掃描程式碼品質、安全性和效能問題
+- 產生可行的改進建議
 
-**Output**: Quality report with specific issues and improvement suggestions.
+**輸出**：包含具體問題和改進建議的品質報告。
 
-#### Step 3: Architecture Understanding
+#### 步驟 3：架構理解
 ```bash
 /sc:analyze --focus architecture --persona-architect
 ```
-**What happens**:
-- 🏗️ architect persona provides system design perspective
-- Context7 MCP brings in React/Node.js architectural patterns
-- Sequential MCP structures the architectural analysis
-- Identifies design patterns, data flow, and component relationships
+**發生了什麼**：
+- 🏗️ architect persona 提供系統設計觀點
+- Context7 MCP 引入 React/Node.js 架構模式
+- Sequential MCP 建構架構分析
+- 識別設計模式、資料流程和元件關係
 
-**Output**: Architectural overview with design patterns and system relationships.
+**輸出**：包含設計模式和系統關係的架構概覽。
 
-#### Step 4: Getting Started Guide
+#### 步驟 4：入門指南
 ```bash
 /sc:document onboarding --type guide --persona-scribe
 ```
-**What happens**:
-- ✍️ scribe persona creates professional documentation
-- Context7 MCP provides documentation standards
-- Synthesizes previous analysis into newcomer-friendly guide
-- Includes setup instructions and key concepts
+**發生了什麼**：
+- ✍️ scribe persona 建立專業文件
+- Context7 MCP 提供文件標準
+- 將先前的分析綜合為對新人友善的指南
+- 包含設定說明和關鍵概念
 
-**Output**: Comprehensive onboarding guide for future team members.
+**輸出**：全面的上手指南，供未來團隊成員使用。
 
-**Time saved**: What normally takes 2-3 days of exploration is condensed into a comprehensive understanding in about 30 minutes.
+**節省時間**：通常需要 2-3 天的探索，現在濃縮為約 30 分鐘的全面理解。
 
-### Scenario 2: Security Vulnerability Investigation 🛡️
+### 情境 2：安全漏洞調查 🛡️
 
-**Situation**: Security scanner flagged potential issues in user authentication system.
+**情況**：安全掃描器標記出使用者驗證系統中的潛在問題。
 
-#### Step 1: Security-Focused Analysis
+#### 步驟 1：以安全為重點的分析
 ```bash
 /sc:scan auth-system/ --persona-security --focus security
 ```
-**Auto-coordination**:
-- 🛡️ security persona activates (security expertise)
-- Sequential MCP provides systematic threat modeling
-- Context7 MCP brings in OWASP and security best practices
-- `--validate` flag auto-activates (high-risk operation)
+**自動協調**：
+- 🛡️ security persona 啟用 (安全專業知識)
+- Sequential MCP 提供系統性威脅模型
+- Context7 MCP 引入 OWASP 和安全最佳實踐
+- `--validate` 旗標自動啟用 (高風險操作)
 
-**Output**: Detailed security analysis with threat assessment and vulnerability prioritization.
+**輸出**：詳細的安全分析，包含威脅評估和漏洞優先級排序。
 
-#### Step 2: Root Cause Investigation  
+#### 步驟 2：根本原因調查
 ```bash
 /sc:troubleshoot "JWT token exposure in logs" --think --seq
 ```
-**What happens**:
-- 🔍 analyzer persona provides investigation methodology
-- `--think` flag enables deep analysis
-- Sequential MCP structures the debugging process
-- Traces data flow and identifies exposure points
+**發生了什麼**：
+- 🔍 analyzer persona 提供調查方法論
+- `--think` 旗標啟用深度分析
+- Sequential MCP 建構除錯流程
+- 追蹤資料流程並識別洩漏點
 
-**Output**: Root cause analysis with evidence trail and impact assessment.
+**輸出**：根本原因分析，包含證據鏈和影響評估。
 
-#### Step 3: Secure Implementation
+#### 步驟 3：安全實作
 ```bash
 /sc:improve auth-system/ --focus security --safe-mode --validate
 ```
-**Auto-coordination**:
-- 🛡️ security persona maintains security focus
-- `--safe-mode` ensures conservative changes
-- `--validate` confirms changes before applying
-- Context7 MCP provides secure coding patterns
+**自動協調**：
+- 🛡️ security persona 維持安全焦點
+- `--safe-mode` 確保保守變更
+- `--validate` 在套用前確認變更
+- Context7 MCP 提供安全編碼模式
 
-**Output**: Security improvements with minimal risk and comprehensive validation.
+**輸出**：風險最小且經過全面驗證的安全改進。
 
-#### Step 4: Security Testing
+#### 步驟 4：安全測試
 ```bash
 /sc:test auth-system/ --type security --play
 ```
-**What happens**:
-- 🧪 qa persona provides testing expertise  
-- Playwright MCP executes security testing scenarios
-- Tests authentication flows, session management, and access controls
-- Validates security improvements are working
+**發生了什麼**：
+- 🧪 qa persona 提供測試專業知識
+- Playwright MCP 執行安全測試情境
+- 測試驗證流程、會話管理和存取控制
+- 驗證安全改進是否有效
 
-**Output**: Comprehensive security test results with evidence of improvements.
+**輸出**：全面的安全測試結果，附有改進證據。
 
-**Risk reduction**: Systematic approach reduces chance of missing security issues and ensures comprehensive coverage.
+**風險降低**：系統性方法降低了遺漏安全問題的機會，並確保全面覆蓋。
 
-### Scenario 3: Performance Optimization Sprint ⚡
+### 情境 3：效能優化衝刺 ⚡
 
-**Situation**: E-commerce dashboard is loading slowly, affecting user experience.
+**情況**：電子商務儀表板載入緩慢，影響使用者體驗。
 
-#### Step 1: Performance Analysis
+#### 步驟 1：效能分析
 ```bash
 /sc:analyze dashboard/ --focus performance --persona-performance
 ```
-**Auto-coordination**:
-- ⚡ performance persona activates (performance expertise)
-- Playwright MCP provides performance metrics and testing
-- Context7 MCP brings in React performance best practices
-- `--think-hard` auto-activates (complex performance analysis)
+**自動協調**：
+- ⚡ performance persona 啟用 (效能專業知識)
+- Playwright MCP 提供效能指標和測試
+- Context7 MCP 引入 React 效能最佳實踐
+- `--think-hard` 自動啟用 (複雜的效能分析)
 
-**Output**: Performance bottleneck identification with metrics and prioritized optimization opportunities.
+**輸出**：效能瓶頸識別，包含指標和優先的優化機會。
 
-#### Step 2: Frontend Performance Deep Dive
+#### 步驟 2：前端效能深度剖析
 ```bash
 /sc:analyze frontend/ --persona-frontend --focus performance --play
 ```
-**What happens**:
-- 🎨 frontend persona provides UI/UX perspective
-- ⚡ performance persona coordinates (dual expertise)
-- Playwright MCP measures Core Web Vitals, bundle sizes, render times
-- Magic MCP suggests modern optimization patterns
+**發生了什麼**：
+- 🎨 frontend persona 提供 UI/UX 觀點
+- ⚡ performance persona 協調 (雙重專業知識)
+- Playwright MCP 測量 Core Web Vitals、套件大小、渲染時間
+- Magic MCP 建議現代優化模式
 
-**Output**: Frontend-specific performance analysis with accessibility and user experience considerations.
+**輸出**：前端特定的效能分析，包含無障礙和使用者體驗考量。
 
-#### Step 3: Backend API Performance
+#### 步驟 3：後端 API 效能
 ```bash
 /sc:analyze api/ --persona-backend --focus performance
 ```
-**Auto-coordination**:
-- ⚙️ backend persona provides server-side expertise
-- Sequential MCP analyzes database queries and API patterns
-- Context7 MCP provides Node.js/Express optimization patterns
-- Identifies slow queries, inefficient endpoints, and caching opportunities
+**自動協調**：
+- ⚙️ backend persona 提供伺服器端專業知識
+- Sequential MCP 分析資料庫查詢和 API 模式
+- Context7 MCP 提供 Node.js/Express 優化模式
+- 識別緩慢的查詢、低效的端點和快取機會
 
-**Output**: Backend performance analysis with database and API optimization recommendations.
+**輸出**：後端效能分析，包含資料庫和 API 優化建議。
 
-#### Step 4: Systematic Optimization
+#### 步驟 4：系統性優化
 ```bash
 /sc:improve dashboard/ --focus performance --loop --iterations 3
 ```
-**What happens**:
-- ⚡ performance persona leads optimization
-- `--loop` enables iterative improvement
-- Each iteration: optimize → measure → validate → improve
-- Progressive enhancement with metrics validation
+**發生了什麼**：
+- ⚡ performance persona 主導優化
+- `--loop` 啟用迭代改進
+- 每個迭代：優化 → 測量 → 驗證 → 改進
+- 具有指標驗證的漸進式增強
 
-**Output**: Iterative performance improvements with measurable results after each cycle.
+**輸出**：每個週期後具有可衡量結果的迭代效能改進。
 
-#### Step 5: Performance Testing Validation
+#### 步驟 5：效能測試驗證
 ```bash
 /sc:test dashboard/ --focus performance --play --benchmark
 ```
-**What happens**:
-- Playwright MCP executes comprehensive performance testing
-- Tests on multiple devices, network conditions, and browsers
-- Measures Core Web Vitals, load times, and user interaction metrics
-- Validates improvements meet performance budgets
+**發生了什麼**：
+- Playwright MCP 執行全面的效能測試
+- 在多種裝置、網路條件和瀏覽器上進行測試
+- 測量 Core Web Vitals、載入時間和使用者互動指標
+- 驗證改進是否符合效能預算
 
-**Output**: Performance test results proving optimization effectiveness.
+**輸出**：證明優化有效性的效能測試結果。
 
-**Performance gain**: Systematic approach typically achieves 40-70% performance improvements with measurable validation.
+**效能提升**：系統性方法通常能實現 40-70% 的效能改進，並附有可衡量的驗證。
 
-### Scenario 4: Legacy Code Modernization 🔄
+### 情境 4：舊程式碼現代化 🔄
 
-**Situation**: 5-year-old React application needs modernization to current standards.
+**情況**：一個 5 年前的 React 應用程式需要現代化以符合當前標準。
 
-#### Step 1: Legacy Assessment
+#### 步驟 1：舊系統評估
 ```bash
 /sc:analyze legacy-app/ --persona-architect --ultrathink
 ```
-**Auto-coordination**:
-- 🏗️ architect persona provides structural analysis
-- `--ultrathink` enables maximum analysis depth
-- Context7 MCP compares against current React patterns
-- Sequential MCP provides systematic modernization assessment
+**自動協調**：
+- 🏗️ architect persona 提供結構分析
+- `--ultrathink` 啟用最大分析深度
+- Context7 MCP 與當前的 React 模式進行比較
+- Sequential MCP 提供系統性的現代化評估
 
-**Output**: Comprehensive legacy analysis with modernization roadmap and risk assessment.
+**輸出**：全面的舊系統分析，包含現代化藍圖和風險評估。
 
-#### Step 2: Modernization Planning
+#### 步驟 2：現代化規劃
 ```bash
 /sc:design modernization-strategy --type architecture --persona-architect
 ```
-**What happens**:
-- 🏗️ architect persona designs migration strategy
-- Context7 MCP provides current React ecosystem patterns
-- Sequential MCP structures the modernization plan
-- Identifies migration phases, dependencies, and risks
+**發生了什麼**：
+- 🏗️ architect persona 設計遷移策略
+- Context7 MCP 提供當前的 React 生態系統模式
+- Sequential MCP 建構現代化計畫
+- 識別遷移階段、依賴關係和風險
 
-**Output**: Detailed modernization plan with phased approach and risk mitigation.
+**輸出**：詳細的現代化計畫，包含分階段方法和風險緩解。
 
-#### Step 3: Safe Incremental Improvements
+#### 步驟 3：安全的增量改進
 ```bash
 /sc:improve legacy-components/ --safe-mode --wave-mode systematic --loop
 ```
-**Auto-coordination**:
-- 🔄 refactorer persona leads code improvements
-- `--safe-mode` ensures minimal risk
-- `--wave-mode systematic` enables multi-stage improvements
-- `--loop` allows iterative refinement
-- Multiple personas coordinate: architect, frontend, qa
+**自動協調**：
+- 🔄 refactorer persona 主導程式碼改進
+- `--safe-mode` 確保最小風險
+- `--wave-mode systematic` 啟用多階段改進
+- `--loop` 允許迭代精煉
+- 多個 Persona 協調：architect, frontend, qa
 
-**Output**: Systematic modernization with safety checks and progressive enhancement.
+**輸出**：具有安全檢查和漸進式增強的系統性現代化。
 
-#### Step 4: Testing Modernization
+#### 步驟 4：測試現代化
 ```bash
 /sc:test modernized-app/ --type integration --coverage --play
 ```
-**What happens**:
-- 🧪 qa persona ensures quality throughout modernization
-- Playwright MCP provides comprehensive testing
-- Tests legacy compatibility and new functionality
-- Validates modernization doesn't break existing features
+**發生了什麼**：
+- 🧪 qa persona 確保整個現代化過程的品質
+- Playwright MCP 提供全面的測試
+- 測試舊系統相容性和新功能
+- 驗證現代化不會破壞現有功能
 
-**Output**: Comprehensive test results proving modernization success.
+**輸出**：證明現代化成功的全面測試結果。
 
-**Modernization success**: Systematic approach reduces modernization risk by 80% and ensures compatibility.
+**現代化成功**：系統性方法將現代化風險降低 80%，並確保相容性。
 
-### Scenario 5: Multi-Team API Design 🌐
+### 情境 5：多團隊 API 設計 🌐
 
-**Situation**: Designing a new microservice API that multiple teams will consume.
+**情況**：設計一個將由多個團隊使用的新微服務 API。
 
-#### Step 1: Requirements Analysis
+#### 步驟 1：需求分析
 ```bash
 /sc:design user-service-api --type api --persona-backend
 ```
-**Auto-coordination**:
-- ⚙️ backend persona provides API design expertise
-- 🏗️ architect persona coordinates for system integration
-- Context7 MCP provides API design best practices
-- Sequential MCP structures requirement analysis
+**自動協調**：
+- ⚙️ backend persona 提供 API 設計專業知識
+- 🏗️ architect persona 為系統整合進行協調
+- Context7 MCP 提供 API 設計最佳實踐
+- Sequential MCP 建構需求分析
 
-**Output**: Comprehensive API design with endpoints, data models, and integration patterns.
+**輸出**：全面的 API 設計，包含端點、資料模型和整合模式。
 
-#### Step 2: Security Review
+#### 步驟 2：安全審查
 ```bash
 /sc:review api-design/ --persona-security --focus security
 ```
-**What happens**:
-- 🛡️ security persona evaluates API security
-- Reviews authentication, authorization, and data protection
-- Context7 MCP provides OWASP API security guidelines
-- Identifies security requirements and threat vectors
+**發生了什麼**：
+- 🛡️ security persona 評估 API 安全性
+- 審查驗證、授權和資料保護
+- Context7 MCP 提供 OWASP API 安全指南
+- 識別安全要求和威脅向量
 
-**Output**: Security assessment with hardening recommendations and compliance requirements.
+**輸出**：安全評估，包含強化建議和合規性要求。
 
-#### Step 3: Performance Considerations
+#### 步驟 3：效能考量
 ```bash
 /sc:analyze api-design/ --persona-performance --focus performance
 ```
-**Auto-coordination**:
-- ⚡ performance persona evaluates scalability
-- Analyzes endpoint performance, caching strategies, rate limiting
-- Context7 MCP provides high-performance API patterns
-- Projects performance under load
+**自動協調**：
+- ⚡ performance persona 評估可擴展性
+- 分析端點效能、快取策略、速率限制
+- Context7 MCP 提供高效能 API 模式
+- 預測負載下的效能
 
-**Output**: Performance analysis with scalability recommendations and optimization strategies.
+**輸出**：效能分析，包含可擴展性建議和優化策略。
 
-#### Step 4: Documentation for Multiple Teams
+#### 步驟 4：為多個團隊撰寫文件
 ```bash
 /sc:document api/ --type api --persona-scribe --detailed
 ```
-**What happens**:
-- ✍️ scribe persona creates professional API documentation
-- Context7 MCP provides API documentation standards
-- Creates examples, integration guides, and troubleshooting
-- Tailored for multiple consuming teams
+**發生了什麼**：
+- ✍️ scribe persona 建立專業的 API 文件
+- Context7 MCP 提供 API 文件標準
+- 建立範例、整合指南和疑難排解
+- 為多個使用團隊量身訂做
 
-**Output**: Comprehensive API documentation with examples, integration guides, and best practices.
+**輸出**：全面的 API 文件，包含範例、整合指南和最佳實踐。
 
-#### Step 5: Implementation Validation
+#### 步驟 5：實作驗證
 ```bash
 /sc:build api-implementation/ --validate --test-coverage
 ```
-**Auto-coordination**:
-- ⚙️ backend persona implements API patterns
-- 🧪 qa persona ensures quality and testing
-- Sequential MCP validates implementation against design
-- Comprehensive testing and validation
+**自動協調**：
+- ⚙️ backend persona 實作 API 模式
+- 🧪 qa persona 確保品質和測試
+- Sequential MCP 根據設計驗證實作
+- 全面的測試和驗證
 
-**Output**: Production-ready API implementation with comprehensive testing and validation.
+**輸出**：經過全面測試和驗證的生產就緒 API 實作。
 
-**Collaboration efficiency**: Multi-persona coordination reduces design iteration cycles by 60% and improves cross-team alignment.
+**協作效率**：多 Persona 協調將設計迭代週期減少 60%，並改善跨團隊的協調。
 
-### Common Pattern Recognition 🔍
+### 常見模式識別 🔍
 
-These examples show recurring patterns in how SuperClaude components coordinate:
+這些範例顯示了 SuperClaude 元件協調的重複模式：
 
-#### Investigation → Analysis → Implementation → Validation
-Most complex workflows follow this pattern with appropriate personas and tools for each phase.
+#### 調查 → 分析 → 實作 → 驗證
+大多數複雜的工作流程都遵循此模式，並為每個階段配備適當的 Persona 和工具。
 
-#### Multi-Persona Coordination
-Complex problems benefit from multiple perspectives (security + performance, architecture + frontend, etc.).
+#### 多 Persona 協調
+複雜問題受益於多種觀點 (安全 + 效能、架構 + 前端等)。
 
-#### Progressive Enhancement
-Starting simple and adding complexity as needed (`--think` → `--think-hard` → `--ultrathink`).
+#### 漸進式增強
+從簡單開始，根據需要增加複雜性 (`--think` → `--think-hard` → `--ultrathink`)。
 
-#### Safety-First Approach
-Critical operations automatically include validation and safety checks (`--safe-mode`, `--validate`).
+#### 安全優先方法
+關鍵操作會自動包含驗證和安全檢查 (`--safe-mode`, `--validate`)。
 
-#### Context-Aware Tool Selection
-SuperClaude automatically chooses appropriate MCP servers and flags based on detected context.
+#### 情境感知工具選擇
+SuperClaude 會根據偵測到的情境自動選擇適當的 MCP 伺服器和旗標。
 
-These examples demonstrate that SuperClaude's value comes from intelligent coordination of its components rather than any single capability. The framework adapts to your needs while maintaining consistent quality and safety standards.
+這些範例表明，SuperClaude 的價值來自其元件之間的智慧協調，而非任何單一功能。該框架能適應你的需求，同時維持一致的品質和安全標準。
 
 ---
 
-## Tips & Best Practices 🎯
+## 技巧與最佳實踐 🎯
 
-Based on real-world usage patterns and successful workflows, here are practical tips for getting the most out of SuperClaude.
+根據真實世界的使用模式和成功的工作流程，以下是充分利用 SuperClaude 的實用技巧。
 
-### Starting Out Successfully 🚀
+### 成功入門 🚀
 
-#### Begin with Simple Commands
+#### 從簡單的指令開始
 ```bash
-# Start here - basic functionality
+# 從這裡開始 - 基本功能
 /sc:help
 /sc:analyze README.md
 /sc:build --help
 
-# Not here - complex orchestration
+# 不要從這裡開始 - 複雜的編排
 /sc:improve entire-codebase/ --wave-mode force --all-mcp --delegate auto
 ```
 
-**Why**: Understanding basic behavior before adding complexity prevents confusion and helps you learn the framework gradually.
+**> ⚠️ 注意**：在增加複雜性之前了解基本行為，可以防止混淆，並幫助你逐步學習框架。
 
-#### Trust Auto-Activation First
+#### 首先相信自動啟用
 ```bash
-# Let SuperClaude choose tools
-/sc:analyze auth-system/  
-# → Watch what auto-activates (likely security persona + validation)
+# 讓 SuperClaude 選擇工具
+/sc:analyze auth-system/
+# → 觀察自動啟用的內容 (可能是 security persona + validation)
 
-# Then experiment with manual control
+# 然後實驗手動控制
 /sc:analyze auth-system/ --persona-performance
-# → See different perspective on same code
+# → 從不同角度看待相同的程式碼
 ```
 
-**Why**: Auto-activation usually gets it right and shows you optimal tool combinations for different scenarios.
+**> ⚠️ 注意**：自動啟用通常是正確的，並向你展示不同情境下的最佳工具組合。
 
-#### Use Preview and Safe Modes
+#### 使用預覽和安全模式
 ```bash
-# See what would happen first
+# 先看看會發生什麼
 /sc:improve messy-code.js --preview
 
-# Apply changes safely  
+# 安全地套用變更
 /sc:improve messy-code.js --safe-mode
 
-# For critical code, use both
+# 對於關鍵程式碼，兩者都使用
 /sc:improve production-auth/ --preview --safe-mode --validate
 ```
 
-**Why**: Prevents unintended changes and helps you understand what SuperClaude will do before it does it.
+**> ⚠️ 注意**：防止意外變更，並幫助你在 SuperClaude 執行前了解它將做什麼。
 
-### Flag Usage Patterns 🏁
+### 旗標使用模式 🏁
 
-#### Start Simple, Add Complexity
+#### 從簡單開始，增加複雜性
 ```bash
-# Basic command
+# 基本指令
 /sc:analyze complex-system/
 
-# Add thinking if needed
+# 如果需要，新增思考
 /sc:analyze complex-system/ --think
 
-# Add documentation if external libraries involved
+# 如果涉及外部函式庫，新增文件
 /sc:analyze complex-system/ --think --c7
 
-# Full analysis for critical systems
+# 對關鍵系統進行完整分析
 /sc:analyze complex-system/ --think-hard --c7 --seq --validate
 ```
 
-**Why**: Incremental complexity helps you understand what each flag adds and avoids over-engineering simple problems.
+**> ⚠️ 注意**：增量增加複雜性有助於你了解每個旗標的作用，並避免對簡單問題過度設計。
 
-#### Common Flag Combinations That Work
+#### 常見的有效旗標組合
 ```bash
-# Safe improvement workflow
+# 安全改進工作流程
 /sc:improve --preview → /improve --safe-mode → /test --coverage
 
-# Deep investigation workflow  
+# 深度調查工作流程
 /sc:troubleshoot issue --think --seq → /analyze affected-code/ --focus quality
 
-# Learning and documentation workflow
+# 學習與文件工作流程
 /sc:explain concept --persona-mentor --verbose --c7
 
-# Performance optimization workflow
+# 效能優化工作流程
 /sc:analyze --focus performance --persona-performance --play
 ```
 
-**Why**: These combinations are proven patterns that work well together and don't conflict.
+**> ⚠️ 注意**：這些組合是經過驗證的模式，可以很好地協同工作且不會衝突。
 
-#### Avoid Flag Conflicts
+#### 避免旗標衝突
 ```bash
-# ❌ Conflicting flags
-/sc:analyze code/ --no-mcp --c7  # --no-mcp overrides --c7
+# ❌ 衝突的旗標
+/sc:analyze code/ --no-mcp --c7  # --no-mcp 覆蓋 --c7
 
-# ❌ Counterproductive combinations
-/sc:analyze small-file.js --ultrathink --all-mcp  # Overkill for simple tasks
+# ❌ 適得其反的組合
+/sc:analyze small-file.js --ultrathink --all-mcp  # 對簡單任務來說矯枉過正
 
-# ✅ Sensible combinations
-/sc:analyze large-system/ --think --delegate auto  # Appropriate for complexity
-/sc:analyze simple-utility.js --answer-only       # Appropriate for simplicity
+# ✅ 合理的組合
+/sc:analyze large-system/ --think --delegate auto  # 適合複雜度
+/sc:analyze simple-utility.js --answer-only       # 適合簡單性
 ```
 
-**Why**: Understanding flag precedence and interactions prevents unexpected behavior and wasted resources.
+**> ⚠️ 注意**：了解旗標的優先順序和互動可以防止意外行為和資源浪費。
 
-### Persona Optimization 🎭
+### Persona 優化 🎭
 
-#### Let Domain Auto-Activation Work
+#### 讓領域自動啟用運作
 ```bash
-# These will automatically get the right persona
+# 這些會自動獲得正確的 Persona
 /sc:build react-components/     # → frontend persona
-/sc:scan auth/ --focus security # → security persona  
+/sc:scan auth/ --focus security # → security persona
 /sc:troubleshoot slow-api/      # → performance + analyzer personas
 ```
 
-**Why**: Auto-activation is based on proven patterns and usually selects the most appropriate expertise.
+**> ⚠️ 注意**：自動啟用基於經過驗證的模式，通常會選擇最合適的專業知識。
 
-#### Manual Override for Different Perspectives
+#### 為不同觀點手動覆蓋
 ```bash
-# Get different viewpoints on same code
-/sc:analyze payment-flow/ --persona-security    # Security perspective
-/sc:analyze payment-flow/ --persona-performance # Performance perspective
-/sc:analyze payment-flow/ --persona-architect   # Architecture perspective
+# 從不同角度看待相同的程式碼
+/sc:analyze payment-flow/ --persona-security    # 安全觀點
+/sc:analyze payment-flow/ --persona-performance # 效能觀點
+/sc:analyze payment-flow/ --persona-architect   # 架構觀點
 ```
 
-**Why**: Different personas provide unique insights that can reveal issues or opportunities others might miss.
+**> ⚠️ 注意**：不同的 Persona 提供了獨特的見解，可以揭示其他人可能忽略的問題或機會。
 
-#### Use Appropriate Personas for Project Phases
+#### 為專案階段使用適當的 Persona
 ```bash
-# Planning phase
+# 規劃階段
 /sc:design new-feature --persona-architect
 
-# Implementation phase  
-/sc:build feature/ --persona-frontend  # or backend, etc.
+# 實作階段
+/sc:build feature/ --persona-frontend  # 或 backend 等
 
-# Testing phase
+# 測試階段
 /sc:test feature/ --persona-qa
 
-# Documentation phase
+# 文件階段
 /sc:document feature/ --persona-scribe
 ```
 
-**Why**: Each project phase benefits from different types of expertise and perspectives.
+**> ⚠️ 注意**：每個專案階段都受益於不同類型的專業知識和觀點。
 
-### MCP Server Strategy 🔧
+### MCP 伺服器策略 🔧
 
-#### Understand When Each Server Helps
-- **Context7**: When working with frameworks, libraries, or need official documentation
-- **Sequential**: For complex debugging, systematic analysis, or architectural decisions  
-- **Magic**: For UI component generation, design systems, or frontend development
-- **Playwright**: For testing, performance measurement, or browser automation
+#### 了解每個伺服器的幫助時機
+- **Context7**：當使用框架、函式庫或需要官方文件時
+- **Sequential**：用於複雜除錯、系統性分析或架構決策
+- **Magic**：用於 UI 元件產生、設計系統或前端開發
+- **Playwright**：用於測試、效能測量或瀏覽器自動化
 
-#### Optimize for Performance vs. Capabilities
+#### 優化效能與功能
 ```bash
-# Fast execution for simple tasks
+# 簡單任務的快速執行
 /sc:analyze simple-script.js --no-mcp
 
-# Comprehensive analysis for complex problems
+# 複雜問題的全面分析
 /sc:analyze complex-system/ --all-mcp --think-hard
 
-# Balanced approach for most work
-/sc:analyze typical-component/ --c7  # Just documentation lookup
+# 大多數工作的平衡方法
+/sc:analyze typical-component/ --c7  # 僅文件查詢
 ```
 
-**Why**: Matching MCP usage to task complexity optimizes both speed and quality of results.
+**> ⚠️ 注意**：將 MCP 使用與任務複雜度相匹配，可以優化速度和結果品質。
 
-### Workflow Optimization 📈
+### 工作流程優化 📈
 
-#### Use Progressive Enhancement
+#### 使用漸進式增強
 ```bash
-# Level 1: Basic analysis
+# 等級 1：基本分析
 /sc:analyze component.js
 
-# Level 2: Add thinking if complex
+# 等級 2：如果複雜則新增思考
 /sc:analyze component.js --think
 
-# Level 3: Add documentation for frameworks
+# 等級 3：為框架新增文件
 /sc:analyze component.js --think --c7
 
-# Level 4: Full analysis for critical code
+# 等級 4：對關鍵程式碼進行完整分析
 /sc:analyze component.js --think-hard --c7 --seq --validate
 ```
 
-**Why**: Start with what you need and add complexity only when necessary. Prevents over-engineering and saves time.
+**> ⚠️ 注意**：從你需要的開始，只有在必要時才增加複雜性。防止過度設計並節省時間。
 
-#### Batch Related Operations
+#### 批次處理相關操作
 ```bash
-# ✅ Efficient: Related operations together
+# ✅ 高效：相關操作一起處理
 /sc:analyze auth-system/ --focus security
-/sc:improve auth-system/ --focus security --safe-mode  
+/sc:improve auth-system/ --focus security --safe-mode
 /sc:test auth-system/ --type security
 
-# ❌ Inefficient: Scattered operations
+# ❌ 低效：分散的操作
 /sc:analyze auth-system/
 /sc:review different-system/
-/sc:improve auth-system/  # Context lost between operations
+/sc:improve auth-system/  # 操作之間遺失情境
 ```
 
-**Why**: Batching related work maintains context and allows SuperClaude to build on previous analysis.
+**> ⚠️ 注意**：批次處理相關工作可以維持情境，並讓 SuperClaude 在先前的分析基礎上繼續進行。
 
-#### Use Appropriate Scope
+#### 使用適當的範圍
 ```bash
-# File-level for specific issues
+# 針對特定問題的檔案級
 /sc:improve single-component.js --focus performance
 
-# Module-level for related functionality
+# 針對相關功能的模組級
 /sc:analyze user-auth/ --scope module
 
-# Project-level for architectural concerns
+# 針對架構考量的專案級
 /sc:analyze --scope project --focus architecture
 
-# System-level only when necessary
+# 僅在必要時使用系統級
 /sc:analyze --scope system --delegate auto --uc
 ```
 
-**Why**: Matching scope to problem prevents both under-analysis and resource waste.
+**> ⚠️ 注意**：將範圍與問題相匹配，可以防止分析不足和資源浪費。
 
-### Performance and Efficiency 🏃‍♂️
+### 效能與效率 🏃‍♂️
 
-#### Manage Context and Token Usage
+#### 管理情境和 Token 使用
 ```bash
-# For large operations, use compression
+# 對於大型操作，使用壓縮
 /sc:analyze huge-codebase/ --uc --delegate auto
 
-# For repeated analysis, cache results
-/sc:load project-context/  # Cache project understanding
-/sc:analyze specific-issue/  # Build on cached context
+# 對於重複分析，快取結果
+/sc:load project-context/  # 快取專案理解
+/sc:analyze specific-issue/  # 在快取的情境上建構
 
-# For simple questions, minimize overhead
+# 對於簡單問題，最小化開銷
 /sc:explain quick-concept --answer-only --no-mcp
 ```
 
-**Why**: Token efficiency keeps operations fast and prevents context overflow in large projects.
+**> ⚠️ 注意**：Token 效率可以保持操作快速，並防止大型專案中的情境溢出。
 
-#### Use Delegation for Large Projects
+#### 對大型專案使用委派
 ```bash
-# Automatically delegate when appropriate
+# 在適當時自動委派
 /sc:analyze monorepo/ --delegate auto
 
-# Manual delegation for specific needs
+# 為特定需求手動委派
 /sc:analyze large-project/ --delegate folders --concurrency 3
 
-# Skip delegation for small projects
+# 對小型專案跳過委派
 /sc:analyze small-app/ --no-delegate
 ```
 
-**Why**: Delegation provides significant speedup (40-70%) for large-scale operations while maintaining quality.
+**> ⚠️ 注意**：委派為大規模操作提供了顯著的速度提升 (40-70%)，同時保持品質。
 
-#### Optimize Command Sequences
+#### 優化指令序列
 ```bash
-# ✅ Efficient sequence
-/sc:load project/           # Understand context once
-/sc:analyze --focus quality # Build on understanding
-/sc:improve --safe-mode     # Apply improvements
-/sc:test --coverage         # Validate changes
+# ✅ 高效序列
+/sc:load project/           # 一次性理解情境
+/sc:analyze --focus quality # 在理解的基礎上建構
+/sc:improve --safe-mode     # 套用改進
+/sc:test --coverage         # 驗證變更
 
-# ❌ Inefficient sequence  
+# ❌ 低效序列
 /sc:analyze file1.js
-/sc:analyze file2.js        # Duplicate setup
-/sc:analyze file3.js        # Lost optimization opportunities
+/sc:analyze file2.js        # 重複設定
+/sc:analyze file3.js        # 錯失優化機會
 ```
 
-**Why**: Sequential commands can build on each other's context and analysis for better results.
+**> ⚠️ 注意**：順序指令可以在彼此的情境和分析基礎上建構，以獲得更好的結果。
 
-### Quality and Safety 🛡️
+### 品質與安全 🛡️
 
-#### Always Validate Important Changes
+#### 務必驗證重要變更
 ```bash
-# For production code
+# 對於生產程式碼
 /sc:improve production-auth/ --safe-mode --validate --preview
 
-# For experimental features
+# 對於實驗性功能
 /sc:improve experimental-feature/ --validate
 
-# For learning/exploration
-/sc:improve test-code/ --preview  # See what it would do
+# 用於學習/探索
+/sc:improve test-code/ --preview  # 看看它會做什麼
 ```
 
-**Why**: Validation prevents breaking changes and helps you understand the impact of modifications.
+**> ⚠️ 注意**：驗證可以防止破壞性變更，並幫助你了解修改的影響。
 
-#### Use Quality Gates Effectively
+#### 有效使用品質關卡
 ```bash
-# Let quality gates run automatically
-/sc:build production-app/  # 8-step validation process runs
+# 讓品質關卡自動運行
+/sc:build production-app/  # 8 步驟驗證流程運行
 
-# Add extra validation for critical systems
+# 為關鍵系統新增額外驗證
 /sc:build payment-system/ --validate --safe-mode
 
-# Skip validation only for experimental work
-/sc:build prototype/ --no-validate  # Use sparingly
+# 僅對實驗性工作跳過驗證
+/sc:build prototype/ --no-validate  # 謹慎使用
 ```
 
-**Why**: Quality gates catch issues early when they're cheaper and easier to fix.
+**> ⚠️ 注意**：品質關卡可以在問題變得更昂貴、更難修復時及早發現它們。
 
-#### Maintain Evidence Trail
+#### 維持證據鏈
 ```bash
-# Commands that provide evidence
-/sc:analyze --focus performance  # → Performance metrics
-/sc:test --coverage             # → Coverage reports  
-/sc:scan --focus security       # → Security assessment
+# 提供證據的指令
+/sc:analyze --focus performance  # → 效能指標
+/sc:test --coverage             # → 覆蓋率報告
+/sc:scan --focus security       # → 安全評估
 
-# Use introspection for complex decisions
-/sc:analyze complex-system/ --introspect  # → Decision reasoning
+# 對複雜決策使用內省
+/sc:analyze complex-system/ --introspect  # → 決策理由
 ```
 
-**Why**: Evidence-based development leads to better decisions and easier debugging when issues arise.
+**> ⚠️ 注意**：基於證據的開發可以帶來更好的決策，並在問題出現時更容易除錯。
 
-### Learning and Growth 📚
+### 學習與成長 📚
 
-#### Use Mentor Persona for Learning
+#### 使用 Mentor Persona 進行學習
 ```bash
-# Learn new concepts
+# 學習新概念
 /sc:explain GraphQL --persona-mentor --verbose
 
-# Understand complex code
+# 理解複雜程式碼
 /sc:analyze complex-algorithm.js --persona-mentor
 
-# Get step-by-step guidance
+# 獲得逐步指導
 /sc:build new-feature/ --persona-mentor --plan
 ```
 
-**Why**: Mentor persona optimizes for understanding and knowledge transfer rather than just task completion.
+**> ⚠️ 注意**：Mentor Persona 優化理解和知識轉移，而不僅僅是任務完成。
 
-#### Experiment with Different Approaches
+#### 實驗不同方法
 ```bash
-# Try different personas on same problem
+# 在同一個問題上嘗試不同 Persona
 /sc:analyze api-design/ --persona-architect
 /sc:analyze api-design/ --persona-security
 /sc:analyze api-design/ --persona-performance
 
-# Compare tool combinations
+# 比較工具組合
 /sc:build app/ --magic --c7
-/sc:build app/ --no-mcp --uc  # Faster but simpler
+/sc:build app/ --no-mcp --uc  # 更快但更簡單
 ```
 
-**Why**: Understanding different approaches helps you choose the best tools for different situations.
+**> ⚠️ 注意**：了解不同方法有助於你為不同情況選擇最佳工具。
 
-#### Build Your Own Patterns
+#### 建立你自己的模式
 ```bash
-# Identify what works for your workflow
-# Security-focused API development
+# 識別對你的工作流程有效的模式
+# 以安全為重點的 API 開發
 /sc:design api --persona-security --validate
 /sc:build api --persona-backend --c7
 /sc:test api --type security --play
 
-# Create your own efficient combinations
-/sc:analyze code/ --think --c7 --safe-mode  # Your personal "thorough analysis"
+# 建立你自己的高效組合
+/sc:analyze code/ --think --c7 --safe-mode  # 你個人的「徹底分析」
 ```
 
-**Why**: Developing your own proven patterns increases productivity and ensures consistent quality.
+**> ⚠️ 注意**：開發你自己的經過驗證的模式可以提高生產力並確保一致的品質。
 
-### Common Pitfalls to Avoid ⚠️
+### 常見陷阱與避免方法 ⚠️
 
-#### Don't Over-Engineer Simple Tasks
+#### 不要對簡單任務過度設計
 ```bash
-# ❌ Overkill for simple tasks
+# ❌ 對簡單任務矯枉過正
 /sc:analyze simple-utility.js --ultrathink --all-mcp --wave-mode force
 
-# ✅ Appropriate for simple tasks  
+# ✅ 適合簡單任務
 /sc:analyze simple-utility.js --focus quality
 ```
 
-#### Don't Ignore Auto-Activation Wisdom
+#### 不要忽視自動啟用的智慧
 ```bash
-# ❌ Fighting the system
-/sc:build react-app/ --persona-backend --no-magic  # Wrong tools for the job
+# ❌ 與系統對抗
+/sc:build react-app/ --persona-backend --no-magic  # 工作工具錯誤
 
-# ✅ Working with the system
-/sc:build react-app/  # Let frontend persona and Magic activate automatically
+# ✅ 與系統合作
+/sc:build react-app/  # 讓 frontend persona 和 Magic 自動啟用
 ```
 
-#### Don't Skip Safety for Speed
+#### 不要為了速度犧牲安全
 ```bash
-# ❌ Risky for important code
+# ❌ 對重要程式碼有風險
 /sc:improve production-auth/ --force --no-validate
 
-# ✅ Balanced approach
-/sc:improve production-auth/ --safe-mode --validate  # Safer but still efficient
+# ✅ 平衡的方法
+/sc:improve production-auth/ --safe-mode --validate  # 更安全但仍然高效
 ```
 
-#### Don't Use Flags You Don't Understand
+#### 不要使用你不了解的旗標
 ```bash
-# ❌ Cargo cult flag usage
+# ❌ 盲目跟風使用旗標
 /sc:command --random-flags-that-look-important
 
-# ✅ Understand what each flag does
-/sc:command --think  # Because I need deeper analysis
-/sc:command --c7     # Because I'm working with external libraries
+# ✅ 了解每個旗標的作用
+/sc:command --think  # 因為我需要更深入的分析
+/sc:command --c7     # 因為我正在使用外部函式庫
 ```
 
-### Measuring Success 📊
+### 衡量成功 📊
 
-Track what works well for your specific needs:
+追蹤對你的特定需求有效的東西：
 
-- **Speed**: How quickly do different flag combinations complete?
-- **Quality**: Which approaches produce better results for your type of work?
-- **Learning**: Which combinations help you understand problems better?
-- **Safety**: Which patterns prevent issues in your environment?
+- **速度**：不同旗標組合完成的速度有多快？
+- **品質**：哪種方法對你的工作類型產生更好的結果？
+- **學習**：哪種組合能幫助你更好地理解問題？
+- **安全**：哪種模式能預防你環境中的問題？
 
-Remember: SuperClaude learns from successful patterns, so using effective combinations consistently helps the framework get better at auto-activation for your specific workflow.
+記住：SuperClaude 會從成功的模式中學習，所以持續使用有效的組合有助於框架更好地為你的特定工作流程自動啟用正確的方法。
 
 ---
 
-## Troubleshooting & Common Issues 🚨
+## 疑難排解與常見問題 🚨
 
-When SuperClaude doesn't work as expected, here's how to diagnose and fix common problems.
+當 SuperClaude 未如預期運作時，以下是如何診斷和修復常見問題的方法。
 
-### Command Issues 🛠️
+### 指令問題 🛠️
 
-#### Commands Not Working as Expected
+#### 指令未如預期運作
 
-**Problem**: Command produces unexpected results or seems to ignore your request.
+**問題**：指令產生意外結果或似乎忽略了你的請求。
 
-**Diagnosis**:
+**診斷**：
 ```bash
-# Check what auto-activated
+# 檢查自動啟用的內容
 /sc:analyze code.js --introspect
-# → Shows decision-making process
+# → 顯示決策過程
 
-# Try with explicit control
+# 嘗試使用明確的控制
 /sc:analyze code.js --persona-analyzer --think --seq
-# → Override auto-activation
+# → 覆蓋自動啟用
 ```
 
-**Solutions**:
+**解決方案**：
 ```bash
-# Be more specific about what you want
+# 更具體地說明你想要什麼
 /sc:improve code.js --focus performance --safe-mode
 
-# Use preview to understand what will happen
+# 使用預覽來了解將會發生什麼
 /sc:improve code.js --preview
 
-# Start simple and add complexity
-/sc:analyze code.js                    # Basic
-/sc:analyze code.js --think            # Add depth
-/sc:analyze code.js --think --c7       # Add documentation
+# 從簡單開始，增加複雜性
+/sc:analyze code.js                    # 基本
+/sc:analyze code.js --think            # 增加深度
+/sc:analyze code.js --think --c7       # 新增文件
 ```
 
-**Common Causes**:
-- Auto-activation chose different tools than you expected
-- Request was too vague for SuperClaude to understand intent
-- Complexity mismatch (simple request with complex flags or vice versa)
+**常見原因**：
+- 自動啟用選擇了與你預期不同的工具
+- 請求過於模糊，SuperClaude 無法理解意圖
+- 複雜度不匹配 (簡單請求搭配複雜旗標，反之亦然)
 
-#### Commands Running Too Slowly
+#### 指令運行過慢
 
-**Problem**: Operations take much longer than expected.
+**問題**：操作比預期花費更長的時間。
 
-**Diagnosis**:
+**診斷**：
 ```bash
-# Check what's activated
+# 檢查啟用了什麼
 /sc:analyze large-project/ --introspect
-# → See what tools and servers are being used
+# → 查看正在使用哪些工具和伺服器
 
-# Monitor resource usage
+# 監控資源使用
 /sc:analyze large-project/ --verbose
-# → Shows detailed execution steps
+# → 顯示詳細的執行步驟
 ```
 
-**Solutions**:
+**解決方案**：
 ```bash
-# Optimize for speed
+# 為速度進行優化
 /sc:analyze large-project/ --uc --no-mcp --scope module
 
-# Use delegation for large operations
+# 對大型操作使用委派
 /sc:analyze huge-codebase/ --delegate auto --concurrency 3
 
-# Reduce scope
-/sc:analyze specific-component.js  # Instead of entire project
+# 縮小範圍
+/sc:analyze specific-component.js  # 而不是整個專案
 
-# Disable expensive features
+# 停用昂貴的功能
 /sc:analyze code/ --no-mcp --answer-only
 ```
 
-**Performance Optimization Priority**:
-1. Reduce scope (`--scope file` vs `--scope project`)
-2. Use compression (`--uc`)
-3. Disable MCP servers (`--no-mcp`)
-4. Use delegation (`--delegate auto`)
-5. Use answer-only mode (`--answer-only`)
+**效能優化優先順序**：
+1. 縮小範圍 (`--scope file` vs `--scope project`)
+2. 使用壓縮 (`--uc`)
+3. 停用 MCP 伺服器 (`--no-mcp`)
+4. 使用委派 (`--delegate auto`)
+5. 使用僅回答模式 (`--answer-only`)
 
-#### Commands Producing Too Much Output
+#### 指令產生過多輸出
 
-**Problem**: Information overload, hard to find relevant information.
+**問題**：資訊過載，難以找到相關資訊。
 
-**Solutions**:
+**解決方案**：
 ```bash
-# Use compression
+# 使用壓縮
 /sc:analyze large-system/ --uc
 
-# Be more specific about focus
-/sc:analyze system/ --focus security  # Instead of general analysis
+# 更具體地說明焦點
+/sc:analyze system/ --focus security  # 而不是一般分析
 
-# Use answer-only for simple questions
+# 對簡單問題使用僅回答模式
 /sc:explain concept --answer-only
 
-# Limit scope
+# 限制範圍
 /sc:analyze --scope file specific-issue.js
 ```
 
-### Flag Issues 🏁
+### 旗標問題 🏁
 
-#### Flag Conflicts and Unexpected Behavior
+#### 旗標衝突與意外行為
 
-**Problem**: Flags don't seem to work or produce unexpected results.
+**問題**：旗標似乎不起作用或產生意外結果。
 
-**Common Conflicts**:
+**常見衝突**：
 ```bash
-# ❌ These conflict
-/sc:command --no-mcp --c7        # --no-mcp overrides --c7
-/sc:command --answer-only --plan # --answer-only skips planning
-/sc:command --uc --verbose       # --uc overrides --verbose
+# ❌ 這些會衝突
+/sc:command --no-mcp --c7        # --no-mcp 覆蓋 --c7
+/sc:command --answer-only --plan # --answer-only 跳過規劃
+/sc:command --uc --verbose       # --uc 覆蓋 --verbose
 
-# ✅ These work together
-/sc:command --think --c7 --seq   # Complementary capabilities
-/sc:command --safe-mode --validate --preview  # Layered safety
+# ✅ 這些可以協同工作
+/sc:command --think --c7 --seq   # 互補的功能
+/sc:command --safe-mode --validate --preview  # 分層的安全性
 ```
 
-**Flag Precedence Order**:
-1. Safety flags (`--safe-mode`) > optimization flags
-2. Explicit flags > auto-activation  
-3. `--no-mcp` overrides all individual MCP flags
-4. Last specified persona wins
-5. Scope: system > project > module > file
+**旗標優先順序**：
+1. 安全旗標 (`--safe-mode`) > 優化旗標
+2. 明確指定的旗標 > 自動啟用
+3. `--no-mcp` 覆蓋所有單獨的 MCP 旗標
+4. 最後指定的 Persona 生效
+5. 範圍：system > project > module > file
 
-**Diagnosis**:
+**診斷**：
 ```bash
-# Check what flags are actually active
+# 檢查實際啟用的旗標
 /sc:command args --introspect
-# → Shows final flag configuration after precedence resolution
+# → 顯示優先順序解析後的最終旗標設定
 ```
 
-#### Auto-Activation Issues
+#### 自動啟用問題
 
-**Problem**: Wrong flags or personas auto-activate.
+**問題**：自動啟用了錯誤的旗標或 Persona。
 
-**Solutions**:
+**解決方案**：
 ```bash
-# Override auto-activation explicitly
-/sc:analyze frontend-code/ --persona-security  # Force security view
-/sc:build project/ --no-mcp                    # Force native tools only
+# 明確覆蓋自動啟用
+/sc:analyze frontend-code/ --persona-security  # 強制安全視角
+/sc:build project/ --no-mcp                    # 強制僅使用原生工具
 
-# Use more specific language
-/sc:analyze "security vulnerabilities in auth system"  # Clear intent
+# 使用更具體的語言
+/sc:analyze "security vulnerabilities in auth system"  # 明確的意圖
 # vs
-/sc:analyze auth system                                # Ambiguous
+/sc:analyze auth system                                # 模糊
 
-# Check what keywords trigger auto-activation
-/sc:help analyze  # Shows auto-activation patterns
+# 檢查哪些關鍵字觸發自動啟用
+/sc:help analyze  # 顯示自動啟用模式
 ```
 
-**Auto-Activation Debugging**:
+**自動啟用除錯**：
 ```bash
-# See why certain flags activated
+# 查看為什麼啟用了某些旗標
 /sc:troubleshoot "why did --think-hard activate?" --introspect
 ```
 
-### Persona Issues 🎭
+### Persona 問題 🎭
 
-#### Wrong Persona Activated
+#### 啟用了錯誤的 Persona
 
-**Problem**: SuperClaude uses the wrong specialist for your needs.
+**問題**：SuperClaude 為你的需求使用了錯誤的專家。
 
-**Diagnosis**:
+**診斷**：
 ```bash
-# Check what triggered persona activation
+# 檢查是什麼觸發了 Persona 啟用
 /sc:analyze code/ --introspect
-# → Shows persona selection reasoning
+# → 顯示 Persona 選擇的理由
 ```
 
-**Solutions**:
+**解決方案**：
 ```bash
-# Override with explicit persona
-/sc:analyze backend-api/ --persona-security  # Security view of backend code
-/sc:analyze ui-component/ --persona-performance  # Performance view of frontend
+# 使用明確的 Persona 進行覆蓋
+/sc:analyze backend-api/ --persona-security  # 從安全角度看後端程式碼
+/sc:analyze ui-component/ --persona-performance  # 從效能角度看前端
 
-# Use more specific language
-/sc:analyze "security issues in payment processing"  # Triggers security persona
-/sc:analyze "slow database queries"                  # Triggers performance persona
+# 使用更具體的語言
+/sc:analyze "security issues in payment processing"  # 觸發 security persona
+/sc:analyze "slow database queries"                  # 觸發 performance persona
 
-# Try different personas for different perspectives
-/sc:analyze payment-system/ --persona-security    # Security view
-/sc:analyze payment-system/ --persona-architect   # Architecture view
+# 為不同觀點嘗試不同 Persona
+/sc:analyze payment-system/ --persona-security    # 安全觀點
+/sc:analyze payment-system/ --persona-architect   # 架構觀點
 ```
 
-#### Persona Doesn't Seem Active
+#### Persona 似乎未啟用
 
-**Problem**: Expected persona behavior but getting generic responses.
+**問題**：預期的 Persona 行為但得到通用回應。
 
-**Check Persona Activation**:
+**檢查 Persona 啟用**：
 ```bash
-# Verify persona is active
+# 驗證 Persona 是否已啟用
 /sc:analyze auth/ --persona-security --introspect
-# → Should show security-focused reasoning
+# → 應該會顯示以安全為重點的推理
 
-# Check if domain keywords are clear
-/sc:scan authentication --focus security  # Should auto-activate security persona
+# 檢查領域關鍵字是否清晰
+/sc:scan authentication --focus security  # 應該會自動啟用 security persona
 ```
 
-**Solutions**:
+**解決方案**：
 ```bash
-# Be explicit about persona and focus
+# 明確指定 Persona 和焦點
 /sc:analyze code/ --persona-security --focus security
 
-# Use appropriate commands for personas
-/sc:scan --persona-security     # Security scanning
-/sc:test --persona-qa           # Quality-focused testing
-/sc:document --persona-scribe   # Professional documentation
+# 為 Persona 使用適當的指令
+/sc:scan --persona-security     # 安全掃描
+/sc:test --persona-qa           # 以品質為重點的測試
+/sc:document --persona-scribe   # 專業文件
 ```
 
-### MCP Server Issues 🔧
+### MCP 伺服器問題 🔧
 
-#### MCP Servers Not Activating
+#### MCP 伺服器未啟用
 
-**Problem**: Expected MCP capabilities but they don't seem to work.
+**問題**：預期的 MCP 功能但它們似乎不起作用。
 
-**Diagnosis**:
+**診斷**：
 ```bash
-# Check MCP server status
+# 檢查 MCP 伺服器狀態
 /sc:troubleshoot "MCP servers not working" --introspect
 
-# Verify MCP installation
-/sc:load --summary  # Should show available MCP servers
+# 驗證 MCP 安裝
+/sc:load --summary  # 應該會顯示可用的 MCP 伺服器
 
-# Test specific servers
-/sc:analyze react-app/ --c7     # Should use Context7
-/sc:troubleshoot issue --seq    # Should use Sequential
-/sc:build ui/ --magic           # Should use Magic
-/sc:test app/ --play            # Should use Playwright
+# 測試特定伺服器
+/sc:analyze react-app/ --c7     # 應該使用 Context7
+/sc:troubleshoot issue --seq    # 應該使用 Sequential
+/sc:build ui/ --magic           # 應該使用 Magic
+/sc:test app/ --play            # 應該使用 Playwright
 ```
 
-**Common Solutions**:
+**常見解決方案**：
 ```bash
-# Force MCP activation
+# 強制啟用 MCP
 /sc:analyze code/ --all-mcp
 
-# Check if servers are disabled
-/sc:analyze code/ --c7  # If this doesn't work, Context7 may be unavailable
+# 檢查伺服器是否被停用
+/sc:analyze code/ --c7  # 如果這不起作用，Context7 可能不可用
 
-# Use fallback approaches
-/sc:analyze react-app/ --no-mcp  # Use native tools if MCP unavailable
+# 使用備援方法
+/sc:analyze react-app/ --no-mcp  # 如果 MCP 不可用，則使用原生工具
 ```
 
-#### MCP Servers Too Slow
+#### MCP 伺服器過慢
 
-**Problem**: MCP server integration causes slow performance.
+**問題**：MCP 伺服器整合導致效能緩慢。
 
-**Solutions**:
+**解決方案**：
 ```bash
-# Disable MCP for speed
+# 為速度停用 MCP
 /sc:analyze large-project/ --no-mcp
 
-# Use selective MCP activation
-/sc:analyze react-code/ --magic --no-seq  # Only UI generation, skip analysis
+# 使用選擇性的 MCP 啟用
+/sc:analyze react-code/ --magic --no-seq  # 僅 UI 產生，跳過分析
 
-# Optimize MCP usage
-/sc:analyze code/ --uc --c7  # Compression + documentation only
+# 優化 MCP 使用
+/sc:analyze code/ --uc --c7  # 僅壓縮 + 文件
 ```
 
-### Performance Issues ⚡
+### 效能問題 ⚡
 
-#### Operations Using Too Many Tokens
+#### 操作使用過多 Token
 
-**Problem**: Hitting context limits or expensive operations.
+**問題**：達到情境限制或操作昂貴。
 
-**Solutions**:
+**解決方案**：
 ```bash
-# Enable compression automatically
+# 自動啟用壓縮
 /sc:analyze huge-project/ --uc
 
-# Reduce scope
+# 縮小範圍
 /sc:analyze --scope module specific-area/
 /sc:analyze --scope file specific-file.js
 
-# Use delegation
+# 使用委派
 /sc:analyze large-codebase/ --delegate auto --uc
 
-# Disable expensive features
+# 停用昂貴的功能
 /sc:analyze code/ --no-mcp --answer-only
 ```
 
-#### Memory or Resource Issues
+#### 記憶體或資源問題
 
-**Problem**: Operations failing or very slow due to resource constraints.
+**問題**：由於資源限制，操作失敗或非常緩慢。
 
-**Solutions**:
+**解決方案**：
 ```bash
-# Reduce concurrency
+# 減少並行性
 /sc:analyze large-project/ --delegate auto --concurrency 1
 
-# Use safe mode
-/sc:improve large-system/ --safe-mode  # More conservative resource usage
+# 使用安全模式
+/sc:improve large-system/ --safe-mode  # 更保守的資源使用
 
-# Break work into smaller chunks
+# 將工作分解為更小的區塊
 /sc:analyze module1/
 /sc:analyze module2/
 /sc:analyze module3/
-# Instead of /analyze entire-project/
+# 而不是 /analyze entire-project/
 ```
 
-### Quality and Safety Issues 🛡️
+### 品質與安全問題 🛡️
 
-#### Unsafe or Risky Suggestions
+#### 不安全或有風險的建議
 
-**Problem**: SuperClaude suggests changes that seem risky.
+**問題**：SuperClaude 建議的變更似乎有風險。
 
-**Always Use Safety Features**:
+**務必使用安全功能**：
 ```bash
-# Preview before applying
+# 套用前預覽
 /sc:improve important-code/ --preview
 
-# Use safe mode for critical code
+# 對關鍵程式碼使用安全模式
 /sc:improve production-auth/ --safe-mode
 
-# Add validation
+# 新增驗證
 /sc:improve system/ --validate --safe-mode
 
-# Use iterative approach
+# 使用迭代方法
 /sc:improve complex-system/ --loop --safe-mode
 ```
 
-#### Changes Breaking Functionality
+#### 變更破壞功能
 
-**Problem**: Applied improvements cause issues.
+**問題**：套用的改進導致問題。
 
-**Prevention**:
+**預防**：
 ```bash
-# Always use preview first
+# 總是先使用預覽
 /sc:improve code/ --preview
 
-# Use safe mode
+# 使用安全模式
 /sc:improve code/ --safe-mode
 
-# Test after changes
+# 變更後進行測試
 /sc:improve code/ --safe-mode && /test code/
 ```
 
-**Recovery**:
-- Use git to revert changes
-- Apply improvements incrementally with `--safe-mode`
-- Use `--validate` to check before applying changes
+**恢復**：
+- 使用 git 還原變更
+- 使用 `--safe-mode` 增量套用改進
+- 在套用變更前使用 `--validate` 進行檢查
 
-### Framework and Integration Issues 🔗
+### 框架與整合問題 🔗
 
-#### SuperClaude Doesn't Understand Project Context
+#### SuperClaude 不理解專案情境
 
-**Problem**: Recommendations don't fit your project's patterns or constraints.
+**問題**：建議不符合你專案的模式或限制。
 
-**Solutions**:
+**解決方案**：
 ```bash
-# Load project context first
+# 先載入專案情境
 /sc:load --deep --summary
 
-# Be explicit about project type
-/sc:analyze react-typescript-app/ --c7  # Include tech stack in description
+# 明確說明專案類型
+/sc:analyze react-typescript-app/ --c7  # 在描述中包含技術棧
 
-# Use appropriate personas
+# 使用適當的 Persona
 /sc:analyze node-api/ --persona-backend
 /sc:analyze react-ui/ --persona-frontend
 ```
 
-#### Inconsistent Results
+#### 結果不一致
 
-**Problem**: Same command produces different results at different times.
+**問題**：相同指令在不同時間產生不同結果。
 
-**Diagnosis**:
+**診斷**：
 ```bash
-# Check what's auto-activating differently
+# 檢查自動啟用的內容有何不同
 /sc:command args --introspect
 
-# Use explicit flags for consistency
-/sc:analyze code/ --persona-analyzer --think --c7  # Explicit configuration
+# 為求一致性使用明確的旗標
+/sc:analyze code/ --persona-analyzer --think --c7  # 明確的設定
 ```
 
-**Solutions**:
+**解決方案**：
 ```bash
-# Be more explicit about requirements
+# 更明確地說明需求
 /sc:improve code/ --focus performance --persona-performance --safe-mode
 
-# Use consistent flag patterns
-/sc:analyze --think --c7     # Your standard thorough analysis
-/sc:improve --safe-mode      # Your standard safe improvement
+# 使用一致的旗標模式
+/sc:analyze --think --c7     # 你的標準徹底分析
+/sc:improve --safe-mode      # 你的標準安全改進
 ```
 
-### Getting Help 🆘
+### 尋求幫助 🆘
 
-#### When You're Stuck
+#### 當你卡住時
 
-**Self-Diagnosis Steps**:
-1. Use `--introspect` to understand what SuperClaude is thinking
-2. Try simpler versions of your command
-3. Check auto-activation with explicit flags
-4. Use `--help` on commands to see options
+**自我診斷步驟**：
+1. 使用 `--introspect` 了解 SuperClaude 的想法
+2. 嘗試更簡單版本的指令
+3. 使用明確的旗標檢查自動啟用
+4. 在指令上使用 `--help` 查看選項
 
-**Escalation Path**:
+**升級路徑**：
 ```bash
-# Get framework help
+# 獲取框架幫助
 /sc:troubleshoot "SuperClaude framework issues" --introspect
 
-# Check documentation
-/sc:help                    # Command overview
-/sc:analyze --help          # Specific command help
+# 查閱文件
+/sc:help                    # 指令概覽
+/sc:analyze --help          # 特定指令幫助
 
-# Test basic functionality
-/sc:analyze README.md       # Simple test
-/sc:build --help           # Check if commands work
+# 測試基本功能
+/sc:analyze README.md       # 簡單測試
+/sc:build --help           # 檢查指令是否運作
 ```
 
-#### Reporting Issues
+#### 回報問題
 
-When reporting problems, include:
-- **Exact command used**: `/analyze code/ --think --c7`
-- **Expected behavior**: "Should provide security analysis"
-- **Actual behavior**: "Only provided basic code review"
-- **Context**: "Working on Node.js authentication system"
-- **SuperClaude version**: Check with `/help`
+回報問題時，請包含：
+- **使用的確切指令**：`/analyze code/ --think --c7`
+- **預期行為**：「應該提供安全分析」
+- **實際行為**：「只提供了基本的程式碼審查」
+- **情境**：「正在處理 Node.js 驗證系統」
+- **SuperClaude 版本**：使用 `/help` 檢查
 
-**Useful Debug Information**:
+**有用的除錯資訊**：
 ```bash
-# Get diagnostic information
+# 獲取診斷資訊
 /sc:troubleshoot "describe your issue" --introspect --verbose
-# → Provides detailed context for bug reports
+# → 為錯誤報告提供詳細情境
 ```
 
-### Quick Reference for Common Problems 📋
+### 常見問題快速參考 📋
 
-| Problem              | Quick Fix                       | Command                    |
-| -------------------- | ------------------------------- | -------------------------- |
-| Too slow             | Reduce scope + compression      | `--scope file --uc`        |
-| Wrong persona        | Override explicitly             | `--persona-security`       |
-| Too much output      | Use compression                 | `--uc`                     |
-| Risky changes        | Use safety features             | `--safe-mode --preview`    |
-| MCP not working      | Force activation or disable     | `--all-mcp` or `--no-mcp`  |
-| Inconsistent results | Use explicit flags              | `--persona-x --think --c7` |
-| Context issues       | Load project context            | `/load --deep`             |
-| Token limits         | Enable compression + delegation | `--uc --delegate auto`     |
+| 問題 | 快速修復 | 指令 |
+|---------|-----------|---------|
+| 太慢 | 縮小範圍 + 壓縮 | `--scope file --uc` |
+| 錯誤的 Persona | 明確覆蓋 | `--persona-security` |
+| 輸出過多 | 使用壓縮 | `--uc` |
+| 有風險的變更 | 使用安全功能 | `--safe-mode --preview` |
+| MCP 不運作 | 強制啟用或停用 | `--all-mcp` 或 `--no-mcp` |
+| 結果不一致 | 使用明確的旗標 | `--persona-x --think --c7` |
+| 情境問題 | 載入專案情境 | `/load --deep` |
+| Token 限制 | 啟用壓縮 + 委派 | `--uc --delegate auto` |
 
-Remember: When in doubt, start simple and add complexity gradually. Use `--introspect` to understand what SuperClaude is thinking, and don't hesitate to override auto-activation when you need specific behavior.
+記住：如有疑問，從簡單開始，逐步增加複雜性。使用 `--introspect` 了解 SuperClaude 的想法，並在需要特定行為時毫不猶豫地覆蓋自動啟用。
 
 ---
 
-## What's Next 🔮
+## 未來展望 🔮
 
-SuperClaude v3.0 is fresh out of beta, and we're honest about what that means: it works pretty well for what it does, but there are rough edges and room for improvement. Here's what you can expect as the framework evolves.
+SuperClaude v3.0 才剛結束測試版，我們坦誠地說：就其功能而言，它運作得相當不錯，但仍有不完善之處和改進空間。以下是你可以預期框架演變的方向。
 
-### Current Limitations (Let's Be Honest) ⚠️
+### 當前限制 (老實說) ⚠️
 
-#### Known Issues We're Working On
+#### 我們正在處理的已知問題
 
-**Performance Optimization**
-- Some operations are slower than we'd like, especially with all MCP servers active
-- Token usage could be more efficient for large-scale operations  
-- Memory usage spikes on very large codebases (>1000 files)
+**效能優化**
+- 某些操作比我們希望的要慢，尤其是在所有 MCP 伺服器都啟用的情況下
+- 對於大規模操作，Token 使用可以更有效率
+- 在非常大的程式碼庫 (>1000 個檔案) 上會出現記憶體使用高峰
 
-**MCP Server Integration**
-- Server connections occasionally timeout or become unresponsive
-- Error handling between MCP servers could be smoother
-- Some advanced MCP features are experimental and may not work reliably
+**MCP 伺服器整合**
+- 伺服器連接偶爾會超時或無回應
+- MCP 伺服器之間的錯誤處理可以更順暢
+- 一些進階 MCP 功能是實驗性的，可能無法可靠運作
 
-**Quality Gates**
-- The 8-step validation process sometimes misses edge cases
-- Quality metrics could be more granular and actionable
-- Integration testing validation needs improvement
+**品質關卡**
+- 8 步驟驗證流程有時會錯過邊緣案例
+- 品質指標可以更細緻、更具可操作性
+- 整合測試驗證需要改進
 
-**Auto-Activation Intelligence**
-- Persona selection occasionally misses context clues
-- Flag auto-activation can be overly aggressive for simple tasks
-- Pattern recognition works well for common scenarios but struggles with edge cases
+**自動啟用智慧**
+- Persona 選擇偶爾會錯過情境線索
+- 對於簡單任務，旗標自動啟用可能過於積極
+- 模式識別對常見情境運作良好，但對邊緣案例則較為困難
 
-#### What We Removed (And Why)
+#### 我們移除的內容 (以及原因)
 
-**Hooks System (Coming Back in v4)**
-- The v2 hooks system became too complex and buggy
-- Caused performance issues and unpredictable behavior
-- Being redesigned from scratch with better architecture
-- Will return in v4 with improved reliability and simpler configuration
+**Hooks 系統 (將在 v4 回歸)**
+- v2 的 hooks 系統變得過於複雜且充滿錯誤
+- 導致效能問題和不可預測的行為
+- 正在以更好的架構從頭開始重新設計
+- 將在 v4 中以更高的可靠性和更簡單的設定回歸
 
-**Some Advanced Commands**
-- Consolidated 20+ commands down to 16 essential ones
-- Removed experimental commands that weren't stable enough
-- Focus on making core commands excellent rather than having many mediocre ones
+**一些進階指令**
+- 將 20+ 個指令合併為 16 個基本指令
+- 移除了不夠穩定的實驗性指令
+- 專注於讓核心指令變得優秀，而不是擁有許多平庸的指令
 
-### Short-Term Improvements (v3.x) 🔧
+### 短期改進 (v3.x) 🔧
 
-Our immediate focus is making v3 stable and polished:
+我們當前的重點是讓 v3 穩定和完善：
 
-#### Performance Optimization (v3.1)
-- **MCP Connection Pooling**: Reuse connections to reduce startup overhead
-- **Intelligent Caching**: Cache MCP results and analysis outcomes
-- **Token Optimization**: Better compression algorithms and smarter batching
-- **Resource Management**: Better memory usage for large projects
+#### 效能優化 (v3.1)
+- **MCP 連接池**：重用連接以減少啟動開銷
+- **智慧快取**：快取 MCP 結果和分析結果
+- **Token 優化**：更好的壓縮演算法和更聰明的批次處理
+- **資源管理**：對大型專案更好的記憶體使用
 
-**Expected Impact**: 30-50% performance improvement for common operations.
+**預期影響**：常見操作的效能提升 30-50%。
 
-#### MCP Server Reliability (v3.2)  
-- **Connection Resilience**: Better handling of MCP server timeouts and failures
-- **Graceful Degradation**: Fallback strategies when servers are unavailable
-- **Health Monitoring**: Real-time monitoring of MCP server status
-- **Error Recovery**: Automatic retry and recovery mechanisms
+#### MCP 伺服器可靠性 (v3.2)
+- **連接彈性**：更好地處理 MCP 伺服器超時和故障
+- **優雅降級**：當伺服器不可用時的備援策略
+- **健康監控**：即時監控 MCP 伺服器狀態
+- **錯誤恢復**：自動重試和恢復機制
 
-**Expected Impact**: 80% reduction in MCP-related failures and timeouts.
+**預期影響**：MCP 相關故障和超時減少 80%。
 
-#### Quality Gate Enhancement (v3.3)
-- **Granular Metrics**: More specific and actionable quality measurements
-- **Custom Validation**: User-configurable quality checks
-- **Evidence Tracking**: Better documentation of validation outcomes
-- **Integration Testing**: Improved validation of system-wide changes
+#### 品質關卡增強 (v3.3)
+- **細緻指標**：更具體、更可操作的品質測量
+- **自訂驗證**：使用者可設定的品質檢查
+- **證據追蹤**：更好地記錄驗證結果
+- **整合測試**：改進對全系統變更的驗證
 
-**Expected Impact**: Higher confidence in automated improvements and better quality metrics.
+**預期影響**：對自動化改進的信心更高，品質指標更好。
 
-### Medium-Term Evolution (v4.0) 🚀
+### 中期演變 (v4.0) 🚀
 
-The next major version will focus on intelligence and user experience:
+下一個主要版本將專注於智慧和使用者體驗：
 
-#### Redesigned Hooks System
-- **Event-Driven Architecture**: Clean separation between framework and hooks
-- **Performance Optimized**: No impact on core operations when hooks aren't used
-- **Simple Configuration**: Easy setup and debugging
-- **Extensibility**: Community hooks and custom integrations
+#### 重新設計的 Hooks 系統
+- **事件驅動架構**：框架與 hooks 之間的清晰分離
+- **效能優化**：當未使用 hooks 時不影響核心操作
+- **簡單設定**：易於設定和除錯
+- **可擴展性**：社群 hooks 和自訂整合
 
-#### Enhanced AI Coordination
-- **Smarter Auto-Activation**: Better context understanding and tool selection
-- **Learning Patterns**: Framework learns from your successful workflows
-- **Predictive Assistance**: Suggests next steps based on current context
-- **Personalization**: Adapts to your coding style and preferences
+#### 增強的 AI 協調
+- **更聰明的自動啟用**：更好的情境理解和工具選擇
+- **學習模式**：框架從你成功的工作流程中學習
+- **預測性協助**：根據當前情境建議下一步
+- **個人化**：適應你的編碼風格和偏好
 
-#### Advanced Orchestration
-- **Dynamic Resource Allocation**: Intelligent scaling based on operation complexity
-- **Parallel Processing**: True parallelization for independent operations
-- **Context Preservation**: Better memory of previous work within sessions
-- **Workflow Templates**: Reusable patterns for common development scenarios
+#### 進階編排
+- **動態資源分配**：基於操作複雜度的智慧擴展
+- **平行處理**：對獨立操作的真正平行化
+- **情境保留**：在會話中更好地記住先前的工作
+- **工作流程模板**：用於常見開發情境的可重用模式
 
-#### Extended MCP Ecosystem
-- **More Servers**: Additional specialized capabilities (database, cloud, monitoring)
-- **Community Servers**: Framework for community-contributed MCP servers
-- **Server Marketplace**: Easy discovery and installation of new capabilities
-- **Local Development**: Run MCP servers locally for better performance
+#### 擴展的 MCP 生態系統
+- **更多伺服器**：額外的專業功能 (資料庫、雲端、監控)
+- **社群伺服器**：用於社群貢獻的 MCP 伺服器框架
+- **伺服器市集**：輕鬆發現和安裝新功能
+- **本地開發**：在本地運行 MCP 伺服器以獲得更好的效能
 
-### Long-Term Vision (v5.0+) 🌟
+### 長期願景 (v5.0+) 🌟
 
-Looking further ahead, we're exploring more ambitious improvements:
+展望未來，我們正在探索更具雄心的改進：
 
-#### Intelligence and Automation
-- **Contextual Understanding**: Deep comprehension of project goals and constraints
-- **Proactive Assistance**: Suggestions based on code analysis and project patterns
-- **Automated Workflows**: End-to-end automation for common development tasks
-- **Code Evolution Tracking**: Understanding how your codebase changes over time
+#### 智慧與自動化
+- **情境理解**：深度理解專案目標和限制
+- **主動協助**：基於程式碼分析和專案模式的建議
+- **自動化工作流程**：對常見開發任務的端到端自動化
+- **程式碼演變追蹤**：理解你的程式碼庫如何隨時間變化
 
-#### Team and Enterprise Features
-- **Multi-Developer Coordination**: Team-aware analysis and recommendations
-- **Project Memory**: Persistent understanding of project context across sessions
-- **Policy Enforcement**: Automated enforcement of team coding standards
-- **Analytics Dashboard**: Insights into development patterns and productivity
+#### 團隊與企業功能
+- **多開發者協調**：團隊感知的分析和建議
+- **專案記憶**：跨會話的專案情境持久理解
+- **政策執行**：自動執行團隊編碼標準
+- **分析儀表板**：對開發模式和生產力的洞察
 
-#### Platform Integration
-- **IDE Deep Integration**: Native integration with popular development environments
-- **CI/CD Pipeline Integration**: Automated quality checks and improvements in build processes
-- **Cloud Development**: Integration with cloud development platforms
-- **API Ecosystem**: Rich APIs for custom integrations and tooling
+#### 平台整合
+- **IDE 深度整合**：與流行開發環境的原生整合
+- **CI/CD 管線整合**：建置流程中的自動化品質檢查和改進
+- **雲端開發**：與雲端開發平台的整合
+- **API 生態系統**：用於自訂整合和工具的豐富 API
 
-### How You Can Influence Development 📝
+### 你如何影響開發 📝
 
-#### Feedback and Usage Patterns
-We actively monitor:
-- **Command usage patterns**: Which commands are most/least useful
-- **Flag combinations**: What combinations work well in practice
-- **Error patterns**: Common failure modes and user confusion points
-- **Performance bottlenecks**: Where users experience slowdowns
+#### 回饋與使用模式
+我們積極監控：
+- **指令使用模式**：哪些指令最有用/最少用
+- **旗標組合**：哪些組合在實務中效果良好
+- **錯誤模式**：常見的故障模式和使用者困惑點
+- **效能瓶頸**：使用者在哪裡遇到速度變慢
 
-#### Community Involvement
-- **GitHub Issues**: Bug reports and feature requests help prioritize development
-- **Usage Examples**: Real-world usage examples inform our testing and optimization
-- **Documentation Feedback**: Gaps in documentation highlight areas for improvement
-- **Integration Requests**: Requests for specific tool/framework integrations guide MCP development
+#### 社群參與
+- **GitHub Issues**：錯誤報告和功能請求有助於確定開發優先順序
+- **使用範例**：真實世界的使用範例為我們的測試和優化提供資訊
+- **文件回饋**：文件中的空白突顯了需要改進的領域
+- **整合請求**：對特定工具/框架整合的請求指導 MCP 開發
 
-#### Beta Testing Program
-- **Early Access**: Test new features before public release
-- **Feedback Loop**: Direct input on experimental features
-- **Performance Testing**: Help validate optimizations across different environments
-- **Use Case Validation**: Ensure new features work for real development scenarios
+#### Beta 測試計畫
+- **搶先體驗**：在公開發布前測試新功能
+- **回饋循環**：對實驗性功能的直接輸入
+- **效能測試**：幫助驗證跨不同環境的優化
+- **使用案例驗證**：確保新功能適用於真實的開發情境
 
-### Staying Updated 📡
+### 保持更新 📡
 
-#### How to Keep Current
+#### 如何保持最新
 ```bash
-# Check for updates regularly
-/sc:help  # Shows current version and update availability
+# 定期檢查更新
+/sc:help  # 顯示當前版本和更新可用性
 
-# Monitor development progress
-# - GitHub releases: Feature announcements and changelogs
-# - Documentation updates: New patterns and best practices
-# - Community discussions: Tips and advanced usage patterns
+# 監控開發進度
+# - GitHub releases：功能公告和變更日誌
+# - 文件更新：新模式和最佳實踐
+# - 社群討論：技巧和進階使用模式
 ```
 
-#### Migration and Compatibility
-- **Backwards Compatibility**: v3.x updates maintain command compatibility
-- **Configuration Migration**: Automatic migration of settings between versions
-- **Deprecation Warnings**: Advance notice of changing features
-- **Migration Guides**: Step-by-step guides for major version upgrades
+#### 遷移與相容性
+- **向後相容**：v3.x 更新維持指令相容性
+- **設定遷移**：版本之間自動遷移設定
+- **棄用警告**：提前通知變更的功能
+- **遷移指南**：主要版本升級的逐步指南
 
-### Realistic Expectations 📊
+### 現實的期望 📊
 
-#### What to Expect from Updates
-- **v3.x updates**: Bug fixes, performance improvements, stability enhancements
-- **Major versions**: New features, architectural improvements, expanded capabilities
-- **Community contributions**: Additional MCP servers, workflow patterns, integrations
+#### 對更新的期望
+- **v3.x 更新**：錯誤修復、效能改進、穩定性增強
+- **主要版本**：新功能、架構改進、擴展功能
+- **社群貢獻**：額外的 MCP 伺服器、工作流程模式、整合
 
-#### What Not to Expect
-- **Perfect AI**: SuperClaude will continue to have limitations and edge cases
-- **One-Size-Fits-All**: Different projects and teams will need different approaches
-- **Zero Learning Curve**: New features will require learning and experimentation
-- **Magical Solutions**: Complex problems still require human expertise and judgment
+#### 不應期望的
+- **完美的 AI**：SuperClaude 將繼續存在限制和邊緣案例
+- **一體適用**：不同專案和團隊需要不同方法
+- **零學習曲線**：新功能需要學習和實驗
+- **神奇的解決方案**：複雜問題仍需要人類的專業知識和判斷
 
-### Contributing to SuperClaude 🤝
+### 為 SuperClaude 做出貢獻 🤝
 
-#### Ways to Help
-- **Bug Reports**: Detailed reports help improve stability and reliability
-- **Feature Requests**: Real-world needs drive development priorities
-- **Documentation**: Examples, guides, and clarifications help the community
-- **Community Support**: Helping other users builds a stronger ecosystem
+#### 幫助的方式
+- **錯誤報告**：詳細的報告有助於提高穩定性和可靠性
+- **功能請求**：真實世界的需求驅動開發優先順序
+- **文件**：範例、指南和澄清有助於社群
+- **社群支援**：幫助其他使用者建立更強大的生態系統
 
-#### What We Value Most
-- **Honest Feedback**: Both positive experiences and frustrations help improve the framework
-- **Real-World Usage**: How SuperClaude works (or doesn't work) in actual development workflows
-- **Specific Examples**: Concrete scenarios are more valuable than abstract feature requests
-- **Patience**: Remember that v3.0 is fresh out of beta - improvement takes time
+#### 我們最重視的
+- **誠實的回饋**：正面經驗和挫折都有助於改進框架
+- **真實世界的使用**：SuperClaude 在實際開發工作流程中的運作方式 (或不運作)
+- **具體範例**：具體的情境比抽象的功能請求更有價值
+- **耐心**：記住 v3.0 才剛結束測試版 - 改進需要時間
 
-### The Bottom Line 🎯
+### 底線 🎯
 
-SuperClaude v3.0 is a solid foundation with room to grow. We're committed to:
-- **Honest Communication**: No overpromising, clear about limitations and timelines
-- **User-Driven Development**: Prioritizing features that solve real problems
-- **Quality Over Features**: Making existing capabilities excellent before adding new ones
-- **Community Focus**: Building a framework that serves the development community
+SuperClaude v3.0 是一個有成長空間的堅實基礎。我們致力於：
+- **誠實溝通**：不過度承諾，清楚說明限制和時間表
+- **使用者驅動的開發**：優先考慮解決實際問題的功能
+- **品質優於功能**：在新增功能之前讓現有功能變得優秀
+- **社群焦點**：建立一個服務於開發社群的框架
 
-We believe SuperClaude can become significantly more helpful for software development workflows, but it will take time, feedback, and iteration to get there. We appreciate your patience, feedback, and continued use as we improve the framework together.
+我們相信 SuperClaude 可以對軟體開發工作流程變得更有幫助，但這需要時間、回饋和迭代才能實現。在我們共同改進框架的過程中，感謝你的耐心、回饋和持續使用。
 
-**Want to stay involved?** Watch the GitHub repository, try new features when they're released, and let us know what works (and what doesn't) in your development workflows. Your real-world usage and feedback are what will make SuperClaude truly valuable for the development community.
-
----
-
-## Conclusion 🎉
-
-You've now got a comprehensive understanding of SuperClaude v3.0 - its components, capabilities, and how to use them effectively. Let's wrap up with the key takeaways that will help you get the most out of the framework.
-
-### Key Takeaways 🎯
-
-#### SuperClaude's Core Value
-SuperClaude transforms Claude Code from a general-purpose AI assistant into a specialized development partner through:
-- **15 specialized commands** that understand development workflows
-- **11 expert personas** that bring domain-specific knowledge
-- **Intelligent orchestration** that coordinates tools automatically
-- **Quality-first approach** that maintains safety and reliability
-
-#### The Power is in the Coordination
-SuperClaude's power comes not from any single feature, but from how components work together:
-- Commands usually activate appropriate personas and MCP servers
-- Personas coordinate with each other for multi-domain problems
-- The orchestrator optimizes tool selection and resource usage
-- Quality gates ensure consistent, reliable outcomes
-
-#### Start Simple, Scale Intelligently
-The best approach to SuperClaude is progressive:
-1. **Begin with basic commands** to understand core functionality
-2. **Trust auto-activation** to learn optimal tool combinations
-3. **Add manual control** when you need specific perspectives
-4. **Experiment with advanced features** as your confidence grows
-
-### What Makes SuperClaude Different 🌟
-
-#### Honest About Limitations
-- We acknowledge v3.0 is fresh out of beta with rough edges
-- We clearly document what works well vs. what's still experimental
-- We prioritize reliability over flashy features
-- We provide realistic timelines and expectations
-
-#### Evidence-Based Development
-- All recommendations backed by verifiable data
-- Quality gates ensure changes don't break existing functionality
-- Performance optimizations based on real usage patterns
-- Continuous improvement driven by user feedback
-
-#### Respectful of Your Workflow
-- Enhances existing tools rather than replacing them
-- Maintains compatibility with standard development practices
-- Provides manual override for all automatic decisions
-- Scales from simple tasks to complex enterprise scenarios
-
-### Practical Next Steps 🛣️
-
-#### For New Users
-1. **Start with installation**: Follow the [Installation Guide](installation-guide.md)
-2. **Try basic commands**: `/help`, `/analyze README.md`, `/build --help`
-3. **Explore domain guides**: [Commands](commands-guide.md), [Flags](flags-guide.md), [Personas](personas-guide.md)
-4. **Build confidence gradually**: Simple tasks → complex workflows → advanced features
-
-#### For Experienced Users
-1. **Optimize your workflows**: Identify flag combinations that work well for your needs
-2. **Experiment with coordination**: Try different persona combinations on complex problems
-3. **Contribute feedback**: Share what works (and what doesn't) in your environment
-4. **Explore advanced features**: Wave orchestration, sub-agent delegation, introspection mode
-
-### When to Use SuperClaude 🤔
-
-#### SuperClaude Excels At
-- **Development workflows**: Building, testing, deploying, documenting
-- **Code analysis**: Quality assessment, security scanning, performance optimization
-- **Learning and understanding**: Explaining complex systems, onboarding to new projects
-- **Quality improvement**: Systematic refactoring, technical debt reduction
-- **Multi-domain problems**: Issues requiring multiple types of expertise
-
-#### When to Use Standard Claude Code
-- **Simple questions**: Quick explanations that don't need specialized tools
-- **Creative writing**: Non-technical content creation
-- **General research**: Topics outside software development
-- **Brainstorming**: Open-ended ideation without specific implementation needs
-
-### The SuperClaude Philosophy 💭
-
-#### Human-AI Collaboration
-SuperClaude is designed to augment human expertise, not replace it:
-- **You provide context and goals** - SuperClaude provides execution and expertise
-- **You make decisions** - SuperClaude provides evidence and recommendations  
-- **You understand your constraints** - SuperClaude respects and works within them
-- **You own the outcomes** - SuperClaude helps you achieve better results
-
-#### Continuous Improvement
-The framework gets better through:
-- **Usage patterns**: Learning what combinations work well in practice
-- **User feedback**: Real-world experiences drive development priorities
-- **Evidence-based optimization**: Data-driven improvements to tools and workflows
-- **Community contributions**: Shared knowledge and best practices
-
-### Looking Forward 🔮
-
-#### Short-Term (Next 6 Months)
-- Performance optimizations making operations 30-50% faster
-- Improved MCP server reliability reducing failures by 80%
-- Enhanced quality gates providing more actionable feedback
-- Better documentation based on user questions and feedback
-
-#### Medium-Term (6-18 Months)  
-- Redesigned hooks system with better architecture and performance
-- Smarter auto-activation based on learning from usage patterns
-- Extended MCP ecosystem with community-contributed servers
-- Advanced orchestration with true parallel processing
-
-#### Long-Term Vision
-- Deep contextual understanding of projects and team workflows
-- Proactive assistance based on code analysis and project patterns
-- Team-aware features for collaborative development
-- Rich integration ecosystem with IDEs, CI/CD, and cloud platforms
-
-### Final Thoughts 🎉
-
-SuperClaude v3.0 represents a solid foundation for enhanced software development workflows. While it's not perfect and still has room for improvement, it demonstrates how AI can be thoughtfully integrated into development practices without disrupting existing workflows or replacing human expertise.
-
-The framework succeeds when it makes you more productive, helps you learn new things, or catches issues you might have missed. It's designed to be a helpful colleague rather than a replacement for understanding your craft.
-
-#### Thank You 🙏
-
-Thanks for taking the time to understand SuperClaude thoroughly. Your thoughtful usage, honest feedback, and patience with rough edges are what will make this framework truly valuable for the development community.
-
-Whether you use SuperClaude occasionally for specific tasks or integrate it deeply into your daily workflow, we hope it makes your development experience a bit better. And when it doesn't work as expected, please let us know - that feedback is invaluable for making improvements.
-
-**Happy coding!** 🚀 We're excited to see what you build with SuperClaude as your development partner.
+**想保持參與嗎？** 關注 GitHub 儲存庫，在新功能發布時嘗試它們，並讓我們知道在你的開發工作流程中哪些有效 (哪些無效)。你的真實世界使用和回饋將使 SuperClaude 對開發社群真正有價值。
 
 ---
 
-*Last updated: July 2024*  
-*SuperClaude v3.0 User Guide*
+## 結論 🎉
 
-*For questions, feedback, or contributions, visit our GitHub repository or join the community discussions. We're always happy to hear from users and learn about your experiences with the framework.*
+你現在對 SuperClaude v3.0 有了全面的了解 - 它的元件、功能以及如何有效地使用它們。讓我們總結一下有助於你充分利用該框架的關鍵要點。
+
+### 關鍵要點 🎯
+
+#### SuperClaude 的核心價值
+SuperClaude 透過以下方式將 Claude Code 從通用 AI 助理轉變為專業的開發夥伴：
+- **15 個專業指令**，了解開發工作流程
+- **11 個專家 Persona**，帶來領域特定的知識
+- **智慧編排**，自動協調工具
+- **品質優先的方法**，維持安全性和可靠性
+
+#### 力量在於協調
+SuperClaude 的力量來自其元件的協同運作，而非任何單一功能：
+- 指令通常會啟用適當的 Persona 和 MCP 伺服器
+- Persona 會在多領域問題上相互協調
+- 編排器會優化工具選擇和資源使用
+- 品質關卡確保一致、可靠的結果
+
+#### 從簡單開始，智慧擴展
+使用 SuperClaude 的最佳方法是漸進式的：
+1. **從基本指令開始**，了解核心功能
+2. **相信自動啟用**，學習最佳的工具組合
+3. **在需要特定觀點時新增手動控制**
+4. **隨著信心增長，實驗進階功能**
+
+### 是什麼讓 SuperClaude 與眾不同 🌟
+
+#### 坦誠面對限制
+- 我們承認 v3.0 才剛結束測試版，仍有不完善之處
+- 我們清楚地記錄了哪些運作良好，哪些仍是實驗性的
+- 我們優先考慮可靠性而非華而不實的功能
+- 我們提供現實的時間表和期望
+
+#### 基於證據的開發
+- 所有建議都有可驗證的資料支持
+- 品質關卡確保變更不會破壞現有功能
+- 基於真實使用模式的效能優化
+- 由使用者回饋驅動的持續改進
+
+#### 尊重你的工作流程
+- 增強現有工具，而非取代它們
+- 維持與標準開發實踐的相容性
+- 為所有自動決策提供手動覆蓋
+- 從簡單任務擴展到複雜的企業情境
+
+### 實際的下一步 🛣️
+
+#### 對於新使用者
+1. **從安裝開始**：遵循[安裝指南](installation-guide.md)
+2. **嘗試基本指令**：`/help`、`/analyze README.md`、`/build --help`
+3. **探索領域指南**：[指令](commands-guide.md)、[旗標](flags-guide.md)、[Persona](personas-guide.md)
+4. **逐步建立信心**：簡單任務 → 複雜工作流程 → 進階功能
+
+#### 對於有經驗的使用者
+1. **優化你的工作流程**：識別對你的需求有效的旗標組合
+2. **實驗協調**：在複雜問題上嘗試不同的 Persona 組合
+3. **貢獻回饋**：分享在你的環境中哪些有效 (哪些無效)
+4. **探索進階功能**：Wave 編排、子代理人委派、內省模式
+
+### 何時使用 SuperClaude 🤔
+
+#### SuperClaude 擅長於
+- **開發工作流程**：建置、測試、部署、文件
+- **程式碼分析**：品質評估、安全掃描、效能優化
+- **學習與理解**：解釋複雜系統、上手新專案
+- **品質改進**：系統性重構、技術債清理
+- **多領域問題**：需要多種類型專業知識的問題
+
+#### 何時使用標準 Claude Code
+- **簡單問題**：不需要專業工具的快速解釋
+- **創意寫作**：非技術性內容創作
+- **一般研究**：軟體開發之外的主題
+- **腦力激盪**：沒有具體實作需求的開放式構想
+
+### SuperClaude 的哲學 💭
+
+#### 人類與 AI 的協作
+SuperClaude 旨在增強人類的專業知識，而非取代它：
+- **你提供情境和目標** - SuperClaude 提供執行和專業知識
+- **你做決定** - SuperClaude 提供證據和建議
+- **你了解你的限制** - SuperClaude 尊重並在其中運作
+- **你對結果負責** - SuperClaude 幫助你取得更好的結果
+
+#### 持續改進
+框架透過以下方式變得更好：
+- **使用模式**：學習哪些組合在實務中效果良好
+- **使用者回饋**：真實世界的經驗驅動開發優先順序
+- **基於證據的優化**：資料驅動的工具和工作流程改進
+- **社群貢獻**：共享的知識和最佳實踐
+
+### 展望未來 🔮
+
+#### 短期 (未來 6 個月)
+- 效能優化使操作速度提高 30-50%
+- 改善的 MCP 伺服器可靠性將故障減少 80%
+- 增強的品質關卡提供更具可操作性的回饋
+- 基於使用者問題和回饋的更好文件
+
+#### 中期 (6-18 個月)
+- 具有更好架構和效能的重新設計的 hooks 系統
+- 基於從使用模式中學習的更聰明的自動啟用
+- 擴展的 MCP 生態系統，包含社群貢獻的伺服器
+- 具有真正平行處理的進階編排
+
+#### 長期願景
+- 對專案和團隊工作流程的深度情境理解
+- 基於程式碼分析和專案模式的主動協助
+- 針對協作開發的團隊感知功能
+- 具有 IDE、CI/CD 和雲端平台的豐富整合生態系統
+
+### 最後的想法 🎉
+
+SuperClaude v3.0 代表了增強軟體開發工作流程的堅實基礎。雖然它並不完美，仍有改進空間，但它展示了如何將 AI 審慎地整合到開發實踐中，而不會擾亂現有工作流程或取代人類的專業知識。
+
+當框架讓你更有效率、幫助你學習新事物或發現你可能錯過的問題時，它就成功了。它的設計初衷是成為一個有幫助的同事，而不是取代你對自己專業的理解。
+
+#### 感謝 🙏
+
+感謝你花時間徹底了解 SuperClaude。你深思熟慮的使用、誠實的回饋以及對不完善之處的耐心，將使這個框架對開發社群真正有價值。
+
+無論你是偶爾為特定任務使用 SuperClaude，還是將其深度整合到你的日常工作流程中，我們都希望它能讓你的開發體驗變得更好一些。當它未如預期運作時，請告訴我們 - 這些回饋對於進行改進至關重要。
+
+**祝你編碼愉快！** 🚀 我們很高興看到你與 SuperClaude 作為開發夥伴一起打造的成果。
+
+---
+
+*最後更新：2024 年 7 月*
+*SuperClaude v3.0 使用者指南*
+
+*如有問題、回饋或貢獻，請訪問我們的 GitHub 儲存庫或加入社群討論。我們總是樂於聽取使用者的意見，並了解你們使用該框架的經驗。*
