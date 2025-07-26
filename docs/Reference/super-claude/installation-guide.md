@@ -4,8 +4,6 @@ title: SuperClaude 安裝指南
 description: 一份完整的 SuperClaude 安裝指南，涵蓋從快速入門到進階設定的所有內容，幫助你快速開始使用。
 tags:
   - SuperClaude
-  - 安裝指南
-  - AI工具
 last_update:
   date: 2025-07-26
   author: Danny
