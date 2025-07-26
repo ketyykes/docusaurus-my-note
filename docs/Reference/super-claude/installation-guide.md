@@ -40,7 +40,7 @@ SuperClaude v3 也支援透過 [`uv`](https://github.com/astral-sh/uv) (一個�
 curl -Ls https://astral.sh/uv/install.sh | sh
 ```
 
-> 或遵循 [https://github.com/astral-sh/uv](https://github.com/astral-sh/uv) 的說明
+&gt; 或遵循 [https://github.com/astral-sh/uv](https://github.com/astral-sh/uv) 的說明
 
 一旦 `uv` 可用，你可以這樣安裝 SuperClaude：
 
@@ -69,7 +69,7 @@ SuperClaude v3 也支援透過 [`uv`](https://github.com/astral-sh/uv) (一個�
 curl -Ls https://astral.sh/uv/install.sh | sh
 ```
 
-> 或遵循 [https://github.com/astral-sh/uv](https://github.com/astral-sh/uv) 的說明
+或遵循 [https://github.com/astral-sh/uv](https://github.com/astral-sh/uv) 的說明
 
 一旦 `uv` 可用，你可以這樣安裝 SuperClaude：
 
@@ -165,7 +165,7 @@ SuperClaude install --quick
 **選項 B：從原始碼**
 ```bash
 # 複製儲存庫
-git clone <repository-url>
+git clone &lt;repository-url&gt;
 cd SuperClaude
 pip install .
 
@@ -281,7 +281,7 @@ pip install SuperClaude
 ```bash
 # 下載並解壓縮最新版本
 # (將 URL 替換為實際的發行版 URL)
-curl -L <release-url> -o superclaude-v3.zip
+curl -L &lt;release-url&gt; -o superclaude-v3.zip
 unzip superclaude-v3.zip
 cd superclaude-v3
 pip install .
@@ -289,7 +289,7 @@ pip install .
 
 **選項 3：從 Git 複製**
 ```bash
-git clone <repository-url>
+git clone &lt;repository-url&gt;
 cd SuperClaude
 pip install .
 ```
