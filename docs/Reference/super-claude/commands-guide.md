@@ -4,8 +4,6 @@ title: SuperClaude 指令指南
 description: 一份完整的 SuperClaude 斜線指令實用指南，涵蓋開發、分析、品質、專案管理等指令的詳細說明與範例。
 tags:
   - SuperClaude
-  - 指令指南
-  - AI工具
 last_update:
   date: 2025-07-26
   author: Danny
