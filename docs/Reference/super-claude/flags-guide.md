@@ -135,7 +135,7 @@ last_update:
 **使用時機**：快速提問，不希望有工作流程自動化
 **範例**：`/explain React hooks --answer-only`
 
-&gt; **💡 提示**：`--uc` 很適合大型操作。`--safe-mode` 用於任何重要的事情。`--verbose` 用於學習時。
+**💡 提示**：`--uc` 很適合大型操作。`--safe-mode` 用於任何重要的事情。`--verbose` 用於學習時。
 
 ---
 
