@@ -40,7 +40,7 @@ SuperClaude v3 也支援透過 [`uv`](https://github.com/astral-sh/uv) (一個�
 curl -Ls https://astral.sh/uv/install.sh | sh
 ```
 
-&gt; 或遵循 [https://github.com/astral-sh/uv](https://github.com/astral-sh/uv) 的說明
+或遵循 [https://github.com/astral-sh/uv](https://github.com/astral-sh/uv) 的說明
 
 一旦 `uv` 可用，你可以這樣安裝 SuperClaude：
 
