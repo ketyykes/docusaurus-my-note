@@ -4,8 +4,6 @@ title: SuperClaude 使用者指南
 description: 一份全面性的 SuperClaude 使用指南，涵蓋其核心元件、操作模式、指令、旗標與 Persona 的詳細介紹與實用範例。
 tags:
   - SuperClaude
-  - 使用者指南
-  - AI工具
 last_update:
   date: 2025-07-26
   author: Danny
@@ -164,14 +162,14 @@ SuperClaude 讓 Claude Code 在開發工作上變得更聰明。你得到的不�
 
 ### 快速功能概覽 🎯
 
-| 元件 | 功能 | 了解更多 *(可選！)* |
-|-----------|--------------|------------|
-| **指令** | 15 個會自動啟用的專業工具 | [指令指南](commands-guide.md) |
-| **旗標** | 大部分會自動啟用的修飾符 | [旗標指南](flags-guide.md) |
-| **Persona** | 11 個知道何時該幫忙的 AI 專家 | [Persona 指南](personas-guide.md) |
-| **MCP 伺服器** | 在需要時連接的外部整合 | [本指南](#核心元件-) |
-| **模式** | 3 種適用於不同工作流程的操作模式 | [本指南](#三種操作模式-) |
-| **編排器** | 讓一切運作的智慧路由 | [本指南](#編排器系統-) |
+| 元件           | 功能                             | 了解更多 *(可選！)*               |
+| -------------- | -------------------------------- | --------------------------------- |
+| **指令**       | 15 個會自動啟用的專業工具        | [指令指南](commands-guide.md)     |
+| **旗標**       | 大部分會自動啟用的修飾符         | [旗標指南](flags-guide.md)        |
+| **Persona**    | 11 個知道何時該幫忙的 AI 專家    | [Persona 指南](personas-guide.md) |
+| **MCP 伺服器** | 在需要時連接的外部整合           | [本指南](#核心元件-)              |
+| **模式**       | 3 種適用於不同工作流程的操作模式 | [本指南](#三種操作模式-)          |
+| **編排器**     | 讓一切運作的智慧路由             | [本指南](#編排器系統-)            |
 
 **記住**：即使不閱讀任何這些指南，你也可以有效地使用 SuperClaude。它們是為當你對其運作原理感到好奇時準備的！🎪
 
@@ -591,13 +589,13 @@ SuperClaude 在三種不同的模式下運作，以優化開發工作流程的�
 
 #### 主路由表
 
-| 請求模式 | 通常自動啟用 | 頻率 | 原因 |
-|----------------|----------------|------------|-----|
-| "analyze architecture" | 🏗️ architect + --ultrathink + Sequential | 大多數時候 | 複雜的系統分析 |
-| "create UI component" | 🎨 frontend + Magic + --uc | 相當頻繁 | 帶有產生的前端領域 |
-| "security audit" | 🛡️ security + --ultrathink + Sequential | 大多數時候 | 需要安全專業知識 |
-| "debug complex issue" | 🔍 analyzer + --think + Sequential | 經常 | 調查方法論 |
-| "improve performance" | ⚡ performance + --think-hard + Playwright | 相當頻繁 | 效能專業知識 + 測試 |
+| 請求模式               | 通常自動啟用                              | 頻率       | 原因                |
+| ---------------------- | ----------------------------------------- | ---------- | ------------------- |
+| "analyze architecture" | 🏗️ architect + --ultrathink + Sequential   | 大多數時候 | 複雜的系統分析      |
+| "create UI component"  | 🎨 frontend + Magic + --uc                 | 相當頻繁   | 帶有產生的前端領域  |
+| "security audit"       | 🛡️ security + --ultrathink + Sequential    | 大多數時候 | 需要安全專業知識    |
+| "debug complex issue"  | 🔍 analyzer + --think + Sequential         | 經常       | 調查方法論          |
+| "improve performance"  | ⚡ performance + --think-hard + Playwright | 相當頻繁   | 效能專業知識 + 測試 |
 
 #### 智慧協調
 
@@ -2711,16 +2709,16 @@ SuperClaude 會根據偵測到的情境自動選擇適當的 MCP 伺服器和旗
 
 ### 常見問題快速參考 📋
 
-| 問題 | 快速修復 | 指令 |
-|---------|-----------|---------|
-| 太慢 | 縮小範圍 + 壓縮 | `--scope file --uc` |
-| 錯誤的 Persona | 明確覆蓋 | `--persona-security` |
-| 輸出過多 | 使用壓縮 | `--uc` |
-| 有風險的變更 | 使用安全功能 | `--safe-mode --preview` |
-| MCP 不運作 | 強制啟用或停用 | `--all-mcp` 或 `--no-mcp` |
-| 結果不一致 | 使用明確的旗標 | `--persona-x --think --c7` |
-| 情境問題 | 載入專案情境 | `/load --deep` |
-| Token 限制 | 啟用壓縮 + 委派 | `--uc --delegate auto` |
+| 問題           | 快速修復        | 指令                       |
+| -------------- | --------------- | -------------------------- |
+| 太慢           | 縮小範圍 + 壓縮 | `--scope file --uc`        |
+| 錯誤的 Persona | 明確覆蓋        | `--persona-security`       |
+| 輸出過多       | 使用壓縮        | `--uc`                     |
+| 有風險的變更   | 使用安全功能    | `--safe-mode --preview`    |
+| MCP 不運作     | 強制啟用或停用  | `--all-mcp` 或 `--no-mcp`  |
+| 結果不一致     | 使用明確的旗標  | `--persona-x --think --c7` |
+| 情境問題       | 載入專案情境    | `/load --deep`             |
+| Token 限制     | 啟用壓縮 + 委派 | `--uc --delegate auto`     |
 
 記住：如有疑問，從簡單開始，逐步增加複雜性。使用 `--introspect` 了解 SuperClaude 的想法，並在需要特定行為時毫不猶豫地覆蓋自動啟用。
 

@@ -4,8 +4,6 @@ title: SuperClaude Persona 使用指南
 description: 一份完整的 SuperClaude 斜線指令 Persona 使用指南，涵蓋各種 Persona 的詳細說明與範例。
 tags:
   - SuperClaude
-  - 指令指南
-  - AI工具
 last_update:
   date: 2025-07-26
   author: Danny
@@ -726,19 +724,19 @@ Persona 通常會自動協同作業。以下是常見的協作模式：
 
 ### Persona 速查表
 
-| Persona | 最適用於 | 自動啟用條件 | 手動旗標 |
-|---------|----------|-------------------|-------------|
-| 🏗️ architect | 系統設計、架構 | "architecture", "design", "scalability" | `--persona-architect` |
-| 🎨 frontend | UI/UX、無障礙 | "component", "responsive", "UI" | `--persona-frontend` |
-| ⚙️ backend | API、資料庫、可靠性 | "API", "database", "service" | `--persona-backend` |
-| 🛡️ security | 安全性、合規性 | "security", "vulnerability", "auth" | `--persona-security` |
-| ⚡ performance | 優化、速度 | "performance", "optimization", "slow" | `--persona-performance` |
-| 🔍 analyzer | 除錯、調查 | "analyze", "debug", "investigate" | `--persona-analyzer` |
-| 🧪 qa | 測試、品質 | "test", "quality", "validation" | `--persona-qa` |
-| 🔄 refactorer | 程式碼清理、重構 | "refactor", "cleanup", "quality" | `--persona-refactorer` |
-| 🚀 devops | 部署、基礎設施 | "deploy", "infrastructure", "CI/CD" | `--persona-devops` |
-| 👨‍🏫 mentor | 學習、解釋 | "explain", "learn", "understand" | `--persona-mentor` |
-| ✍️ scribe | 文件、寫作 | "document", "write", "guide" | `--persona-scribe` |
+| Persona       | 最適用於            | 自動啟用條件                            | 手動旗標                |
+| ------------- | ------------------- | --------------------------------------- | ----------------------- |
+| 🏗️ architect   | 系統設計、架構      | "architecture", "design", "scalability" | `--persona-architect`   |
+| 🎨 frontend    | UI/UX、無障礙       | "component", "responsive", "UI"         | `--persona-frontend`    |
+| ⚙️ backend     | API、資料庫、可靠性 | "API", "database", "service"            | `--persona-backend`     |
+| 🛡️ security    | 安全性、合規性      | "security", "vulnerability", "auth"     | `--persona-security`    |
+| ⚡ performance | 優化、速度          | "performance", "optimization", "slow"   | `--persona-performance` |
+| 🔍 analyzer    | 除錯、調查          | "analyze", "debug", "investigate"       | `--persona-analyzer`    |
+| 🧪 qa          | 測試、品質          | "test", "quality", "validation"         | `--persona-qa`          |
+| 🔄 refactorer  | 程式碼清理、重構    | "refactor", "cleanup", "quality"        | `--persona-refactorer`  |
+| 🚀 devops      | 部署、基礎設施      | "deploy", "infrastructure", "CI/CD"     | `--persona-devops`      |
+| 👨‍🏫 mentor      | 學習、解釋          | "explain", "learn", "understand"        | `--persona-mentor`      |
+| ✍️ scribe      | 文件、寫作          | "document", "write", "guide"            | `--persona-scribe`      |
 
 ### 最有用的組合
 
