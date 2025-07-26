@@ -1,49 +1,37 @@
----
-sidebar_position: 3
-title: SuperClaude 安裝指南
-description: 完整的 SuperClaude v3.0 安裝指南，包含 PyPI、uv、uvx 等多種安裝方式
-tags:
-  - SuperClaude
-last_update:
-  date: 2025-07-26
-  author: Danny
----
+# SuperClaude Installation Guide 📦
 
-# SuperClaude 安裝指南 📦
+## 🎯 It's Easier Than It Looks!
 
-## 🎯 比看起來更容易！
+**The honest truth**: This guide looks long because we want to cover all the details, but installation is actually pretty simple. Most people are done in 2 minutes with one command! 
 
-**誠實的事實**：這個指南看起來很長是因為我們想要涵蓋所有細節，但安裝實際上相當簡單。大多數人在 2 分鐘內用一個指令就完成了！
+### Step 1: Install the Package
 
-### 步驟 1：安裝套件
-
-**選項 A：從 PyPI（推薦）**
+**Option A: From PyPI (Recommended)**
 ```bash
 uv add SuperClaude
 ```
 
-**選項 B：從原始碼**
+**Option B: From Source**
 ```bash
 git clone https://github.com/NomenAK/SuperClaude.git
 cd SuperClaude
 uv sync
 ```
+### 🔧 UV / UVX Setup Guide
 
-### 🔧 UV / UVX 設定指南
+SuperClaude v3 also supports installation via [`uv`](https://github.com/astral-sh/uv) (a faster, modern Python package manager) or `uvx` for cross-platform usage.
 
-SuperClaude v3 也支援透過 [`uv`](https://github.com/astral-sh/uv)（一個更快、更現代的 Python 套件管理器）或 `uvx` 進行跨平台使用安裝。
+### 🌀 Install with `uv`
 
-### 🌀 使用 `uv` 安裝
-
-確保 `uv` 已安裝：
+Make sure `uv` is installed:
 
 ```bash
 curl -Ls https://astral.sh/uv/install.sh | sh
 ```
 
-> 或遵循來自 [https://github.com/astral-sh/uv](https://github.com/astral-sh/uv) 的指示
+> Or follow instructions from: [https://github.com/astral-sh/uv](https://github.com/astral-sh/uv)
 
-一旦 `uv` 可用，你可以像這樣安裝 SuperClaude：
+Once `uv` is available, you can install SuperClaude like this:
 
 ```bash
 uv venv
@@ -51,29 +39,28 @@ source .venv/bin/activate
 uv pip install SuperClaude
 ```
 
-### ⚡ 使用 `uvx` 安裝（跨平台 CLI）
+### ⚡ Install with `uvx` (Cross-platform CLI)
 
-如果你使用 `uvx`，只需執行：
+If you’re using `uvx`, just run:
 
 ```bash
 uvx pip install SuperClaude
 ```
+## 🔧 UV / UVX Setup Guide
 
-## 🔧 UV / UVX 設定指南
+SuperClaude v3 also supports installation via [`uv`](https://github.com/astral-sh/uv) (a faster, modern Python package manager) or `uvx` for cross-platform usage.
 
-SuperClaude v3 也支援透過 [`uv`](https://github.com/astral-sh/uv)（一個更快、更現代的 Python 套件管理器）或 `uvx` 進行跨平台使用安裝。
+### 🌀 Install with `uv`
 
-### 🌀 使用 `uv` 安裝
-
-確保 `uv` 已安裝：
+Make sure `uv` is installed:
 
 ```bash
 curl -Ls https://astral.sh/uv/install.sh | sh
 ```
 
-> 或遵循來自 [https://github.com/astral-sh/uv](https://github.com/astral-sh/uv) 的指示
+> Or follow instructions from: [https://github.com/astral-sh/uv](https://github.com/astral-sh/uv)
 
-一旦 `uv` 可用，你可以像這樣安裝 SuperClaude：
+Once `uv` is available, you can install SuperClaude like this:
 
 ```bash
 uv venv
@@ -81,36 +68,36 @@ source .venv/bin/activate
 uv pip install SuperClaude
 ```
 
-### ⚡ 使用 `uvx` 安裝（跨平台 CLI）
+### ⚡ Install with `uvx` (Cross-platform CLI)
 
-如果你使用 `uvx`，只需執行：
+If you’re using `uvx`, just run:
 
 ```bash
 uvx pip install SuperClaude
 ```
 
-### ✅ 完成安裝
+### ✅ Finish Installation
 
-安裝後，繼續通常的安裝程式步驟：
+After installing, continue with the usual installer step:
 
 ```bash
 python3 -m SuperClaude install
 ```
 
-或使用 bash 風格的 CLI：
+Or using bash-style CLI:
 
 ```bash
 SuperClaude install
 ```
 
-### 🧠 注意：
+### 🧠 Note:
 
-* `uv` 提供更好的快取和效能。
-* 與 Python 3.8+ 相容，並與 SuperClaude 順暢運作。
+* `uv` provides better caching and performance.
+* Compatible with Python 3.8+ and works smoothly with SuperClaude.
 
 ---
 
-### ⚠️ 重要注意事項
+### ⚠️ Important Note 
 **After installing the SuperClaude.**
 **You can use `SuperClaude commands`
 , `python3 -m SuperClaude commands` or also `python3 SuperClaude commands`**
