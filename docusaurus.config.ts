@@ -92,14 +92,15 @@ const config: Config = {
 					label: "Tags",
 					position: "left",
 				},
-				// {
-				// 	type: "search",
-				// 	position: "right",
-				// },
+				{
+					href: "https://wedsatcoming.com",
+					label: "我的部落格站",
+					position: "left",
+				},
 			],
 		},
 		footer: {
-			style: "dark",
+			style: "light",
 			links: [
 				{
 					title: "Docs",
