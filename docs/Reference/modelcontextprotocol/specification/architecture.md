@@ -162,9 +162,9 @@ sequenceDiagram
 
 每個功能都會解鎖特定的協定功能供工作階段使用。例如：
 
-* 已實作的[伺服器功能](/specification/2025-06-18/server)必須在伺服器的功能中宣告
+* 已實作的[伺服器功能](https://modelcontextprotocol.io/specification/2025-06-18/server)必須在伺服器的功能中宣告
 * 發出資源訂閱通知需要伺服器宣告訂閱支援
 * 工具呼叫需要伺服器宣告工具功能
-* [取樣](/specification/2025-06-18/client)需要客戶端在其功能中宣告支援
+* [取樣](https://modelcontextprotocol.io/specification/2025-06-18/client)需要客戶端在其功能中宣告支援
 
 這種功能協商確保客戶端和伺服器對支援的功能有清楚的了解，同時維持協定的擴充性。
