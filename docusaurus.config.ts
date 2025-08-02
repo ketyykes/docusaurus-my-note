@@ -28,6 +28,10 @@ const config: Config = {
 		locales: ["zh-Hant"],
 	},
 
+	markdown: {
+		mermaid: true,
+	},
+	themes: ["@docusaurus/theme-mermaid"],
 	presets: [
 		[
 			"classic",
@@ -51,6 +55,9 @@ const config: Config = {
 		metadata: [
 			{ name: "algolia-site-verification", content: "A8845A31B4D03839" },
 		],
+		mermaid: {
+			theme: { light: "forest", dark: "dark" },
+		},
 		algolia: {
 			// Algolia 提供的應用程式 ID
 			appId: "HVMC43GRZZ",
