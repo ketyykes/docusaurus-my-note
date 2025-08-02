@@ -1,22 +1,18 @@
 ---
 sidebar_position: 2
 title: Model Context Protocol 架構設計
-description: 深入了解 MCP 的客戶端-主機-伺服器架構，以及如何在應用程式間整合 AI 功能並維持安全邊界
+description: 深入了解 MCP 的客戶端 - 主機 - 伺服器架構，以及如何在應用程式間整合 AI 功能並維持安全邊界
 tags:
   - MCP
-  - 架構
-  - JSON-RPC
-  - 協定設計
 last_update:
-  date: 2025-01-02
+  date: 2025-08-02
   author: Danny
 ---
 
 # 架構
 
-<div id="enable-section-numbers" />
 
-Model Context Protocol (MCP) 採用客戶端-主機-伺服器架構，其中每個主機可以執行多個客戶端實例。這種架構讓使用者能夠在應用程式間整合 AI 功能，同時維持清楚的安全邊界並分離關注點。MCP 建構在 JSON-RPC 之上，提供一個有狀態的工作階段協定，專注於客戶端與伺服器之間的情境脈絡交換和取樣協調。
+Model Context Protocol (MCP) 採用客戶端 - 主機 - 伺服器架構，其中每個主機可以執行多個客戶端實例。這種架構讓使用者能夠在應用程式間整合 AI 功能，同時維持清楚的安全邊界並分離關注點。MCP 建構在 JSON-RPC 之上，提供一個有狀態的工作階段協定，專注於客戶端與伺服器之間的情境脈絡交換和取樣協調。
 
 ## 核心元件
 

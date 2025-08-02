@@ -1,6 +1,16 @@
+---
+sidebar_position: 1
+title: Model Context Protocol 規格說明
+description: MCP 協定的權威規格文件，定義開放標準讓 LLM 應用程式與外部資料來源和工具進行無縫整合
+tags:
+  - MCP
+last_update:
+  date: 2025-08-02
+  author: Danny
+---
+
 # 規格說明
 
-<div id="enable-section-numbers" />
 
 [Model Context Protocol](https://modelcontextprotocol.io) (MCP) 是一個開放的協定，它能夠讓 LLM 應用程式與外部資料來源和工具之間進行無縫整合。無論您是要開發 AI 驅動的 IDE、增強聊天介面，或是建立自訂的 AI 工作流程，MCP 都提供了一種標準化的方式來連接 LLM 與它們所需要的情境脈絡。
 

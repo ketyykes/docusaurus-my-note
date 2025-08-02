@@ -4,8 +4,6 @@ title: MCP 客戶端概念：採樣、根目錄與請求機制
 description: 了解 MCP 客戶端的核心功能，包含採樣、根目錄和請求等客戶端特性的設計與實作
 tags:
   - MCP
-  - 客戶端概念
-  - 採樣機制
 last_update:
   date: 2025-08-02
   author: Danny

@@ -4,8 +4,6 @@ title: MCP 伺服器概念：工具、資源與提示的運作機制
 description: 深入了解 MCP 伺服器的核心構建區塊，包含工具、資源、提示的設計模式與實際應用範例
 tags:
   - MCP
-  - 伺服器概念
-  - 工具設計
 last_update:
   date: 2025-08-02
   author: Danny
