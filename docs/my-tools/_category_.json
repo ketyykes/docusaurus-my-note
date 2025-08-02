@@ -2,6 +2,7 @@
   "label": "My Tools",
   "position": 3,
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "keywords": ["工具介紹", "開發工具", "效率工具", "軟體推薦", "工具使用教學"]
   }
 }

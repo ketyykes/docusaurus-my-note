@@ -3,6 +3,13 @@
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "這是一個用來記錄學習過程中的重要筆記和心得的區域。"
+    "description": "這是一個用來記錄學習過程中的重要筆記和心得的區域。",
+    "keywords": [
+      "學習筆記",
+      "學習心得",
+      "技術筆記",
+      "程式設計",
+      "學習"
+    ]
   }
 }
