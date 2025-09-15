@@ -54,6 +54,38 @@ const config: Config = {
 		image: "img/banner-night.jpg",
 		metadata: [
 			{ name: "algolia-site-verification", content: "A8845A31B4D03839" },
+			{
+				name: "description",
+				content:
+					"水土曜來了筆記站 - 分享學習筆記、技術文件與開發經驗的知識分享平台",
+			},
+			{
+				name: "keywords",
+				content: "學習筆記，技術文件，前端開發，React,Vue，程式設計，開發經驗",
+			},
+			{ property: "og:title", content: "水土曜來了筆記站" },
+			{
+				property: "og:description",
+				content:
+					"水土曜來了筆記站 - 分享學習筆記、技術文件與開發經驗的知識分享平台",
+			},
+			{ property: "og:type", content: "website" },
+			{ property: "og:url", content: "https://note.wedsatcoming.com/" },
+			{
+				property: "og:image",
+				content: "https://note.wedsatcoming.com/img/banner-night.jpg",
+			},
+			{ name: "twitter:card", content: "summary_large_image" },
+			{ name: "twitter:title", content: "水土曜來了筆記站" },
+			{
+				name: "twitter:description",
+				content:
+					"水土曜來了筆記站 - 分享學習筆記、技術文件與開發經驗的知識分享平台",
+			},
+			{
+				name: "twitter:image",
+				content: "https://note.wedsatcoming.com/img/banner-night.jpg",
+			},
 		],
 		mermaid: {
 			theme: { light: "forest", dark: "dark" },
