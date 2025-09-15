@@ -110,7 +110,25 @@ Browser Tools MCP 是一套讓 AI 助手（例如 Cursor、Claude Desktop 等）
 - 執行 Accessibility、Performance、SEO、Best Practices 各類稽核
 - 支援多種 MCP 客戶端，主要設計給 Cursor IDE，也可用於其他 AI 編輯器
 
+## Claude Code 使用者快速配置
+
+如果你正在使用 Claude Code，可以透過一行指令快速添加此 MCP：
+
+<span class="mycode">claude mcp add browser-tools -s user -- npx -y @agentdeskai/browser-tools-mcp@1.2.1</span>
+
+### 指令說明：
+- `claude mcp add`：Claude Code 的 MCP 管理指令
+- `browser-tools`：為此 MCP 設定的本地名稱（可自訂）
+- `-s user`：將 MCP 安裝到用戶設定範圍（非全域）
+- `--`：分隔 Claude Code 參數與 MCP 執行指令
+- `npx -y @agentdeskai/browser-tools-mcp@1.2.1`：使用 npx 執行特定版本的 browser-tools-mcp
+
+配置完成後，重啟 Claude Code 即可開始使用所有瀏覽器工具功能！
+
+> <span class="red">注意：</span>你仍需要按照上述步驟安裝 Chrome 擴充套件並啟動 Node 伺服器。
+
 ## 參考資料
 
 - [官方文件 BrowserTools MCP Docs](https://browsertools.agentdesk.ai/)
 - [Github - BrowserTools MCP](https://github.com/AgentDeskAI/browser-tools-mcp)
+- [ClaudeLog - Browser Tools MCP](https://claudelog.com/claude-code-mcps/browser-tools-mcp/)
