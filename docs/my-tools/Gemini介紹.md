@@ -306,7 +306,7 @@ gemini > "請幫我整理這個目錄。
 
 想深入學習 Gemini CLI，以下資源非常有幫助：
 
-*   [**Gemini CLI 官方文件**](https://developers.google.com/gemini/cli) - 最詳盡的官方指南
+*   [**Gemini CLI 官方文件**](https://cloud.google.com/gemini/docs/codeassist/gemini-cli?hl=zh-tw) - 最詳盡的官方指南
 *   [**Gemini CLI GitHub 儲存庫**](https://github.com/google-gemini/gemini-cli) - 原始碼和問題追蹤
 *   [**Google AI Studio (API 金鑰申請)**](https://aistudio.google.com/app/apikey) - 取得 API 金鑰的平台
 
