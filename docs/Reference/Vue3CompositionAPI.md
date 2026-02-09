@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 title: Vue 3 Composition API
 description: 深入解析 Vue 3 Composition API 的核心概念，包含 ref、reactive 響應式資料處理、Props 定義、computed 計算屬性及最佳實踐，幫助你快速掌握現代 Vue 開發
 tags:

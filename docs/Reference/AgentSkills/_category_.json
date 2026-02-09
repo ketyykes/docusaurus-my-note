@@ -1,0 +1,8 @@
+{
+  "label": "Agent Skills",
+  "position": 6,
+  "link": {
+    "type": "generated-index",
+    "description": "Agent Skills 開放格式相關文件，涵蓋概覽、規格、整合指南與參考函式庫"
+  }
+}
