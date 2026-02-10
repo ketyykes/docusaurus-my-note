@@ -32,7 +32,7 @@ Agent Skills 是一個由 [Anthropic](https://anthropic.com) 維護的開放格�
 
 ## 授權
 
-此儲存庫中的程式碼以 [Apache 2.0](LICENSE) 授權。文件以 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 授權。詳情請參閱各目錄。
+此儲存庫中的程式碼以 [Apache 2.0](https://github.com/anthropics/agent-skills-spec/blob/main/LICENSE) 授權。文件以 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 授權。詳情請參閱各目錄。
 
 ## 小結
 
