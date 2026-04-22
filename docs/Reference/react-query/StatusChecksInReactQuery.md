@@ -4,6 +4,7 @@ title: Status Checks in ReactQuery
 description: 深入解析 React Query 查詢狀態的判斷與顯示，說明各種狀態 flag 的意義、背景 refetch 失敗時的 UX 處理，以及實務上如何設計更友善的資料顯示邏輯。
 tags:
   - React Query
+  - TanStack Query
 last_update:
   date: 2025-07-01
   author: Danny

@@ -2,6 +2,9 @@
 sidebar_position: 9
 title: Placeholder 和 Initial Data 在 React Query 的應用
 description: 學習如何在 React Query 中避免 loading spinner，提升使用者體驗。
+tags:
+  - React Query
+  - TanStack Query
 last_update:
   date: 2025-07-01
   author: Danny

@@ -4,6 +4,7 @@ title:  React Query Render Optimizations
 description: 深入解析 React Query 的 render 最佳化技巧，了解如何減少不必要的 re-render，提升 React 應用效能與使用者體驗。
 tags:
   - React Query
+  - TanStack Query
 last_update:
   date: 2025-07-01
   author: Danny

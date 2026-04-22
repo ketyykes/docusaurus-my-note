@@ -4,6 +4,7 @@ title: Mastering Mutations in React Query
 description: 深入解析 React Query mutation 的設計原則與實務技巧，包含快取、refetch、手動操作、樂觀更新與常見陷阱，讓你的資料更新更有效率、更易維護。
 tags:
   - React Query
+  - TanStack Query
 last_update:
   date: 2025-07-01
   author: Danny

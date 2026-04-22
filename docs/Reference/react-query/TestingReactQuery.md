@@ -4,6 +4,7 @@ title: Testing React Query
 description: 實戰教學如何測試 React Query 的 hook 與元件，包含 mock API、QueryClient 設定、關閉自動重試與常見測試陷阱，讓你寫出穩定可靠的 React Query 測試。
 tags:
   - React Query
+  - TanStack Query
 last_update:
   date: 2025-07-01
   author: Danny
