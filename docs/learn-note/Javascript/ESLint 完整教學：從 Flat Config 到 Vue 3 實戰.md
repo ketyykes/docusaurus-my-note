@@ -14,7 +14,7 @@ last_update:
 本文以我整理的 `eslint-demo` 範例倉庫為基底，搭配 `unuse-eslint/`、`use-eslint/`、`vue-eslint/` 三個資料夾，從「為什麼需要 Lint」一路講到「Vue 專案自訂規則」。讀完並手動跑過一次 `npx eslint .`，就能建立完整的 ESLint 心智模型。
 
 :::info 本文範例倉庫
-完整範例程式碼（`unuse-eslint/`、`use-eslint/`、`vue-eslint/` 三個資料夾）請見：<https://github.com/ketyykes/eslint-demo>
+完整範例程式碼（`unuse-eslint/`、`use-eslint/`、`vue-eslint/` 三個資料夾）請見：[github.com/ketyykes/eslint-demo](https://github.com/ketyykes/eslint-demo)
 :::
 
 ## 1. 為什麼需要 ESLint
