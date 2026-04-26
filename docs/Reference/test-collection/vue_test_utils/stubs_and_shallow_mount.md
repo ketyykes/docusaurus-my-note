@@ -393,3 +393,7 @@ test('shallow with stubs', () => {
 - 使用 `global.stubs` 用虛擬的來取代元件或指令，簡化你的測試
 - 使用 `shallow: true`（或 `shallowMount`）為所有子元件建立替身
 - 使用 `global.renderStubDefaultSlot` 為替身元件渲染預設 `<slot>`
+
+### 本文原始連結
+
+[Vue Test Utils - Stubs and Shallow Mount](https://test-utils.vuejs.org/guide/advanced/stubs-shallow-mount.html)

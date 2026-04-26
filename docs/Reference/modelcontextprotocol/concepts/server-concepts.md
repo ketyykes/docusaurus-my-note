@@ -245,3 +245,7 @@ sendEmail(to: "team@work.com", subject: "Out of Office", body: "...")
    AI 首先讀取所有選擇的資源以收集內容。從行事曆中，它識別可用日期。從旅行偏好中，它了解偏好的航空公司和酒店類型。從過去的旅行中，它發現以前喜歡的地點。從天氣資料中，它檢查旅行期間的氣候條件。
 
    使用此內容，AI 然後請求使用者批准執行一系列協調動作：搜尋從 NYC 到巴塞隆納的航班、在指定預算內尋找酒店、為旅行期間建立行事曆事件，以及發送包含旅行詳情的確認電子郵件。
+
+### 本文原始連結
+
+[MCP - Server Concepts](https://modelcontextprotocol.io/docs/learn/server-concepts)

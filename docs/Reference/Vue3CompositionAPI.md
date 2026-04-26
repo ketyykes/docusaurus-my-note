@@ -734,3 +734,7 @@ onUnmounted(() => {
 
 這種結構使程式碼邏輯更加有條理，避免了不同功能互相混雜，便於維護和閱讀。尤其是在大型專案中，這樣的組織方式能有效減少溝通成本，提高開發效率。
 
+### 本文原始連結
+
+[Vue.js - Composition API FAQ](https://vuejs.org/guide/extras/composition-api-faq)
+

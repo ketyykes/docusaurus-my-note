@@ -168,3 +168,7 @@ sequenceDiagram
 * [取樣](https://modelcontextprotocol.io/specification/2025-06-18/client)需要客戶端在其功能中宣告支援
 
 這種功能協商確保客戶端和伺服器對支援的功能有清楚的了解，同時維持協定的擴充性。
+
+### 本文原始連結
+
+[MCP - Architecture (Specification)](https://modelcontextprotocol.io/specification/2025-11-25/architecture)

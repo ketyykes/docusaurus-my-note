@@ -170,3 +170,7 @@ mutation {
 - `Mutation` 類型的最上層欄位會依序執行，不像其他類型的欄位通常是平行執行
 
 現在我們已經知道如何用 GraphQL 伺服器讀寫資料，接下來可以學習如何用 訂閱（subscriptions）即時取得資料。
+
+### 本文原始連結
+
+[GraphQL - Mutations](https://graphql.org/learn/mutations/)

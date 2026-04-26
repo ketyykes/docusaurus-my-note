@@ -793,3 +793,7 @@ last_update:
 ---
 
 *祝你編碼愉快！只要記住 - 你可以跳過本指南的大部分內容，並從實踐中學習。 🎯*
+
+### 本文原始連結
+
+[SuperClaude - Commands](https://github.com/SuperClaude-Org/SuperClaude_Framework/blob/master/docs/user-guide/commands.md)

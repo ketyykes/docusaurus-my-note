@@ -122,3 +122,7 @@ Model Context Protocol 透過任意資料存取和程式碼執行路徑來啟用
 - [伺服器功能](https://modelcontextprotocol.io/specification/2025-06-18/server)
 - [客戶端功能](https://modelcontextprotocol.io//specification/2025-06-18/client)
 - [貢獻](https://modelcontextprotocol.io//development/contributing)
+
+### 本文原始連結
+
+[MCP - Specification](https://modelcontextprotocol.io/specification/latest)

@@ -259,3 +259,7 @@ test('creates a todo', async () => {
 - `trigger()` 和 `setValue()` 可以模擬使用者輸入。
 - 更新 DOM 是非同步操作，記得用 async/await。
 - 測試通常分為三個階段：arrange、act、assert。
+
+### 本文原始連結
+
+[Vue Test Utils - A Crash Course](https://test-utils.vuejs.org/guide/essentials/a-crash-course.html)

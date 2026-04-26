@@ -312,3 +312,6 @@ export default defineConfig(({ mode }) => ({
 }))
 ```
 
+### 本文原始連結
+
+[Vitest - Features](https://vitest.dev/guide/features.html)

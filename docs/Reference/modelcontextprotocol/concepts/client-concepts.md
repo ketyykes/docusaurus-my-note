@@ -233,3 +233,7 @@ sequenceDiagram
 **回應選項**：使用者可以通過適當的 UI 控制項（文字欄位、下拉選單、核取方塊）提供請求的資訊、拒絕提供資訊並可選擇說明，或取消整個操作。客戶端在將回應回傳給伺服器之前根據提供的模式驗證回應。
 
 **隱私考量**：請求從不請求密碼或 API 金鑰。客戶端警告可疑請求並讓使用者在發送之前審核資料。
+
+### 本文原始連結
+
+[MCP - Client Concepts](https://modelcontextprotocol.io/docs/learn/client-concepts)

@@ -279,3 +279,7 @@ pnpm link --global # 這步驟你可以用自己習慣的套件管理工具
 
 ## 社群
 如果你有問題或需要協助，歡迎到 Discord 或 GitHub Discussions 社群發問。
+
+### 本文原始連結
+
+[Vitest - Getting Started](https://vitest.dev/guide/)

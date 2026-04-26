@@ -51,3 +51,7 @@ Prompts 功能讓 MCP server 可以根據特定的提示範本來傳送資訊給
 ## 小結
 
 MCP 就像是 AI 與外部世界溝通的橋樑，透過 Tools、Resources、Prompts 和 Samplings 這四種功能，讓 AI 能夠存取資料、執行操作、理解使用者需求，並提供更完整的服務。其中 Tools 和 Resources 是目前最常被使用的兩種功能。
+
+### 本文原始連結
+
+[Model Context Protocol 官方文件](https://modelcontextprotocol.io)

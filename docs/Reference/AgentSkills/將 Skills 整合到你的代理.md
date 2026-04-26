@@ -112,3 +112,7 @@ skills-ref to-prompt <path>...
 ## 小結
 
 整合 Agent Skills 到你的代理中，主要涉及 Skill 探索、中繼資料載入、任務匹配、啟用和執行五個步驟。無論是基於檔案系統或基於工具的代理，都可以透過 skills-ref 參考函式庫來加速開發。
+
+### 本文原始連結
+
+[Agent Skills - Adding Skills Support](https://agentskills.io/client-implementation/adding-skills-support)

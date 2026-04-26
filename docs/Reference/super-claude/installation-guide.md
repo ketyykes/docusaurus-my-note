@@ -618,3 +618,7 @@ SuperClaude install --profile developer --dev-hooks
 ---
 
 *最後更新：2024 年 7 月 - 如果本指南中有任何錯誤或令人困惑之處，請告訴我們！*
+
+### 本文原始連結
+
+[SuperClaude - Installation](https://github.com/SuperClaude-Org/SuperClaude_Framework/blob/master/docs/getting-started/installation.md)

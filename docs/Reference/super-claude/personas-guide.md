@@ -880,3 +880,7 @@ Persona 通常會自動協同作業。以下是常見的協作模式：
 ---
 
 *記住：在所有這些看似複雜的背後，SuperClaude 的使用其實很簡單。只要開始輸入指令即可！🚀*
+
+### 本文原始連結
+
+[SuperClaude - Agents](https://github.com/SuperClaude-Org/SuperClaude_Framework/blob/master/docs/user-guide/agents.md)

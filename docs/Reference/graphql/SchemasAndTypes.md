@@ -574,3 +574,7 @@ type Character {
 - GraphQL 支援型別、欄位、參數說明，也支援不會被解析的註解
 
 現在你已經了解型別系統的重點，可以繼續學習如何查詢 GraphQL API 的資料。
+
+### 本文原始連結
+
+[GraphQL - Schemas and Types](https://graphql.org/learn/schema/)

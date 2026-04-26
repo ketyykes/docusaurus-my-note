@@ -132,3 +132,7 @@ Apache 2.0
 ## 小結
 
 skills-ref 參考函式庫提供了驗證 Skills、讀取屬性和產生提示詞 XML 的完整工具鏈，支援 CLI 和 Python API 兩種使用方式，方便開發者快速整合 Agent Skills 到自己的代理中。
+
+### 本文原始連結
+
+[Agent Skills - skills-ref](https://github.com/agentskills/agentskills/tree/main/skills-ref)

@@ -169,3 +169,7 @@ test('does not show the user dropdown', () => {
 - 如果預期元素一定存在，用 get()。
 - data 選項可以設定元件的預設值。
 - 用 get() 搭配 isVisible() 來驗證 DOM 裡元素的可見性。
+
+### 本文原始連結
+
+[Vue Test Utils - Conditional Rendering](https://test-utils.vuejs.org/guide/essentials/conditional-rendering.html)

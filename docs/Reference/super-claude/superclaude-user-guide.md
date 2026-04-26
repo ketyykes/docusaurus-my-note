@@ -3040,3 +3040,7 @@ SuperClaude v3.0 代表了增強軟體開發工作流程的堅實基礎。雖然
 *SuperClaude v3.0 使用者指南*
 
 *如有問題、回饋或貢獻，請訪問我們的 GitHub 儲存庫或加入社群討論。我們總是樂於聽取使用者的意見，並了解你們使用該框架的經驗。*
+
+### 本文原始連結
+
+[SuperClaude 官方文件](https://github.com/SuperClaude-Org/SuperClaude_Framework)

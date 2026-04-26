@@ -242,3 +242,7 @@ skills-ref validate ./my-skill
 ## 小結
 
 Agent Skills 格式以 `SKILL.md` 為核心，透過簡潔的 YAML frontmatter 定義中繼資料，搭配 Markdown 指令內容，並可選擇性地附帶腳本、參考資料和素材。漸進式揭露機制確保代理能高效地使用上下文資源。
+
+### 本文原始連結
+
+[Agent Skills - Specification](https://agentskills.io/specification)

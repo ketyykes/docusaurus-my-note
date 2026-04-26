@@ -457,3 +457,7 @@ async def handle_tools_changed_notification(session):
     if app.conversation.is_active():
         app.conversation.notify_llm_of_new_capabilities()
 ```
+
+### 本文原始連結
+
+[MCP - Architecture](https://modelcontextprotocol.io/docs/concepts/architecture)

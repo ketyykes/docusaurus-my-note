@@ -189,3 +189,7 @@ Introspection 是 GraphQL 很實用的功能，對於客戶端開發者和工具
 - 生產環境下通常會關閉 Introspection 功能
 
 現在你已經了解 GraphQL 型別系統、如何查詢 API 資料，以及請求的生命週期，接下來可以前往最佳實踐（Best Practices）章節，學習如何在生產環境下運行 GraphQL。
+
+### 本文原始連結
+
+[GraphQL - Introspection](https://graphql.org/learn/introspection/)
